@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Parallis: AI Dream Simulator</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-badge">Parallis</span>
+                    <span class="sub">Support</span>
+                </a>
+                <div class="nav-right">
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" onclick="toggleLangMenu()">
+                            <i class="fa-solid fa-globe"></i>
+                            <span id="current-lang-code">EN</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+                        </button>
+                        <div class="lang-menu" id="lang-menu">
+                            <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
+                            <div class="lang-option" onclick="setLanguage('tr')">🇹🇷 Türkçe</div>
+                            <div class="lang-option" onclick="setLanguage('fr')">🇫🇷 Français</div>
+                            <div class="lang-option" onclick="setLanguage('de')">🇩🇪 Deutsch</div>
+                            <div class="lang-option" onclick="setLanguage('it')">🇮🇹 Italiano</div>
+                            <div class="lang-option" onclick="setLanguage('es')">🇪🇸 Español</div>
+                            <div class="lang-option" onclick="setLanguage('ru')">🇷🇺 Русский</div>
+                            <div class="lang-option" onclick="setLanguage('ar')">🇸🇦 العربية</div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="btn btn-glass"><i class="fa-solid fa-house"></i> Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="legal-container" style="text-align: center;">
+            <h1 data-i18n="sTitle">HELP & SUPPORT CENTER</h1>
+            <p data-i18n="sBody" style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 36px auto;">Have questions about Parallis VIP subscriptions, credits, or visual generations? Our support team is here to assist you 24/7.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 48px; text-align: left;">
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Direct Email Support</h3>
+                    <p>Send an email directly to our support engineers: <br><a href="mailto:parallisapps@gmail.com" style="color: var(--gold-light); font-weight: 600;">parallisapps@gmail.com</a></p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>Account Deletion</h3>
+                    <p>Want to purge your profile or simulation data? <br><a href="delete-account.html" style="color: var(--gold-light); font-weight: 600;">Go to Delete Account Page</a></p>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-bottom: 32px;">
+                <h2 data-i18n="formTitle">SEND US A MESSAGE</h2>
+            </div>
+
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label data-i18n="lblEmail">Your Email Address</label>
+                    <input type="email" class="form-control" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label data-i18n="lblSubject">Subject / Inquiry Type</label>
+                    <select class="form-control" required>
+                        <option value="subscription">VIP Subscription Help</option>
+                        <option value="credits">Credit Pack Inquiry</option>
+                        <option value="tech">Technical Issue</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="lblMessage">Message Details</label>
+                    <textarea class="form-control" required placeholder="Describe your issue or feedback in detail..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px; font-size: 1rem;">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span data-i18n="btnSend">Send Message</span>
+                </button>
+            </form>
+
+            <div id="form-success" style="display: none; margin-top: 24px; padding: 16px; background: rgba(39, 174, 96, 0.2); border: 1px solid #27ae60; border-radius: var(--radius-md); color: #2ecc71; font-weight: 600;">
+                Thank you! Your message has been sent successfully. We will reply within 24 hours.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div>Parallis: AI Dream Simulator &copy; 2026. All rights reserved.</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="delete-account.html">Delete Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: { sTitle: "HELP & SUPPORT CENTER", sBody: "Have questions about Parallis VIP subscriptions, credits, or visual generations? Our support team is here to assist you 24/7.", formTitle: "SEND US A MESSAGE", lblEmail: "Your Email Address", lblSubject: "Subject / Inquiry Type", lblMessage: "Message Details", btnSend: "Send Message" },
+            tr: { sTitle: "DESTEK VE İLETİŞİM MERKEZİ", sBody: "Parallis VIP üyeliği, kredi paketleri veya görsel üretimi hakkında bir sorunuz mu var? Destek ekibimiz 7/24 hizmetinizde.", formTitle: "BİZE MESAJ GÖNDERİN", lblEmail: "E-posta Adresiniz", lblSubject: "Konu / Başlık", lblMessage: "Mesajınızın Detayları", btnSend: "Mesajı Gönder" }
+        };
+        function setLanguage(lang) {
+            const root = document.getElementById('html-root');
+            if (lang === 'ar') root.setAttribute('dir', 'rtl'); else root.removeAttribute('dir');
+            document.getElementById('current-lang-code').innerText = lang.toUpperCase();
+            const dict = translations[lang] || translations.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerText = dict[key];
+            });
+            closeLangMenu();
+        }
+        function toggleLangMenu() { document.getElementById('lang-menu').classList.toggle('show'); }
+        function closeLangMenu() { document.getElementById('lang-menu').classList.remove('show'); }
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('form-success').style.display = 'block';
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

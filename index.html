@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallis: AI Dream Simulator - Official Web Portal</title>
+    <meta name="description" content="Parallis: AI Dream Simulator - Curate your dream luxury lives, manifest visual vision boards with fal.ai, and experience AI lifestyle simulations in 8 languages.">
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-badge">Parallis</span>
+                    <span class="sub">VIP AI</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+                    <li><a href="#faq" data-i18n="navFaq">FAQ</a></li>
+                    <li><a href="support.html" data-i18n="navSupport">Support</a></li>
+                    <li><a href="privacy.html" data-i18n="navPrivacy">Privacy</a></li>
+                    <li><a href="terms.html" data-i18n="navTerms">Terms</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <!-- 8 Language Switcher Dropdown -->
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" onclick="toggleLangMenu()">
+                            <i class="fa-solid fa-globe"></i>
+                            <span id="current-lang-code">EN</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+                        </button>
+                        <div class="lang-menu" id="lang-menu">
+                            <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
+                            <div class="lang-option" onclick="setLanguage('tr')">🇹🇷 Türkçe</div>
+                            <div class="lang-option" onclick="setLanguage('fr')">🇫🇷 Français</div>
+                            <div class="lang-option" onclick="setLanguage('de')">🇩🇪 Deutsch</div>
+                            <div class="lang-option" onclick="setLanguage('it')">🇮🇹 Italiano</div>
+                            <div class="lang-option" onclick="setLanguage('es')">🇪🇸 Español</div>
+                            <div class="lang-option" onclick="setLanguage('ru')">🇷🇺 Русский</div>
+                            <div class="lang-option" onclick="setLanguage('ar')">🇸🇦 العربية</div>
+                        </div>
+                    </div>
+
+                    <a href="https://apps.apple.com/us/app/altlife-dream-simulator/id6768113492" class="btn btn-gold">
+                        <i class="fa-brands fa-apple"></i>
+                        <span data-i18n="btnDownload">Get App</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                <span data-i18n="heroBadge">Next-Gen AI Dream Simulator</span>
+            </div>
+            <h1 data-i18n="heroTitle">MANIFEST YOUR <span class="highlight">LUXURY LIFE</span> IN 8 LANGUAGES</h1>
+            <p data-i18n="heroBody">Design parallel identities, generate hyper-realistic luxury photo chronicles, and simulate high-net-worth visions with AI precision.</p>
+            
+            <div class="hero-cta">
+                <a href="https://apps.apple.com/us/app/altlife-dream-simulator/id6768113492" class="btn btn-gold" style="padding: 16px 36px; font-size: 1.1rem;">
+                    <i class="fa-brands fa-apple" style="font-size: 1.4rem;"></i>
+                    <span data-i18n="ctaDownload">Download on App Store</span>
+                </a>
+                <a href="support.html" class="btn btn-glass" style="padding: 16px 28px; font-size: 1.05rem;">
+                    <i class="fa-solid fa-headset"></i>
+                    <span data-i18n="ctaSupport">Help & Support</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento Grid -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="featuresHeading">POWERFUL SIMULATION ENGINE</h2>
+                <p data-i18n="featuresSub">Experience state-of-the-art vision building tailored to your ultimate desires.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 data-i18n="f1Title">Lifestyle Director</h3>
+                    <p data-i18n="f1Body">Custom luxury templates, penthouse terraces, private jets, and supercars generated instantly using fal.ai (Nano Banana 2 Lite).</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+                    <h3 data-i18n="f2Title">8-Language AI Engine</h3>
+                    <p data-i18n="f2Body">Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt compilation.</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
+                    <h3 data-i18n="f3Title">VIP Subscriptions & Passes</h3>
+                    <p data-i18n="f3Body">Weekly and Monthly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3 data-i18n="f4Title">Chronicles & Social Packs</h3>
+                    <p data-i18n="f4Body">Generate Instagram/TikTok story packs, reel scripts, and caption ideas tailored to your parallel identity.</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3 data-i18n="f5Title">Simulation Credit Vault</h3>
+                    <p data-i18n="f5Body">Flexibility to top up 10, 25, 60, or 150 permanent simulation credits whenever you want extra visual generations.</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 data-i18n="f6Title">Privacy First & Data Ownership</h3>
+                    <p data-i18n="f6Body">Full control over your profiles and data with instant 1-click in-app account deletion anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="faqHeading">FREQUENTLY ASKED QUESTIONS</h2>
+                <p data-i18n="faqSub">Everything you need to know about Parallis VIP Subscriptions and Simulation Credits.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span data-i18n="q1">What is Parallis VIP Subscription?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="a1">
+                        Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering, and exclusive luxury story text packs. Subscriptions auto-renew weekly or monthly and can be cancelled anytime via your Apple ID Settings.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span data-i18n="q2">How do Simulation Credit Packs work?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="a2">
+                        Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution AI vision scenes.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span data-i18n="q3">How do I delete my account or data?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="a3">
+                        You can delete your account and all associated profiles instantly in the app under Profile -> Delete Account, or submit a request on our Delete Account web page.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div>
+                    <strong>Parallis: AI Dream Simulator</strong> &copy; 2026. All rights reserved.
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="privacy.html" data-i18n="navPrivacy">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-i18n="navTerms">Terms of Use</a></li>
+                    <li><a href="support.html" data-i18n="navSupport">Support</a></li>
+                    <li><a href="delete-account.html" data-i18n="navDelete">Delete Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 8 Languages Translation System Script -->
+    <script>
+        const translations = {
+            en: {
+                navFeatures: "Features", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
+                btnDownload: "Get App", heroBadge: "Next-Gen AI Dream Simulator",
+                heroTitle: "MANIFEST YOUR LUXURY LIFE IN 8 LANGUAGES",
+                heroBody: "Design parallel identities, generate hyper-realistic luxury photo chronicles, and simulate high-net-worth visions with AI precision.",
+                ctaDownload: "Download on App Store", ctaSupport: "Help & Support",
+                featuresHeading: "POWERFUL SIMULATION ENGINE", featuresSub: "Experience state-of-the-art vision building tailored to your ultimate desires.",
+                f1Title: "Lifestyle Director", f1Body: "Custom luxury templates, penthouse terraces, private jets, and supercars generated instantly using fal.ai (Nano Banana 2 Lite).",
+                f2Title: "8-Language AI Engine", f2Body: "Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt compilation.",
+                f3Title: "VIP Subscriptions & Passes", f3Body: "Weekly and Monthly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.",
+                f4Title: "Chronicles & Social Packs", f4Body: "Generate Instagram/TikTok story packs, reel scripts, and caption ideas tailored to your parallel identity.",
+                f5Title: "Simulation Credit Vault", f5Body: "Flexibility to top up 10, 25, 60, or 150 permanent simulation credits whenever you want extra visual generations.",
+                f6Title: "Privacy First & Data Ownership", f6Body: "Full control over your profiles and data with instant 1-click in-app account deletion anytime.",
+                faqHeading: "FREQUENTLY ASKED QUESTIONS", faqSub: "Everything you need to know about Parallis VIP Subscriptions and Simulation Credits.",
+                q1: "What is Parallis VIP Subscription?", a1: "Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering, and exclusive luxury story text packs. Subscriptions auto-renew weekly or monthly and can be cancelled anytime via your Apple ID Settings.",
+                q2: "How do Simulation Credit Packs work?", a2: "Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution AI vision scenes.",
+                q3: "How do I delete my account or data?", a3: "You can delete your account and all associated profiles instantly in the app under Profile -> Delete Account, or submit a request on our Delete Account web page."
+            },
+            tr: {
+                navFeatures: "Özellikler", navFaq: "SSS", navSupport: "Destek", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
+                btnDownload: "Uygulamayı İndir", heroBadge: "Yeni Nesil AI Vizyon Simülatörü",
+                heroTitle: "HAYALİNİZDEKİ LÜKS HAYATI 8 DİLDE SİMÜLE EDİN",
+                heroBody: "Paralel hayat kimlikleri oluşturun, yüksek çözünürlüklü lüks görseller ve hikaye anlatımları üretin.",
+                ctaDownload: "App Store'dan İndirin", ctaSupport: "Destek ve İletişim",
+                featuresHeading: "GÜÇLÜ SİMÜLASYON MOTORU", featuresSub: "Arzuladığınız lüks yaşam standartlarına göre tasarlanmış yapay zeka deneyimi.",
+                f1Title: "Yaşam Yönetmeni", f1Body: "İstanbul Yalı Terası, özel yatlar ve lüks vizyonlar fal.ai (Nano Banana 2 Lite) motoru ile anında üretilir.",
+                f2Title: "8 Dilli Yapı", f2Body: "Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça akıllı dil derleme altyapısı.",
+                f3Title: "VIP Üyelik & Paketler", f3Body: "Haftalık ve Aylık VIP erişim ile sınırsız profil üretimi ve reklamsız yüksek öncelikli simülasyon.",
+                f4Title: "Hikaye & Sosyal Medya Paketleri", f4Body: "Instagram & TikTok uyumlu lansman metinleri, senaryolar ve görsel hikaye kartları.",
+                f5Title: "Kalıcı Kredi Haznesi", f5Body: "Süresi dolmayan 10, 25, 60 ve 150 ek simülasyon kredisi paketleri.",
+                f6Title: "Gizlilik & Veri Kontrolü", f6Body: "Tek tıkla hesabınızı ve tüm verilerinizi anında silme garantisi.",
+                faqHeading: "SIKÇA SORULAN SORULAR", faqSub: "Parallis VIP üyeliği ve kredi paketleri hakkında merak edilenler.",
+                q1: "Parallis VIP Üyeliği Nedir?", a1: "Sınırsız profil üretimi, reklamsız deneyim ve öncelikli AI görsel üretim hakkı sağlar. Haftalık veya aylık olarak yenilenir, dilediğiniz an Apple ID ayarlarınızdan iptal edilebilir.",
+                q2: "Simülasyon Kredi Paketleri Nasıl Çalışır?", a2: "10, 25, 60 veya 150 kredilik paketler kalıcıdır, süresi dolmaz ve dilediğiniz zaman ekstra görsel üretimi yapmanızı sağlar.",
+                q3: "Hesabımı ve verilerimi nasıl silebilirim?", a3: "Uygulama içinde Profil -> Hesabı Sil butonundan veya web sitemizdeki Hesabı Sil sayfasından anında silebilirsiniz."
+            },
+            fr: {
+                navFeatures: "Fonctionnalités", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
+                btnDownload: "Télécharger", heroBadge: "Simulateur IA Nouvelle Génération",
+                heroTitle: "CRÉEZ VOTRE VIE DE LUXE EN 8 LANGUES",
+                heroBody: "Concevez des identités parallèles, générez des visuels de luxe ultra-réalistes et simulez vos rêves avec l'IA.",
+                ctaDownload: "Sur l'App Store", ctaSupport: "Centre d'Aide",
+                featuresHeading: "MOTEUR DE SIMULATION PUISSANT", featuresSub: "Une expérience IA personnalisée conçue pour vos aspirations les plus élevées.",
+                f1Title: "Directeur de Style", f1Body: "Terrasses de luxe, jets privés et voitures de sport générés instantanément avec fal.ai (Nano Banana 2 Lite).",
+                f2Title: "Moteur IA 8 Langues", f2Body: "Support natif pour le français, l'anglais, le turc, l'allemand, l'italien, l'espagnol, le russe et l'arabe.",
+                f3Title: "Abonnements VIP", f3Body: "Accès VIP hebdomadaire et mensuel via RevenueCat sans publicité et avec rendu prioritaire.",
+                f4Title: "Pack Chroniques & Réseaux", f4Body: "Scripts Instagram/TikTok et packs d'histoires personnalisés pour votre profil virtuel.",
+                f5Title: "Réserve de Crédits", f5Body: "Recharges de 10, 25, 60 ou 150 crédits de simulation permanents.",
+                f6Title: "Protection des Données", f6Body: "Suppression définitive de votre compte et de vos données en 1 clic dans l'application.",
+                faqHeading: "FOIRE AUX QUESTIONS", faqSub: "Tout sur les abonnements et crédits Parallis VIP.",
+                q1: "Qu'est-ce que l'Abonnement Parallis VIP?", a1: "Débloque des profils illimités, une expérience sans publicité et un rendu IA prioritaire. Annulable à tout moment.",
+                q2: "Comment fonctionnent les packs de crédits?", a2: "Les crédits ne périment jamais et vous permettent de produire des scènes IA supplémentaires.",
+                q3: "Comment supprimer mes données?", a3: "Accédez à Profil -> Supprimer le compte dans l'application ou visitez notre page dédiée."
+            },
+            de: {
+                navFeatures: "Funktionen", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto Löschen",
+                btnDownload: "App Laden", heroBadge: "KI-Traumsimulator der nächsten Generation",
+                heroTitle: "MANIFESTIEREN SIE IHR LUXUSLEBEN IN 8 SPRACHEN",
+                heroBody: "Entwerfen Sie parallele Identitäten und generieren Sie hochauflösende Luxusvisualisierungen mit KI.",
+                ctaDownload: "Im App Store laden", ctaSupport: "Kundenservice",
+                featuresHeading: "LEISTUNGSSTARKE KI-SIMULATION", featuresSub: "Exklusive Visualisierungen für Ihre Träume.",
+                f1Title: "Lifestyle-Regisseur", f1Body: "Penthouse-Terrassen, Privatjets und Supercars sofort generiert mit fal.ai (Nano Banana 2 Lite).",
+                f2Title: "8-Sprachen-KI-Engine", f2Body: "Unterstützung für Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
+                f3Title: "VIP-Abonnements", f3Body: "Wöchentlicher und monatlicher VIP-Zugang über RevenueCat ohne Werbung.",
+                f4Title: "Chroniken & Story-Packs", f4Body: "Instagram- & TikTok-Skripte passend zu Ihrer virtuellen Identität.",
+                f5Title: "Guthaben-Tresor", f5Body: "Dauerhafte Guthabenpakete mit 10, 25, 60 oder 150 Credits.",
+                f6Title: "Datenschutz an erster Stelle", f6Body: "Volle Kontrolle mit sofortiger Löschung des Kontos in der App.",
+                faqHeading: "HÄUFIG GESTELLTE FRAGEN", faqSub: "Informationen zu VIP-Abonnements und Guthaben.",
+                q1: "Was ist das Parallis VIP-Abonnement?", a1: "Bietet unbegrenzte Profile, werbefreie Nutzung und Prioritäts-KI. Jederzeit kündbar.",
+                q2: "Wie funktionieren Guthabenpakete?", a2: "Guthaben verfallen nie und dienen der Erzeugung zusätzlicher Szenen.",
+                q3: "Wie lösche ich mein Konto?", a3: "In der App unter Profil -> Konto löschen oder über unsere Webseite."
+            },
+            it: {
+                navFeatures: "Caratteristiche", navFaq: "FAQ", navSupport: "Supporto", navPrivacy: "Privacy", navTerms: "Termini", navDelete: "Elimina Account",
+                btnDownload: "Scarica App", heroBadge: "Simulatore di Sogni IA di Nuova Generazione",
+                heroTitle: "CREA LA TUA VITA DI LUSSO IN 8 LINGUE",
+                heroBody: "Crea identità parallele e genera immagini di lusso iperrealistiche con l'IA.",
+                ctaDownload: "Scarica su App Store", ctaSupport: "Supporto",
+                featuresHeading: "MOTORE DI SIMULAZIONE", featuresSub: "Esperienza IA di lusso personalizzata per le tue aspirazioni.",
+                f1Title: "Regista dello Stile", f1Body: "Attici di lusso, jet privati e auto sportive generati all'istante con fal.ai (Nano Banana 2 Lite).",
+                f2Title: "IA in 8 Lingue", f2Body: "Localizzazione nativa per italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
+                f3Title: "Abbonamenti VIP", f3Body: "Accesso VIP settimanale e mensile via RevenueCat senza pubblicità.",
+                f4Title: "Cronache e Social Pack", f4Body: "Genera script e storie per Instagram e TikTok per il tuo profilo virtuale.",
+                f5Title: "Pacchetti Crediti", f5Body: "Crediti permanenti da 10, 25, 60 o 150 per simulazioni extra.",
+                f6Title: "Privacy e Controllo", f6Body: "Cancellazione immediata dell'account e dei dati con 1 clic dall'app.",
+                faqHeading: "DOMANDE FREQUENTI", faqSub: "Tutto sugli abbonamenti VIP e crediti.",
+                q1: "Cos'è l'Abbonamento Parallis VIP?", a1: "Sblocca profili illimitati, esperienza senza pubblicità e generazione IA prioritaria.",
+                q2: "Come funzionano i pacchetti crediti?", a2: "I crediti non scadono mai e ti permettono di generare altre immagini.",
+                q3: "Come elimino il mio account?", a3: "Dall'app su Profilo -> Elimina Account o tramite la nostra pagina web."
+            },
+            es: {
+                navFeatures: "Características", navFaq: "Preguntas", navSupport: "Soporte", navPrivacy: "Privacidad", navTerms: "Términos", navDelete: "Eliminar Cuenta",
+                btnDownload: "Obtener App", heroBadge: "Simulador de Sueños IA de Última Generación",
+                heroTitle: "MANIFIESTA TU VIDA DE LUJO EN 8 IDIOMAS",
+                heroBody: "Diseña identidades paralelas y genera imágenes hiperrealistas de lujo con IA.",
+                ctaDownload: "Descargar en App Store", ctaSupport: "Centro de Ayuda",
+                featuresHeading: "POTENTE MOTOR DE SIMULACIÓN", featuresSub: "Experiencia IA de lujo adaptada a tus metas.",
+                f1Title: "Director de Estilo", f1Body: "Terrazas de lujo, jets privados y superdeportivos generados al instante con fal.ai (Nano Banana 2 Lite).",
+                f2Title: "Motor IA en 8 Idiomas", f2Body: "Soporte nativo para español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
+                f3Title: "Suscripciones VIP", f3Body: "Acceso VIP semanal y mensual vía RevenueCat sin anuncios.",
+                f4Title: "Historias y Redes", f4Body: "Scripts e ideas de publicaciones para Instagram y TikTok adaptados a tu identidad.",
+                f5Title: "Bóveda de Créditos", f5Body: "Paquetes de 10, 25, 60 o 150 créditos permanentes de simulación.",
+                f6Title: "Privacidad Garantizada", f6Body: "Control total con eliminación de cuenta en 1 clic dentro de la app.",
+                faqHeading: "PREGUNTAS FRECUENTES", faqSub: "Todo sobre suscripciones VIP y créditos.",
+                q1: "¿Qué es la Suscripción Parallis VIP?", a1: "Desbloquea perfiles ilimitados, uso sin anuncios y prioridad IA. Cancela cuando quieras.",
+                q2: "¿Cómo funcionan los paquetes de créditos?", a2: "Los créditos nunca caducan y sirven para producir escenas adicionales.",
+                q3: "¿Cómo elimino mi cuenta?", a3: "En la app en Perfil -> Eliminar Cuenta o desde nuestra página web."
+            },
+            ru: {
+                navFeatures: "Функции", navFaq: "FAQ", navSupport: "Поддержка", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить Аккаунт",
+                btnDownload: "Скачать", heroBadge: "ИИ-Симулятор Мечты Нового Поколения",
+                heroTitle: "ВОПЛОЩАЙТЕ РОСКОШНУЮ ЖИЗНЬ НА 8 ЯЗЫКАХ",
+                heroBody: "Создавайте параллельные личности и генерируйте гиперреалистичные фото роскоши с ИИ.",
+                ctaDownload: "Скачать в App Store", ctaSupport: "Служба Поддержки",
+                featuresHeading: "МОЩНЫЙ ИИ-ДВИЖОК", featuresSub: "Премиальный уровень визуализации ваших желаний.",
+                f1Title: "Режиссер Стиля", f1Body: "Пентхаусы, частные джеты и суперкары генерируются мгновенно с fal.ai (Nano Banana 2 Lite).",
+                f2Title: "Поддержка 8 Языков", f2Body: "Родная локализация на русский, английский, турецкий, французский, немецкий, итальянский, испанский и арабский.",
+                f3Title: "VIP-Подписки", f3Body: "Еженедельный и ежемесячный VIP-доступ через RevenueCat без рекламы.",
+                f4Title: "Хроники и Соцсети", f4Body: "Сценарии и тексты для Instagram и TikTok для вашего виртуального профиля.",
+                f5Title: "Пакеты Кредитов", f5Body: "Постоянные кредиты (10, 25, 60 или 150) без срока годности.",
+                f6Title: "Конфиденциальность", f6Body: "Полный контроль с удалением аккаунта в 1 клик прямо в приложении.",
+                faqHeading: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ", faqSub: "Все о VIP-подписках и кредитах.",
+                q1: "Что такое VIP-подписка Parallis?", a1: "Дает неограниченные профили, отсутствие рекламы и приоритетный ИИ. Отмена в любое время.",
+                q2: "Как работают кредиты?", a2: "Кредиты не сгорают и позволяют создавать дополнительные ИИ-сцены.",
+                q3: "Как удалить аккаунт?", a3: "В приложении Профиль -> Удалить Аккаунт или на нашем сайте."
+            },
+            ar: {
+                navFeatures: "المميزات", navFaq: "الأسئلة الشائعة", navSupport: "الدعم الفني", navPrivacy: "سياسة الخصوصية", navTerms: "شروط الاستخدام", navDelete: "حذف الحساب",
+                btnDownload: "حمل التطبيق", heroBadge: "جيل جديد من محاكي الأحلام بالذكاء الاصطناعي",
+                heroTitle: "جسّد حياة الرفاهية بـ 8 لغات عالمية",
+                heroBody: "قم بتصميم شخصيات موازية وإنشاء صور ومقاطع فاخرة فائقة الواقعية باستخدام الذكاء الاصطناعي.",
+                ctaDownload: "تحميل من App Store", ctaSupport: "الدعم والمساعدة",
+                featuresHeading: "محرك محاكاة قوي جداً", featuresSub: "تجربة ذكاء اصطناعي مصممة خصيصاً لتحقيق طموحاتك.",
+                f1Title: "مخرج أسلوب الحياة", f1Body: "شرفات فاخرة، طائرات خاصة، وسيارات فارهة يتم إنشاؤها فورياً عبر fal.ai (Nano Banana 2 Lite).",
+                f2Title: "دعم 8 لغات عالمية", f2Body: "دعم كامل للعربية، الإنجليزية، التركية، الفرنسية، الألمانية، الإيطالية، الإسبانية، والروسية.",
+                f3Title: "اشتراكات VIP الفاخرة", f3Body: "وصول VIP أسبوعي وشهري عبر RevenueCat بدون إعلانات وبأولوية معالجة.",
+                f4Title: "حزم القصص ومواقع التواصل", f4Body: "نصوص سيناريوهات وبطاقات قصص مخصصة لإنستغرام وتيك توك.",
+                f5Title: "خزينة رصيد المحاكاة", f5Body: "باقات رصيد دائمة (10، 25، 60، أو 150) لا تنتهي صلاحيتها أبداً.",
+                f6Title: "خصوصية كاملة للأقسام", f6Body: "تحكم كامل ببياناتك مع إمكانية حذف الحساب بضغطة واحدة.",
+                faqHeading: "الأسئلة الأكثر تكراراً", faqSub: "كل ما تحتاج معرفته عن اشتراكات وباقات Parallis.",
+                q1: "ما هو اشتراك Parallis VIP؟", a1: "يمنحك بروفايلات غير محدودة، تجربة بدون إعلانات، وأولوية التوليد بالذكاء الاصطناعي. يمكن إلغاؤه في أي وقت.",
+                q2: "كيف تعمل باقات الرصيد؟", a2: "الباقات لا تنتهي صلاحيتها أبداً ويمكنك استخدامها لتوليد صور إضافية.",
+                q3: "كيف يمكنني حذف حسابي؟", a3: "من داخل التطبيق عبر الملف الشخصي -> حذف الحساب أو من صفحة حذف الحساب على الموقع."
+            }
+        };
+
+        function setLanguage(lang) {
+            const root = document.getElementById('html-root');
+            if (lang === 'ar') {
+                root.setAttribute('dir', 'rtl');
+            } else {
+                root.removeAttribute('dir');
+            }
+
+            document.getElementById('current-lang-code').innerText = lang.toUpperCase();
+
+            const dict = translations[lang] || translations.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerText = dict[key];
+                }
+            });
+
+            document.querySelectorAll('.lang-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            
+            closeLangMenu();
+        }
+
+        function toggleLangMenu() {
+            document.getElementById('lang-menu').classList.toggle('show');
+        }
+
+        function closeLangMenu() {
+            document.getElementById('lang-menu').classList.remove('show');
+        }
+
+        function toggleFaq(el) {
+            el.classList.toggle('active');
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.closest('.lang-dropdown')) {
+                closeLangMenu();
+            }
+        }
+    </script>
+</body>
+</html>

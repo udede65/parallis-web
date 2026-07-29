@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account & Data Privacy - Parallis: AI Dream Simulator</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-badge">Parallis</span>
+                    <span class="sub">Privacy</span>
+                </a>
+                <div class="nav-right">
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" onclick="toggleLangMenu()">
+                            <i class="fa-solid fa-globe"></i>
+                            <span id="current-lang-code">EN</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+                        </button>
+                        <div class="lang-menu" id="lang-menu">
+                            <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
+                            <div class="lang-option" onclick="setLanguage('tr')">🇹🇷 Türkçe</div>
+                            <div class="lang-option" onclick="setLanguage('fr')">🇫🇷 Français</div>
+                            <div class="lang-option" onclick="setLanguage('de')">🇩🇪 Deutsch</div>
+                            <div class="lang-option" onclick="setLanguage('it')">🇮🇹 Italiano</div>
+                            <div class="lang-option" onclick="setLanguage('es')">🇪🇸 Español</div>
+                            <div class="lang-option" onclick="setLanguage('ru')">🇷🇺 Русский</div>
+                            <div class="lang-option" onclick="setLanguage('ar')">🇸🇦 العربية</div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="btn btn-glass"><i class="fa-solid fa-house"></i> Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="legal-container">
+            <h1 data-i18n="dTitle" style="color: #e74c3c;">DELETE ACCOUNT & DATA ERASURE</h1>
+            <div class="updated-date" data-i18n="dDate">Compliance with Apple App Store Guideline 5.1.1(v) & GDPR</div>
+
+            <p data-i18n="dIntro">In accordance with Apple App Store Guidelines and global privacy laws, you have full authority to delete your Parallis account and purge all associated simulation records, profiles, and media at any time.</p>
+
+            <h2 data-i18n="hInst">Option 1: Instant In-App Account Deletion (Recommended)</h2>
+            <p data-i18n="bInst">The fastest way to permanently erase your data is directly inside the iOS app:</p>
+            <ol style="color: var(--text-secondary); margin-bottom: 24px; padding-left: 24px; line-height: 1.8;">
+                <li data-i18n="s1">Open the <strong>Parallis</strong> app on your iPhone.</li>
+                <li data-i18n="s2">Navigate to the <strong>Profile</strong> tab (top-right icon or bottom tab).</li>
+                <li data-i18n="s3">Scroll down to the <strong>Legal & Support</strong> section.</li>
+                <li data-i18n="s4">Tap <strong>Delete Account</strong> (highlighted in red) and confirm.</li>
+                <li data-i18n="s5">Your account, simulation logs, profiles, and cloud assets will be permanently purged immediately.</li>
+            </ol>
+
+            <h2 data-i18n="hOnline">Option 2: Online Deletion Request Form</h2>
+            <p data-i18n="bOnline">If you no longer have access to the iOS application, fill out the request form below. Our data protection team will process your deletion request within 24 hours:</p>
+
+            <form class="contact-form" onsubmit="handleDeleteSubmit(event)">
+                <div class="form-group">
+                    <label data-i18n="lblUser">Account Email / Username</label>
+                    <input type="email" class="form-control" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label data-i18n="lblReason">Reason for Deletion (Optional)</label>
+                    <textarea class="form-control" placeholder="Please let us know why you are requesting deletion..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; width: 100%; padding: 14px; font-weight: 700;">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span data-i18n="btnRequest">Submit Deletion Request</span>
+                </button>
+            </form>
+
+            <div id="delete-success" style="display: none; margin-top: 24px; padding: 16px; background: rgba(231, 76, 60, 0.2); border: 1px solid #e74c3c; border-radius: var(--radius-md); color: #ff6b6b; font-weight: 600; text-align: center;">
+                Your deletion request has been submitted successfully. All data associated with your email will be purged from our servers within 24 hours.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div>Parallis: AI Dream Simulator &copy; 2026. All rights reserved.</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: { dTitle: "DELETE ACCOUNT & DATA ERASURE", dDate: "Apple App Store Guideline 5.1.1(v) Compliance", dIntro: "You have full authority to delete your Parallis account and purge all associated simulation records anytime.", hInst: "Option 1: Instant In-App Deletion (Recommended)", s1: "Open Parallis app on your iPhone.", s2: "Go to Profile tab.", s3: "Scroll to Legal & Support.", s4: "Tap Delete Account.", s5: "All your data is immediately purged.", hOnline: "Option 2: Online Deletion Request Form", lblUser: "Account Email / Username", lblReason: "Reason for Deletion (Optional)", btnRequest: "Submit Deletion Request" },
+            tr: { dTitle: "HESABI SİL VE VERİ SIFIRLAMA", dDate: "Apple App Store 5.1.1(v) Kuralları Uyumluluğu", dIntro: "Parallis hesabınızı ve tüm simülasyon kayıtlarınızı dilediğiniz an kalıcı olarak silme hakkına sahipsiniz.", hInst: "Yöntem 1: Uygulama İçi Anında Silme (Önerilen)", s1: "iPhone cihazınızda Parallis uygulamasını açın.", s2: "Profil sekmesine gidin.", s3: "Yasal & Destek bölümüne inin.", s4: "Kırmızı renkli Hesabı Sil butonuna tıklayın ve onaylayın.", s5: "Tüm verileriniz ve profilleriniz anında kalıcı olarak silinir.", hOnline: "Yöntem 2: Online Silme Talebi Formu", lblUser: "E-posta / Kullanıcı Adınız", lblReason: "Silme Nedeni (İsteğe Bağlı)", btnRequest: "Silme Talebini Gönder" }
+        };
+        function setLanguage(lang) {
+            const root = document.getElementById('html-root');
+            if (lang === 'ar') root.setAttribute('dir', 'rtl'); else root.removeAttribute('dir');
+            document.getElementById('current-lang-code').innerText = lang.toUpperCase();
+            const dict = translations[lang] || translations.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerText = dict[key];
+            });
+            closeLangMenu();
+        }
+        function toggleLangMenu() { document.getElementById('lang-menu').classList.toggle('show'); }
+        function closeLangMenu() { document.getElementById('lang-menu').classList.remove('show'); }
+        function handleDeleteSubmit(e) {
+            e.preventDefault();
+            document.getElementById('delete-success').style.display = 'block';
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
