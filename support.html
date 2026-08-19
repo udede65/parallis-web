@@ -65,23 +65,29 @@
                 <h2 data-i18n="formTitle">SEND US A MESSAGE</h2>
             </div>
 
-            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <form class="contact-form" action="https://formsubmit.co/parallisapps@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="Yeni Destek Talebi - Parallis Web Sitesi">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://udede65.github.io/parallis-web/support.html?success=true">
+                
                 <div class="form-group">
                     <label data-i18n="lblEmail">Your Email Address</label>
-                    <input type="email" class="form-control" required placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control" required placeholder="name@example.com">
                 </div>
                 <div class="form-group">
                     <label data-i18n="lblSubject">Subject / Inquiry Type</label>
-                    <select class="form-control" required>
-                        <option value="subscription">VIP Subscription Help</option>
-                        <option value="credits">Credit Pack Inquiry</option>
-                        <option value="tech">Technical Issue</option>
-                        <option value="other">Other Inquiry</option>
+                    <select name="subject" class="form-control" required>
+                        <option value="VIP Subscription Help">VIP Subscription Help</option>
+                        <option value="Credit Pack Inquiry">Credit Pack Inquiry</option>
+                        <option value="Technical Issue">Technical Issue</option>
+                        <option value="Other Inquiry">Other Inquiry</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label data-i18n="lblMessage">Message Details</label>
-                    <textarea class="form-control" required placeholder="Describe your issue or feedback in detail..."></textarea>
+                    <textarea name="message" class="form-control" required placeholder="Describe your issue or feedback in detail..."></textarea>
                 </div>
                 <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px; font-size: 1rem;">
                     <i class="fa-solid fa-paper-plane"></i>
@@ -127,10 +133,10 @@
         }
         function toggleLangMenu() { document.getElementById('lang-menu').classList.toggle('show'); }
         function closeLangMenu() { document.getElementById('lang-menu').classList.remove('show'); }
-        function handleFormSubmit(e) {
-            e.preventDefault();
+        
+        // Show success alert on FormSubmit return
+        if (window.location.search.includes('success=true')) {
             document.getElementById('form-success').style.display = 'block';
-            e.target.reset();
         }
     </script>
 </body>
