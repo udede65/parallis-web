@@ -138,6 +138,15 @@
         if (window.location.search.includes('success=true')) {
             document.getElementById('form-success').style.display = 'block';
         }
+    
+        // Auto-detect language from URL query parameter (?lang=tr, ?lang=de, etc.)
+        window.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get("lang");
+            if (langParam) {
+                setLanguage(langParam.toLowerCase());
+            }
+        });
     </script>
 </body>
 </html>
