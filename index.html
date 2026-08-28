@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="tiktok-developers-site-verification" content="v9OdkHOTxzB3ZUgegV8G3WuGj8kKvDRr">
     <title>Parallis: AI Dream Simulator - Official Web Portal</title>
-    <meta name="description" content="Parallis: AI Dream Simulator - Curate your dream luxury lives, manifest visual vision boards with fal.ai, and experience AI lifestyle simulations in 8 languages.">
-    <link rel="stylesheet" href="style.css?v=4">
+    <meta name="description" content="Parallis: AI Dream Simulator - Manifest your parallel luxury life in 8K using fal.ai (Nano Banana 2 Lite), 528Hz quantum portal, and live city intelligence in 8 languages.">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- 528Hz Interactive Quantum Canvas Background -->
+    <canvas id="quantum-canvas"></canvas>
 
     <div class="bg-orb bg-orb-1"></div>
     <div class="bg-orb bg-orb-2"></div>
@@ -19,12 +22,15 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
+                    <img src="assets/images/app_icon.png" alt="Parallis Logo" class="logo-icon-img">
                     <span class="logo-badge">Parallis</span>
                     <span class="sub">VIP AI</span>
                 </a>
 
                 <ul class="nav-links">
+                    <li><a href="#showcase" data-i18n="navShowcase">8K Showcase</a></li>
                     <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+                    <li><a href="#experience" data-i18n="navExperience">Experience</a></li>
                     <li><a href="#faq" data-i18n="navFaq">FAQ</a></li>
                     <li><a href="support.html" data-i18n="navSupport">Support</a></li>
                     <li><a href="privacy.html" data-i18n="navPrivacy">Privacy</a></li>
@@ -34,10 +40,10 @@
                 <div class="nav-right">
                     <!-- 8 Language Switcher Dropdown -->
                     <div class="lang-dropdown">
-                        <button class="lang-btn" onclick="toggleLangMenu()">
+                        <button class="lang-btn" onclick="toggleLangMenu()" aria-label="Language Selector">
                             <i class="fa-solid fa-globe"></i>
                             <span id="current-lang-code">EN</span>
-                            <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 0.72rem;"></i>
                         </button>
                         <div class="lang-menu" id="lang-menu">
                             <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
@@ -65,20 +71,185 @@
         <div class="container">
             <div class="hero-badge">
                 <i class="fa-solid fa-sparkles"></i>
-                <span data-i18n="heroBadge">Next-Gen AI Dream Simulator</span>
+                <span data-i18n="heroBadge">Next-Gen AI Dream & Life Simulator</span>
             </div>
-            <h1 data-i18n="heroTitle">MANIFEST YOUR <span class="highlight">LUXURY LIFE</span> IN 8 LANGUAGES</h1>
-            <p data-i18n="heroBody">Design parallel identities, generate hyper-realistic luxury photo chronicles, and simulate high-net-worth visions with AI precision.</p>
             
-            <div class="hero-cta">
+            <h1>
+                <span data-i18n="heroTitlePrefix">MANIFEST YOUR</span> 
+                <span class="highlight" data-i18n="heroTitleHighlight">PARALLEL LUXURY LIFE</span> 
+                <span data-i18n="heroTitleSuffix">IN 8 LANGUAGES</span>
+            </h1>
+            
+            <p data-i18n="heroBody">
+                Step into your highest reality. Generate hyper-realistic 8K photo chronicles with fal.ai (Nano Banana 2 Lite), receive daily telegrams from your future self, and calibrate your frequency at 528Hz.
+            </p>
+            
+            <div class="hero-cta-group">
                 <a href="https://apps.apple.com/app/parallis/id6793040335" class="btn btn-gold" style="padding: 16px 36px; font-size: 1.1rem;">
                     <i class="fa-brands fa-apple" style="font-size: 1.4rem;"></i>
                     <span data-i18n="ctaDownload">Download on App Store</span>
                 </a>
-                <a href="support.html" class="btn btn-glass" style="padding: 16px 28px; font-size: 1.05rem;">
-                    <i class="fa-solid fa-headset"></i>
-                    <span data-i18n="ctaSupport">Help & Support</span>
+                <a href="#showcase" class="btn btn-glass" style="padding: 16px 28px; font-size: 1.05rem;">
+                    <i class="fa-solid fa-play"></i>
+                    <span data-i18n="ctaExplore">Explore 8K Showcase</span>
                 </a>
+            </div>
+
+            <div class="hero-specs">
+                <div class="spec-item">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>fal.ai (Nano Banana 2 Lite) 8K</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-solid fa-wave-square"></i>
+                    <span data-i18n="specFrequency">528Hz Quantum Calibration</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span data-i18n="specLanguages">8 Native Languages</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                    <span data-i18n="specLive">Live Tavily City Intelligence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive 8K AI Simulation Showcase -->
+    <section id="showcase" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="showcaseHeading">INTERACTIVE 8K SIMULATION GALLERY</h2>
+                <p data-i18n="showcaseSub">Switch between parallel archetypes and witness how fal.ai (Nano Banana 2 Lite) materializes your ultimate life visions.</p>
+            </div>
+
+            <!-- Showcase Tabs -->
+            <div class="showcase-tabs">
+                <button class="showcase-tab active" onclick="switchShowcase(0)">
+                    <i class="fa-solid fa-ship"></i>
+                    <span data-i18n="tabMonaco">Monaco Superyacht</span>
+                </button>
+                <button class="showcase-tab" onclick="switchShowcase(1)">
+                    <i class="fa-solid fa-building"></i>
+                    <span data-i18n="tabParis">Paris Penthouse</span>
+                </button>
+                <button class="showcase-tab" onclick="switchShowcase(2)">
+                    <i class="fa-solid fa-mountain"></i>
+                    <span data-i18n="tabSwiss">Swiss Alps Chalet</span>
+                </button>
+                <button class="showcase-tab" onclick="switchShowcase(3)">
+                    <i class="fa-solid fa-city"></i>
+                    <span data-i18n="tabTokyo">Tokyo Cyber Estate</span>
+                </button>
+                <button class="showcase-tab" onclick="switchShowcase(4)">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                    <span data-i18n="tabDubai">Dubai Sky Villa</span>
+                </button>
+            </div>
+
+            <!-- Showcase Display Card -->
+            <div class="showcase-display" id="showcase-display">
+                <div class="showcase-image-wrapper">
+                    <img id="showcase-img" src="assets/images/monaco_yacht.jpg" alt="8K Parallel Simulation">
+                    <div class="showcase-image-overlay"></div>
+                    <div class="showcase-badge-8k">
+                        <i class="fa-solid fa-gem"></i> 8K ULTRA-PHOTOREALISTIC
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <div class="showcase-tag" id="showcase-tag">
+                        <i class="fa-solid fa-location-dot"></i> <span>MONTE CARLO, MONACO</span>
+                    </div>
+                    <h3 id="showcase-title">Sunset Horizon on Private Superyacht</h3>
+                    <p id="showcase-desc">Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.</p>
+                    
+                    <div class="showcase-prompt-box">
+                        <div class="prompt-label">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span data-i18n="promptLabel">fal.ai (Nano Banana 2 Lite) Compiled Blueprint</span>
+                        </div>
+                        <div class="prompt-text" id="showcase-prompt">
+                            "8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."
+                        </div>
+                    </div>
+
+                    <a href="https://apps.apple.com/app/parallis/id6793040335" class="btn btn-gold" style="align-self: flex-start;">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        <span data-i18n="btnSimulateThis">Simulate This Reality</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & iPhone 16 Pro Mockup Section -->
+    <section id="experience" class="section" style="background: radial-gradient(circle at center, rgba(30, 20, 50, 0.45) 0%, transparent 70%);">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="expHeading">THE QUANTUM MANIFESTATION EXPERIENCE</h2>
+                <p data-i18n="expSub">Engineered with neuroscience, 528Hz solfeggio harmonics, and real-time generative AI intelligence.</p>
+            </div>
+
+            <div class="mockup-grid">
+                <!-- Left Details -->
+                <div class="mockup-info">
+                    <div class="glass-card" style="margin-bottom: 24px;">
+                        <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+                        <h3 data-i18n="exp1Title">528Hz Solfeggio Portal</h3>
+                        <p data-i18n="exp1Body">Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.</p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 24px;">
+                        <div class="card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <h3 data-i18n="exp2Title">Future Self Quantum Letters</h3>
+                        <p data-i18n="exp2Body">Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-vault"></i></div>
+                        <h3 data-i18n="exp3Title">Net Worth & Asset Portfolio</h3>
+                        <p data-i18n="exp3Body">Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.</p>
+                    </div>
+                </div>
+
+                <!-- Right iPhone 16 Pro Mockup Frame -->
+                <div class="mockup-phone">
+                    <div class="mockup-island"></div>
+                    <div class="mockup-screen">
+                        <div class="mockup-ui-card">
+                            <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold-light); letter-spacing: 1.5px; text-transform: uppercase;">
+                                QUANTUM FREQUENCY PORTAL
+                            </div>
+                            <div class="mockup-portal-orb"></div>
+                            <div style="font-size: 1.2rem; font-weight: 800; color: #FFFFFF; margin-top: 10px;">
+                                528 Hz
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+                                Miracle Tone & Reality Lock
+                            </div>
+                        </div>
+
+                        <div style="margin: 0 14px; background: rgba(255,255,255,0.05); border-radius: 16px; padding: 14px; border: 1px solid var(--border-gold);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--gold-light); font-weight: 700;">
+                                <span><i class="fa-solid fa-sun"></i> MORNING VIP BRIEFING</span>
+                                <span>LIVE</span>
+                            </div>
+                            <div style="font-size: 0.82rem; color: #FFFFFF; margin-top: 6px; line-height: 1.4;">
+                                "Your espresso is ready overlooking Monaco harbor. Major private equity deal on the table today, Visionary."
+                            </div>
+                        </div>
+
+                        <div style="margin: 10px 14px 0; background: rgba(0,0,0,0.5); border-radius: 16px; padding: 12px; border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--text-muted);">SIMULATED NET WORTH</div>
+                                <div style="font-size: 1.1rem; font-weight: 800; color: var(--gold-light);">$48,500,000</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-trend-up" style="color: #10B981; font-size: 1.2rem;"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -94,26 +265,26 @@
             <div class="bento-grid">
                 <div class="glass-card">
                     <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 data-i18n="f1Title">Lifestyle Director</h3>
-                    <p data-i18n="f1Body">Custom luxury templates, penthouse terraces, private jets, and supercars generated instantly using fal.ai (Nano Banana 2 Lite).</p>
+                    <h3 data-i18n="f1Title">fal.ai (Nano Banana 2 Lite) Engine</h3>
+                    <p data-i18n="f1Body">Instant 8K cinematic rendering for custom penthouses, superyachts, and luxury lifestyles with zero compromise on realism.</p>
                 </div>
 
                 <div class="glass-card">
                     <div class="card-icon"><i class="fa-solid fa-language"></i></div>
-                    <h3 data-i18n="f2Title">8-Language AI Engine</h3>
-                    <p data-i18n="f2Body">Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt compilation.</p>
+                    <h3 data-i18n="f2Title">8-Language AI Architecture</h3>
+                    <p data-i18n="f2Body">Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt synthesis.</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3 data-i18n="f3Title">Live Tavily City Intelligence</h3>
+                    <p data-i18n="f3Body">Real-time web grounding for chosen destinations. Experience live Michelin dining, galas, and hotspots synthesized daily.</p>
                 </div>
 
                 <div class="glass-card">
                     <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
-                    <h3 data-i18n="f3Title">VIP Subscriptions & Passes</h3>
-                    <p data-i18n="f3Body">Weekly and Monthly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.</p>
-                </div>
-
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h3 data-i18n="f4Title">Chronicles & Social Packs</h3>
-                    <p data-i18n="f4Body">Generate Instagram/TikTok story packs, reel scripts, and caption ideas tailored to your parallel identity.</p>
+                    <h3 data-i18n="f4Title">VIP Subscriptions & Passes</h3>
+                    <p data-i18n="f4Body">Weekly and Yearly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.</p>
                 </div>
 
                 <div class="glass-card">
@@ -124,7 +295,7 @@
 
                 <div class="glass-card">
                     <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 data-i18n="f6Title">Privacy First & Data Ownership</h3>
+                    <h3 data-i18n="f6Title">Privacy First & 1-Click Erasure</h3>
                     <p data-i18n="f6Body">Full control over your profiles and data with instant 1-click in-app account deletion anytime.</p>
                 </div>
             </div>
@@ -146,7 +317,7 @@
                         <i class="fa-solid fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer" data-i18n="a1">
-                        Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering, and exclusive luxury story text packs. Subscriptions auto-renew weekly or monthly and can be cancelled anytime via your Apple ID Settings.
+                        Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering with fal.ai (Nano Banana 2 Lite), and exclusive luxury story text packs. Subscriptions auto-renew weekly or yearly and can be cancelled anytime via your Apple ID Settings.
                     </div>
                 </div>
 
@@ -156,7 +327,7 @@
                         <i class="fa-solid fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer" data-i18n="a2">
-                        Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution AI vision scenes.
+                        Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution 8K AI vision scenes.
                     </div>
                 </div>
 
@@ -172,6 +343,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Desktop QR Code Scanner Widget -->
+    <div class="qr-floating-box" id="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://apps.apple.com/app/parallis/id6793040335" alt="App Store QR" class="qr-code-img">
+        <div class="qr-info">
+            <h4 data-i18n="qrHeading">Scan with iPhone</h4>
+            <p data-i18n="qrSub">Instant App Store Download</p>
+        </div>
+        <div class="qr-close" onclick="document.getElementById('qr-box').style.display='none'"><i class="fa-solid fa-xmark"></i></div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -191,166 +372,366 @@
         </div>
     </footer>
 
-    <!-- 8 Languages Translation System Script -->
+    <!-- Interactive Scripts & 8 Languages Matrix -->
     <script>
+        // Interactive 8K Showcase Data
+        const showcaseData = [
+            {
+                img: "assets/images/monaco_yacht.jpg",
+                tag: "MONTE CARLO, MONACO",
+                title: "Sunset Horizon on Private Superyacht",
+                desc: "Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.",
+                prompt: '"8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."'
+            },
+            {
+                img: "assets/images/paris_penthouse.jpg",
+                tag: "PARIS, FRANCE",
+                title: "Eiffel View Penthouse Terrace",
+                desc: "Waking up to panoramic Parisian rooftop horizons, custom marble fireplaces, and bespoke designer furniture.",
+                prompt: '"8k architectural masterpiece, luxury penthouse terrace overlooking Eiffel tower at dusk, warm ambient interior illumination, hyper-realistic fal.ai detail."'
+            },
+            {
+                img: "assets/images/swiss_chalet.jpg",
+                tag: "ZERMATT, SWITZERLAND",
+                title: "Matterhorn Peak Private Alpine Chalet",
+                desc: "Cozy wood-fired hearths, infinity hot tub overlooking snowy alpine peaks, and private ski-in helicopter hangar.",
+                prompt: '"8k photorealistic alpine estate in Zermatt, glowing glass architecture against snowy Matterhorn mountain, ultra-crisp atmospheric mist."'
+            },
+            {
+                img: "assets/images/tokyo_estate.jpg",
+                tag: "SHIBUYA, TOKYO",
+                title: "Cyberpunk Tech Founder Sky Suite",
+                desc: "Floor-to-ceiling glass looking down onto vibrant Tokyo neon lights, high-frequency quantum workstations, and minimalist bonsai zen gardens.",
+                prompt: '"8k futuristic penthouse in Tokyo skyline, neon reflections on wet glass, luxury minimalist billionaire interior, sharp Hasselblad color science."'
+            },
+            {
+                img: "assets/images/dubai_villa.jpg",
+                tag: "PALM JUMEIRAH, DUBAI",
+                title: "Ultra-Luxury Waterfront Sky Estate",
+                desc: "Private white sand coastline, cantilevered infinity pools, and rare supercar showroom built into the living pavilion.",
+                prompt: '"8k ultra-luxury Palm Jumeirah villa, crystal blue gulf waters, modern organic architecture, golden sun reflections, 100MP photorealism."'
+            }
+        ];
+
+        function switchShowcase(index) {
+            const tabs = document.querySelectorAll('.showcase-tab');
+            tabs.forEach((tab, i) => {
+                if (i === index) tab.classList.add('active');
+                else tab.classList.remove('active');
+            });
+
+            const data = showcaseData[index];
+            const imgEl = document.getElementById('showcase-img');
+            imgEl.style.opacity = '0';
+            setTimeout(() => {
+                imgEl.src = data.img;
+                document.getElementById('showcase-tag').innerHTML = `<i class="fa-solid fa-location-dot"></i> <span>${data.tag}</span>`;
+                document.getElementById('showcase-title').innerText = data.title;
+                document.getElementById('showcase-desc').innerText = data.desc;
+                document.getElementById('showcase-prompt').innerText = data.prompt;
+                imgEl.style.opacity = '1';
+            }, 200);
+        }
+
+        // 528Hz Interactive Quantum Canvas Animation
+        const canvas = document.getElementById('quantum-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class QuantumParticle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.6;
+                this.radius = Math.random() * 2 + 1;
+                this.alpha = Math.random() * 0.5 + 0.2;
+                this.color = Math.random() > 0.4 ? '212, 175, 55' : '147, 51, 234';
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = `rgba(${this.color}, 0.8)`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 45; i++) {
+            particles.push(new QuantumParticle());
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 130) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${0.15 * (1 - dist / 130)})`;
+                        ctx.lineWidth = 0.75;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // 8 Languages Dictionary
         const translations = {
             en: {
-                navFeatures: "Features", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
-                btnDownload: "Get App", heroBadge: "Next-Gen AI Dream Simulator",
-                heroTitle: "MANIFEST YOUR LUXURY LIFE IN 8 LANGUAGES",
-                heroBody: "Design parallel identities, generate hyper-realistic luxury photo chronicles, and simulate high-net-worth visions with AI precision.",
-                ctaDownload: "Download on App Store", ctaSupport: "Help & Support",
+                navShowcase: "8K Showcase", navFeatures: "Features", navExperience: "Experience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
+                btnDownload: "Get App", heroBadge: "Next-Gen AI Dream & Life Simulator",
+                heroTitlePrefix: "MANIFEST YOUR", heroTitleHighlight: "PARALLEL LUXURY LIFE", heroTitleSuffix: "IN 8 LANGUAGES",
+                heroBody: "Step into your highest reality. Generate hyper-realistic 8K photo chronicles with fal.ai (Nano Banana 2 Lite), receive daily telegrams from your future self, and calibrate your frequency at 528Hz.",
+                ctaDownload: "Download on App Store", ctaExplore: "Explore 8K Showcase",
+                specFrequency: "528Hz Quantum Calibration", specLanguages: "8 Native Languages", specLive: "Live Tavily City Intelligence",
+                showcaseHeading: "INTERACTIVE 8K SIMULATION GALLERY", showcaseSub: "Switch between parallel archetypes and witness how fal.ai (Nano Banana 2 Lite) materializes your ultimate life visions.",
+                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Swiss Alps Chalet", tabTokyo: "Tokyo Cyber Estate", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai (Nano Banana 2 Lite) Compiled Blueprint", btnSimulateThis: "Simulate This Reality",
+                expHeading: "THE QUANTUM MANIFESTATION EXPERIENCE", expSub: "Engineered with neuroscience, 528Hz solfeggio harmonics, and real-time generative AI intelligence.",
+                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.",
+                exp2Title: "Future Self Quantum Letters", exp2Body: "Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.",
+                exp3Title: "Net Worth & Asset Portfolio", exp3Body: "Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.",
                 featuresHeading: "POWERFUL SIMULATION ENGINE", featuresSub: "Experience state-of-the-art vision building tailored to your ultimate desires.",
-                f1Title: "Lifestyle Director", f1Body: "Custom luxury templates, penthouse terraces, private jets, and supercars generated instantly using fal.ai (Nano Banana 2 Lite).",
-                f2Title: "8-Language AI Engine", f2Body: "Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt compilation.",
-                f3Title: "VIP Subscriptions & Passes", f3Body: "Weekly and Monthly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.",
-                f4Title: "Chronicles & Social Packs", f4Body: "Generate Instagram/TikTok story packs, reel scripts, and caption ideas tailored to your parallel identity.",
+                f1Title: "fal.ai (Nano Banana 2 Lite) Engine", f1Body: "Instant 8K cinematic rendering for custom penthouses, superyachts, and luxury lifestyles with zero compromise on realism.",
+                f2Title: "8-Language AI Architecture", f2Body: "Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt synthesis.",
+                f3Title: "Live Tavily City Intelligence", f3Body: "Real-time web grounding for chosen destinations. Experience live Michelin dining, galas, and hotspots synthesized daily.",
+                f4Title: "VIP Subscriptions & Passes", f4Body: "Weekly and Yearly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.",
                 f5Title: "Simulation Credit Vault", f5Body: "Flexibility to top up 10, 25, 60, or 150 permanent simulation credits whenever you want extra visual generations.",
-                f6Title: "Privacy First & Data Ownership", f6Body: "Full control over your profiles and data with instant 1-click in-app account deletion anytime.",
+                f6Title: "Privacy First & 1-Click Erasure", f6Body: "Full control over your profiles and data with instant 1-click in-app account deletion anytime.",
                 faqHeading: "FREQUENTLY ASKED QUESTIONS", faqSub: "Everything you need to know about Parallis VIP Subscriptions and Simulation Credits.",
-                q1: "What is Parallis VIP Subscription?", a1: "Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering, and exclusive luxury story text packs. Subscriptions auto-renew weekly or monthly and can be cancelled anytime via your Apple ID Settings.",
-                q2: "How do Simulation Credit Packs work?", a2: "Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution AI vision scenes.",
-                q3: "How do I delete my account or data?", a3: "You can delete your account and all associated profiles instantly in the app under Profile -> Delete Account, or submit a request on our Delete Account web page."
+                q1: "What is Parallis VIP Subscription?", a1: "Parallis VIP unlocks unlimited simulation profiles, ad-free experience, priority AI rendering with fal.ai (Nano Banana 2 Lite), and exclusive luxury story text packs. Subscriptions auto-renew weekly or yearly and can be cancelled anytime via your Apple ID Settings.",
+                q2: "How do Simulation Credit Packs work?", a2: "Credit packs (10, 25, 60, or 150 credits) are consumable top-ups that never expire. You can use them anytime to produce extra high-resolution 8K AI vision scenes.",
+                q3: "How do I delete my account or data?", a3: "You can delete your account and all associated profiles instantly in the app under Profile -> Delete Account, or submit a request on our Delete Account web page.",
+                qrHeading: "Scan with iPhone", qrSub: "Instant App Store Download"
             },
             tr: {
-                navFeatures: "Özellikler", navFaq: "SSS", navSupport: "Destek", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
-                btnDownload: "Uygulamayı İndir", heroBadge: "Yeni Nesil AI Vizyon Simülatörü",
-                heroTitle: "HAYALİNİZDEKİ LÜKS HAYATI 8 DİLDE SİMÜLE EDİN",
-                heroBody: "Paralel hayat kimlikleri oluşturun, yüksek çözünürlüklü lüks görseller ve hikaye anlatımları üretin.",
-                ctaDownload: "App Store'dan İndirin", ctaSupport: "Destek ve İletişim",
+                navShowcase: "8K Vitrin", navFeatures: "Özellikler", navExperience: "Deneyim", navFaq: "SSS", navSupport: "Destek", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
+                btnDownload: "Uygulamayı İndir", heroBadge: "Yeni Nesil AI Vizyon & Hayat Simülatörü",
+                heroTitlePrefix: "HAYALİNİZDEKİ", heroTitleHighlight: "PARALEL LÜKS HAYATI", heroTitleSuffix: "8 DİLDE SİMÜLE EDİN",
+                heroBody: "En yüksek potansiyelinizin gerçekliğine adım atın. fal.ai (Nano Banana 2 Lite) ile 8K ultra-gerçekçi fotoğraf serileri üretin, gelecekteki benliğinizden günlük kuantum mektuplar alın ve zihninizi 528Hz frekansına kilitleyin.",
+                ctaDownload: "App Store'dan İndirin", ctaExplore: "8K Vitrini Keşfet",
+                specFrequency: "528Hz Kuantum Frekansı", specLanguages: "8 Anadil Desteği", specLive: "Canlı Tavily Şehir İstihbaratı",
+                showcaseHeading: "İNTERAKTİF 8K SİMÜLASYON GALERİSİ", showcaseSub: "Paralel arketipler arasında geçiş yapın ve fal.ai (Nano Banana 2 Lite) motorunun hayallerinizi nasıl 8K sinematik görselleştirdiğini canlı görün.",
+                tabMonaco: "Monako Süperyatı", tabParis: "Paris Penthouse", tabSwiss: "İsviçre Alpleri Şatosu", tabTokyo: "Tokyo Siber Rezidans", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai (Nano Banana 2 Lite) Derlenmiş İstem Mimarisi", btnSimulateThis: "Bu Hayatı Simüle Et",
+                expHeading: "KUANTUM TEZAHÜR DENEYİMİ", expSub: "Nörobilim, 528Hz solfeggio frekansları ve gerçek zamanlı üretken yapay zeka ile tasarlandı.",
+                exp1Title: "528Hz Kuantum Portalı", exp1Body: "Zihninizi dönüşüm, DNA onarımı ve kuantum paralel evren hizalanması frekansı olan 528Hz'e kilitleyin.",
+                exp2Title: "Gelecekten Kuantum Mektuplar", exp2Body: "2030'da zirveye ulaşmış paralel benliğinizin kaleminden her gün size özel yazılmış ilham verici mektuplar alın.",
+                exp3Title: "Lüks Varlık Kasası", exp3Body: "Simüle edilmiş lüks gayrimenkullerinizi, kişiye özel süper arabalarınızı ve özel jet filonuzu takip edin.",
                 featuresHeading: "GÜÇLÜ SİMÜLASYON MOTORU", featuresSub: "Arzuladığınız lüks yaşam standartlarına göre tasarlanmış yapay zeka deneyimi.",
-                f1Title: "Yaşam Yönetmeni", f1Body: "İstanbul Yalı Terası, özel yatlar ve lüks vizyonlar fal.ai (Nano Banana 2 Lite) motoru ile anında üretilir.",
-                f2Title: "8 Dilli Yapı", f2Body: "Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça akıllı dil derleme altyapısı.",
-                f3Title: "VIP Üyelik & Paketler", f3Body: "Haftalık ve Aylık VIP erişim ile sınırsız profil üretimi ve reklamsız yüksek öncelikli simülasyon.",
-                f4Title: "Hikaye & Sosyal Medya Paketleri", f4Body: "Instagram & TikTok uyumlu lansman metinleri, senaryolar ve görsel hikaye kartları.",
+                f1Title: "fal.ai (Nano Banana 2 Lite) Motoru", f1Body: "Monako süperyatları ve lüks penthouse sahneleri için sıfır kayıpla anında 8K sinematik görsel üretimi.",
+                f2Title: "8 Dilli AI Mimarisi", f2Body: "Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça akıllı istem sentezi.",
+                f3Title: "Canlı Tavily Şehir Zekası", f3Body: "Seçtiğiniz şehirler için gerçek zamanlı canlı web istihbaratı. Güncel Michelin restoranları ve VIP etkinlikler her gün hazır.",
+                f4Title: "VIP Üyelik & Paketler", f4Body: "Haftalık ve Yıllık VIP erişim ile sınırsız profil üretimi ve reklamsız yüksek öncelikli simülasyon.",
                 f5Title: "Kalıcı Kredi Haznesi", f5Body: "Süresi dolmayan 10, 25, 60 ve 150 ek simülasyon kredisi paketleri.",
-                f6Title: "Gizlilik & Veri Kontrolü", f6Body: "Tek tıkla hesabınızı ve tüm verilerinizi anında silme garantisi.",
+                f6Title: "Gizlilik & Tek Tıkla Silme", f6Body: "Tek tıkla hesabınızı ve tüm simülasyon verilerinizi anında kalıcı olarak silme hakkı.",
                 faqHeading: "SIKÇA SORULAN SORULAR", faqSub: "Parallis VIP üyeliği ve kredi paketleri hakkında merak edilenler.",
-                q1: "Parallis VIP Üyeliği Nedir?", a1: "Sınırsız profil üretimi, reklamsız deneyim ve öncelikli AI görsel üretim hakkı sağlar. Haftalık veya aylık olarak yenilenir, dilediğiniz an Apple ID ayarlarınızdan iptal edilebilir.",
-                q2: "Simülasyon Kredi Paketleri Nasıl Çalışır?", a2: "10, 25, 60 veya 150 kredilik paketler kalıcıdır, süresi dolmaz ve dilediğiniz zaman ekstra görsel üretimi yapmanızı sağlar.",
-                q3: "Hesabımı ve verilerimi nasıl silebilirim?", a3: "Uygulama içinde Profil -> Hesabı Sil butonundan veya web sitemizdeki Hesabı Sil sayfasından anında silebilirsiniz."
+                q1: "Parallis VIP Üyeliği Nedir?", a1: "Sınırsız profil üretimi, reklamsız deneyim ve fal.ai (Nano Banana 2 Lite) ile öncelikli 8K görsel üretim hakkı sağlar. Haftalık veya yıllık olarak yenilenir, dilediğiniz an Apple ID ayarlarınızdan iptal edilebilir.",
+                q2: "Simülasyon Kredi Paketleri Nasıl Çalışır?", a2: "10, 25, 60 veya 150 kredilik paketler kalıcıdır, süresi dolmaz ve dilediğiniz zaman ekstra 8K görsel üretimi yapmanızı sağlar.",
+                q3: "Hesabımı ve verilerimi nasıl silebilirim?", a3: "Uygulama içinde Profil -> Hesabı Sil butonundan veya web sitemizdeki Hesabı Sil sayfasından anında silebilirsiniz.",
+                qrHeading: "iPhone ile Tara", qrSub: "Anında App Store İndir"
             },
             fr: {
-                navFeatures: "Fonctionnalités", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
-                btnDownload: "Télécharger", heroBadge: "Simulateur IA Nouvelle Génération",
-                heroTitle: "CRÉEZ VOTRE VIE DE LUXE EN 8 LANGUES",
-                heroBody: "Concevez des identités parallèles, générez des visuels de luxe ultra-réalistes et simulez vos rêves avec l'IA.",
-                ctaDownload: "Sur l'App Store", ctaSupport: "Centre d'Aide",
+                navShowcase: "Galerie 8K", navFeatures: "Fonctionnalités", navExperience: "Expérience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
+                btnDownload: "Télécharger", heroBadge: "Simulateur de Vie et Rêves IA Nouvelle Génération",
+                heroTitlePrefix: "MANIFESTEZ VOTRE", heroTitleHighlight: "VIE DE LUXE PARALLÈLE", heroTitleSuffix: "EN 8 LANGUES",
+                heroBody: "Entrez dans votre réalité la plus élevée. Générez des chroniques photo 8K ultra-réalistes avec fal.ai (Nano Banana 2 Lite), recevez des télégrammes de votre futur moi et calibrez votre fréquence à 528Hz.",
+                ctaDownload: "Sur l'App Store", ctaExplore: "Explorer la Galerie 8K",
+                specFrequency: "Calibration 528Hz", specLanguages: "8 Langues Natives", specLive: "Intelligence Urbaine Tavily",
+                showcaseHeading: "GALERIE DE SIMULATION INTERACTIVE 8K", showcaseSub: "Basculez entre les archétypes et observez fal.ai (Nano Banana 2 Lite) matérialiser vos visions de luxe.",
+                tabMonaco: "Superyacht Monaco", tabParis: "Penthouse Paris", tabSwiss: "Chalet Alpes Suisses", tabTokyo: "Domaine Cyber Tokyo", tabDubai: "Villa Céleste Dubaï",
+                promptLabel: "Plan compilé fal.ai (Nano Banana 2 Lite)", btnSimulateThis: "Simuler cette réalité",
+                expHeading: "L'EXPÉRIENCE QUANTIQUE", expSub: "Conçu avec les neurosciences, les harmoniques 528Hz et l'IA générative en temps réel.",
+                exp1Title: "Portail Solfeggio 528Hz", exp1Body: "Ajustez votre esprit sur la fréquence de transformation et d'alignement quantique.",
+                exp2Title: "Lettres Quantiques du Futur", exp2Body: "Recevez chaque jour des messages inspirants écrits par votre futur moi accompli en 2030.",
+                exp3Title: "Coffre-fort d'Actifs & Patrimoine", exp3Body: "Suivez votre patrimoine simulé, vos supercars sur mesure et vos jets privés.",
                 featuresHeading: "MOTEUR DE SIMULATION PUISSANT", featuresSub: "Une expérience IA personnalisée conçue pour vos aspirations les plus élevées.",
-                f1Title: "Directeur de Style", f1Body: "Terrasses de luxe, jets privés et voitures de sport générés instantanément avec fal.ai (Nano Banana 2 Lite).",
-                f2Title: "Moteur IA 8 Langues", f2Body: "Support natif pour le français, l'anglais, le turc, l'allemand, l'italien, l'espagnol, le russe et l'arabe.",
-                f3Title: "Abonnements VIP", f3Body: "Accès VIP hebdomadaire et mensuel via RevenueCat sans publicité et avec rendu prioritaire.",
-                f4Title: "Pack Chroniques & Réseaux", f4Body: "Scripts Instagram/TikTok et packs d'histoires personnalisés pour votre profil virtuel.",
-                f5Title: "Réserve de Crédits", f5Body: "Recharges de 10, 25, 60 ou 150 crédits de simulation permanents.",
-                f6Title: "Protection des Données", f6Body: "Suppression définitive de votre compte et de vos données en 1 clic dans l'application.",
+                f1Title: "Moteur fal.ai (Nano Banana 2 Lite)", f1Body: "Rendu cinématographique instantané en 8K pour penthouses et yachts d'exception.",
+                f2Title: "Architecture IA en 8 Langues", f2Body: "Support natif pour le français, l'anglais, le turc, l'allemand, l'italien, l'espagnol, le russe et l'arabe.",
+                f3Title: "Intelligence Urbaine Tavily", f3Body: "Ancrage web en direct pour les meilleures tables et événements VIP dans votre ville choisie.",
+                f4Title: "Abonnements & Pass VIP", f4Body: "Accès VIP sans publicité via RevenueCat avec profils illimités et rendu prioritaire.",
+                f5Title: "Réserve de Crédits", f5Body: "Recharges permanentes de 10, 25, 60 ou 150 crédits de simulation.",
+                f6Title: "Confidentialité & Effacement 1-Clic", f6Body: "Contrôle absolu avec suppression définitive de votre compte et de vos données en 1 clic.",
                 faqHeading: "FOIRE AUX QUESTIONS", faqSub: "Tout sur les abonnements et crédits Parallis VIP.",
-                q1: "Qu'est-ce que l'Abonnement Parallis VIP?", a1: "Débloque des profils illimités, une expérience sans publicité et un rendu IA prioritaire. Annulable à tout moment.",
-                q2: "Comment fonctionnent les packs de crédits?", a2: "Les crédits ne périment jamais et vous permettent de produire des scènes IA supplémentaires.",
-                q3: "Comment supprimer mes données?", a3: "Accédez à Profil -> Supprimer le compte dans l'application ou visitez notre page dédiée."
+                q1: "Qu'est-ce que l'Abonnement Parallis VIP?", a1: "Débloque des profils illimités, une expérience sans publicité et un rendu 8K prioritaire avec fal.ai (Nano Banana 2 Lite).",
+                q2: "Comment fonctionnent les crédits?", a2: "Les crédits ne périment jamais et vous permettent de produire des scènes 8K supplémentaires.",
+                q3: "Comment supprimer mes données?", a3: "Accédez à Profil -> Supprimer le compte dans l'application ou sur notre page dédiée.",
+                qrHeading: "Scanner avec iPhone", qrSub: "Téléchargement App Store"
             },
             de: {
-                navFeatures: "Funktionen", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto Löschen",
-                btnDownload: "App Laden", heroBadge: "KI-Traumsimulator der nächsten Generation",
-                heroTitle: "MANIFESTIEREN SIE IHR LUXUSLEBEN IN 8 SPRACHEN",
-                heroBody: "Entwerfen Sie parallele Identitäten und generieren Sie hochauflösende Luxusvisualisierungen mit KI.",
-                ctaDownload: "Im App Store laden", ctaSupport: "Kundenservice",
-                featuresHeading: "LEISTUNGSSTARKE KI-SIMULATION", featuresSub: "Exklusive Visualisierungen für Ihre Träume.",
-                f1Title: "Lifestyle-Regisseur", f1Body: "Penthouse-Terrassen, Privatjets und Supercars sofort generiert mit fal.ai (Nano Banana 2 Lite).",
-                f2Title: "8-Sprachen-KI-Engine", f2Body: "Unterstützung für Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
-                f3Title: "VIP-Abonnements", f3Body: "Wöchentlicher und monatlicher VIP-Zugang über RevenueCat ohne Werbung.",
-                f4Title: "Chroniken & Story-Packs", f4Body: "Instagram- & TikTok-Skripte passend zu Ihrer virtuellen Identität.",
-                f5Title: "Guthaben-Tresor", f5Body: "Dauerhafte Guthabenpakete mit 10, 25, 60 oder 150 Credits.",
-                f6Title: "Datenschutz an erster Stelle", f6Body: "Volle Kontrolle mit sofortiger Löschung des Kontos in der App.",
-                faqHeading: "HÄUFIG GESTELLTE FRAGEN", faqSub: "Informationen zu VIP-Abonnements und Guthaben.",
-                q1: "Was ist das Parallis VIP-Abonnement?", a1: "Bietet unbegrenzte Profile, werbefreie Nutzung und Prioritäts-KI. Jederzeit kündbar.",
-                q2: "Wie funktionieren Guthabenpakete?", a2: "Guthaben verfallen nie und dienen der Erzeugung zusätzlicher Szenen.",
-                q3: "Wie lösche ich mein Konto?", a3: "In der App unter Profil -> Konto löschen oder über unsere Webseite."
+                navShowcase: "8K Galerie", navFeatures: "Funktionen", navExperience: "Erlebnis", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto löschen",
+                btnDownload: "App holen", heroBadge: "Next-Gen KI-Traum- und Lebenssimulator",
+                heroTitlePrefix: "MANIFESTIEREN SIE IHR", heroTitleHighlight: "PARALLELES LUXUSLEBEN", heroTitleSuffix: "IN 8 SPRACHEN",
+                heroBody: "Treten Sie in Ihre höchste Realität ein. Erstellen Sie ultrarealistische 8K-Fotochroniken mit fal.ai (Nano Banana 2 Lite), erhalten Sie Kuantum-Briefe von Ihrem zukünftigen Ich und kalibrieren Sie 528Hz.",
+                ctaDownload: "Im App Store laden", ctaExplore: "8K Galerie erkunden",
+                specFrequency: "528Hz Frequenz-Kalibrierung", specLanguages: "8 Muttersprachen", specLive: "Live Tavily City Intelligence",
+                showcaseHeading: "INTERAKTIVE 8K SIMULATIONSGALERIE", showcaseSub: "Wechseln Sie zwischen Archetypen und erleben Sie, wie fal.ai (Nano Banana 2 Lite) Ihre Träume materialisiert.",
+                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Schweizer Alpen Chalet", tabTokyo: "Tokio Cyber Anwesen", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai (Nano Banana 2 Lite) Prompt-Architektur", btnSimulateThis: "Diese Realität simulieren",
+                expHeading: "DAS QUANTEN-MANIFESTATIONS-ERLEBNIS", expSub: "Entwickelt mit Neurowissenschaften, 528Hz Frequenzen und generativer Echtzeit-KI.",
+                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Stimmen Sie Ihren Geist auf die Frequenz der Transformation und Realitätsausrichtung ein.",
+                exp2Title: "Quantenbriefe aus der Zukunft", exp2Body: "Erhalten Sie tägliche Botschaften, geschrieben aus der Sicht Ihres erfolgreichen Ichs im Jahr 2030.",
+                exp3Title: "Vermögens- und Asset-Tresor", exp3Body: "Verfolgen Sie Ihre simulierten Luxusimmobilien, Supersportwagen und Privatjets.",
+                featuresHeading: "LEISTUNGSSTARKE SIMULATIONS-ENGINE", featuresSub: "Maßgeschneidertes KI-Erlebnis für Ihre höchsten Lebensziele.",
+                f1Title: "fal.ai (Nano Banana 2 Lite) Engine", f1Body: "Sofortiges 8K-Rendering für Penthäuser und Yachten in atemberaubendem Fotorealismus.",
+                f2Title: "8-Sprachen KI-Architektur", f2Body: "Native Lokalisierung für Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
+                f3Title: "Live Tavily City Intelligence", f3Body: "Echtzeit-Web-Recherche für Spitzenrestaurants und VIP-Events in Ihrer gewählten Stadt.",
+                f4Title: "VIP-Abonnements & Pässe", f4Body: "Wöchentlicher und jährlicher VIP-Zugang über RevenueCat ohne Werbung mit Prioritäts-Rendering.",
+                f5Title: "Simulationsguthaben-Tresor", f5Body: "Dauerhafte Guthabenpakete mit 10, 25, 60 oder 150 Credits.",
+                f6Title: "Datenschutz & 1-Klick-Löschung", f6Body: "Volle Kontrolle mit sofortiger 1-Klick-Kontolöschung jederzeit in der App.",
+                faqHeading: "HÄUFIG GESTELLTE FRAGEN", faqSub: "Alles über Parallis VIP-Abonnements und Credits.",
+                q1: "Was ist das Parallis VIP-Abo?", a1: "Schaltet unbegrenzte Profile, werbefreie Nutzung und priorisiertes 8K-Rendering mit fal.ai (Nano Banana 2 Lite) frei.",
+                q2: "Wie funktionieren die Guthabenpakete?", a2: "Die Credits verfallen nie und ermöglichen die Generierung zusätzlicher 8K-Szenen.",
+                q3: "Wie lösche ich meine Daten?", a3: "Über Profil -> Konto löschen in der App oder auf unserer Website.",
+                qrHeading: "Mit iPhone scannen", qrSub: "Direkt im App Store laden"
             },
             it: {
-                navFeatures: "Caratteristiche", navFaq: "FAQ", navSupport: "Supporto", navPrivacy: "Privacy", navTerms: "Termini", navDelete: "Elimina Account",
-                btnDownload: "Scarica App", heroBadge: "Simulatore di Sogni IA di Nuova Generazione",
-                heroTitle: "CREA LA TUA VITA DI LUSSO IN 8 LINGUE",
-                heroBody: "Crea identità parallele e genera immagini di lusso iperrealistiche con l'IA.",
-                ctaDownload: "Scarica su App Store", ctaSupport: "Supporto",
-                featuresHeading: "MOTORE DI SIMULAZIONE", featuresSub: "Esperienza IA di lusso personalizzata per le tue aspirazioni.",
-                f1Title: "Regista dello Stile", f1Body: "Attici di lusso, jet privati e auto sportive generati all'istante con fal.ai (Nano Banana 2 Lite).",
-                f2Title: "IA in 8 Lingue", f2Body: "Localizzazione nativa per italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
-                f3Title: "Abbonamenti VIP", f3Body: "Accesso VIP settimanale e mensile via RevenueCat senza pubblicità.",
-                f4Title: "Cronache e Social Pack", f4Body: "Genera script e storie per Instagram e TikTok per il tuo profilo virtuale.",
-                f5Title: "Pacchetti Crediti", f5Body: "Crediti permanenti da 10, 25, 60 o 150 per simulazioni extra.",
-                f6Title: "Privacy e Controllo", f6Body: "Cancellazione immediata dell'account e dei dati con 1 clic dall'app.",
-                faqHeading: "DOMANDE FREQUENTI", faqSub: "Tutto sugli abbonamenti VIP e crediti.",
-                q1: "Cos'è l'Abbonamento Parallis VIP?", a1: "Sblocca profili illimitati, esperienza senza pubblicità e generazione IA prioritaria.",
-                q2: "Come funzionano i pacchetti crediti?", a2: "I crediti non scadono mai e ti permettono di generare altre immagini.",
-                q3: "Come elimino il mio account?", a3: "Dall'app su Profilo -> Elimina Account o tramite la nostra pagina web."
+                navShowcase: "Vetrina 8K", navFeatures: "Caratteristiche", navExperience: "Esperienza", navFaq: "FAQ", navSupport: "Supporto", navPrivacy: "Privacy", navTerms: "Termini", navDelete: "Elimina Account",
+                btnDownload: "Scarica App", heroBadge: "Simulatore di Vita e Sogni AI di Nuova Generazione",
+                heroTitlePrefix: "MANIFESTA LA TUA", heroTitleHighlight: "VITA DI LUSSO PARALLELA", heroTitleSuffix: "IN 8 LINGUE",
+                heroBody: "Entra nella tua realtà più elevata. Genera cronache fotografiche 8K con fal.ai (Nano Banana 2 Lite), ricevi lettere quantistiche dal tuo futuro e calibra a 528Hz.",
+                ctaDownload: "Scarica su App Store", ctaExplore: "Esplora Vetrina 8K",
+                specFrequency: "Calibrazione 528Hz", specLanguages: "8 Lingue Native", specLive: "Tavily City Intelligence",
+                showcaseHeading: "GALLERIA DI SIMULAZIONE INTERATTIVA 8K", showcaseSub: "Scegli tra gli archetipi e osserva come fal.ai (Nano Banana 2 Lite) materializza i tuoi sogni.",
+                tabMonaco: "Superyacht Monaco", tabParis: "Attico a Parigi", tabSwiss: "Chalet Alpi Svizzere", tabTokyo: "Tenuta Cyber Tokyo", tabDubai: "Sky Villa Dubai",
+                promptLabel: "Blueprint fal.ai (Nano Banana 2 Lite)", btnSimulateThis: "Simula Questa Realtà",
+                expHeading: "L'ESPERIENZA QUANTISTICA", expSub: "Progettato con neuroscienze, frequenze a 528Hz e intelligenza artificiale generativa in tempo reale.",
+                exp1Title: "Portale Solfeggio 528Hz", exp1Body: "Sintonizza la tua mente sulla frequenza della trasformazione e dell'allineamento quantistico.",
+                exp2Title: "Lettere Quantistiche dal Futuro", exp2Body: "Ricevi ogni giorno messaggi ispiratori scritti dalla prospettiva del tuo io realizzato nel 2030.",
+                exp3Title: "Vault Patrimoniale & Asset", exp3Body: "Monitora i tuoi immobili di lusso, le supercar esclusive e la tua flotta di jet privati.",
+                featuresHeading: "POTENTE MOTORE DI SIMULAZIONE", featuresSub: "Esperienza AI su misura per i tuoi desideri più elevati.",
+                f1Title: "Motore fal.ai (Nano Banana 2 Lite)", f1Body: "Rendering cinematografico 8K istantaneo per attici, yacht e lifestyle d'élite.",
+                f2Title: "Architettura AI in 8 Lingue", f2Body: "Localizzazione nativa per italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
+                f3Title: "Tavily City Intelligence", f3Body: "Informazioni in tempo reale su ristoranti stellati ed eventi VIP nella città selezionata.",
+                f4Title: "Abbonamenti & Pass VIP", f4Body: "Accesso VIP settimanale e annuale tramite RevenueCat senza pubblicità e con rendering prioritario.",
+                f5Title: "Vault dei Crediti", f5Body: "Ricariche permanenti di 10, 25, 60 o 150 crediti di simulazione.",
+                f6Title: "Privacy & Cancellazione in 1 Clic", f6Body: "Controllo assoluto con cancellazione immediata di account e dati in qualsiasi momento.",
+                faqHeading: "DOMANDE FREQUENTI", faqSub: "Tutto su abbonamenti e crediti Parallis VIP.",
+                q1: "Cos'è l'Abbonamento Parallis VIP?", a1: "Sblocca profili illimitati, esperienza senza pubblicità e rendering 8K prioritario con fal.ai (Nano Banana 2 Lite).",
+                q2: "Come funzionano i pacchetti di crediti?", a2: "I crediti non scadono mai e consentono di generare ulteriori scene 8K.",
+                q3: "Come posso eliminare i miei dati?", a3: "Dall'app tramite Profilo -> Elimina Account o tramite la nostra pagina web.",
+                qrHeading: "Scansiona con iPhone", qrSub: "Download su App Store"
             },
             es: {
-                navFeatures: "Características", navFaq: "Preguntas", navSupport: "Soporte", navPrivacy: "Privacidad", navTerms: "Términos", navDelete: "Eliminar Cuenta",
-                btnDownload: "Obtener App", heroBadge: "Simulador de Sueños IA de Última Generación",
-                heroTitle: "MANIFIESTA TU VIDA DE LUJO EN 8 IDIOMAS",
-                heroBody: "Diseña identidades paralelas y genera imágenes hiperrealistas de lujo con IA.",
-                ctaDownload: "Descargar en App Store", ctaSupport: "Centro de Ayuda",
-                featuresHeading: "POTENTE MOTOR DE SIMULACIÓN", featuresSub: "Experiencia IA de lujo adaptada a tus metas.",
-                f1Title: "Director de Estilo", f1Body: "Terrazas de lujo, jets privados y superdeportivos generados al instante con fal.ai (Nano Banana 2 Lite).",
-                f2Title: "Motor IA en 8 Idiomas", f2Body: "Soporte nativo para español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
-                f3Title: "Suscripciones VIP", f3Body: "Acceso VIP semanal y mensual vía RevenueCat sin anuncios.",
-                f4Title: "Historias y Redes", f4Body: "Scripts e ideas de publicaciones para Instagram y TikTok adaptados a tu identidad.",
-                f5Title: "Bóveda de Créditos", f5Body: "Paquetes de 10, 25, 60 o 150 créditos permanentes de simulación.",
-                f6Title: "Privacidad Garantizada", f6Body: "Control total con eliminación de cuenta en 1 clic dentro de la app.",
-                faqHeading: "PREGUNTAS FRECUENTES", faqSub: "Todo sobre suscripciones VIP y créditos.",
-                q1: "¿Qué es la Suscripción Parallis VIP?", a1: "Desbloquea perfiles ilimitados, uso sin anuncios y prioridad IA. Cancela cuando quieras.",
-                q2: "¿Cómo funcionan los paquetes de créditos?", a2: "Los créditos nunca caducan y sirven para producir escenas adicionales.",
-                q3: "¿Cómo elimino mi cuenta?", a3: "En la app en Perfil -> Eliminar Cuenta o desde nuestra página web."
+                navShowcase: "Galería 8K", navFeatures: "Características", navExperience: "Experiencia", navFaq: "FAQ", navSupport: "Soporte", navPrivacy: "Privacidad", navTerms: "Términos", navDelete: "Eliminar Cuenta",
+                btnDownload: "Obtener App", heroBadge: "Simulador de Sueños y Vida con IA de Última Generación",
+                heroTitlePrefix: "MANIFIESTA TU", heroTitleHighlight: "VIDA DE LUJO PARALELA", heroTitleSuffix: "EN 8 IDIOMAS",
+                heroBody: "Entra en tu realidad superior. Genera crónicas fotográficas en 8K con fal.ai (Nano Banana 2 Lite), recibe cartas de tu yo del futuro y calibra tu frecuencia en 528Hz.",
+                ctaDownload: "Descargar en App Store", ctaExplore: "Explorar Galería 8K",
+                specFrequency: "Calibración 528Hz", specLanguages: "8 Idiomas Nativos", specLive: "Inteligencia Urbana Tavily",
+                showcaseHeading: "GALERÍA DE SIMULACIÓN INTERACTIVA 8K", showcaseSub: "Alterna entre arquetipos y contempla cómo fal.ai (Nano Banana 2 Lite) materializa tus mayores anhelos.",
+                tabMonaco: "Superyate en Mónaco", tabParis: "Ático en París", tabSwiss: "Chalet Alpes Suizos", tabTokyo: "Finca Cíber Tokio", tabDubai: "Sky Villa Dubái",
+                promptLabel: "Estructura compilada fal.ai (Nano Banana 2 Lite)", btnSimulateThis: "Simular Esta Realidad",
+                expHeading: "LA EXPERIENCIA CUÁNTICA", expSub: "Diseñado con neurociencia, frecuencias de 528Hz e IA generativa en tiempo real.",
+                exp1Title: "Portal Solfeggio 528Hz", exp1Body: "Alinea tu mente con la frecuencia exacta de transformación y sincronización cuántica.",
+                exp2Title: "Cartas Cuánticas del Futuro", exp2Body: "Recibe mensajes inspiradores escritos desde la perspectiva de tu yo realizado en 2030.",
+                exp3Title: "Bóveda de Patrimonio y Activos", exp3Body: "Supervisa tus propiedades exclusivas, superdeportivos y flota de jets privados.",
+                featuresHeading: "POTENTE MOTOR DE SIMULACIÓN", featuresSub: "Experiencia de IA adaptada a tus aspiraciones de vida más altas.",
+                f1Title: "Motor fal.ai (Nano Banana 2 Lite)", f1Body: "Renderizado cinematográfico en 8K para áticos, yates y estilos de vida de lujo.",
+                f2Title: "Arquitectura IA en 8 Idiomas", f2Body: "Soporte nativo para español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
+                f3Title: "Inteligencia Urbana Tavily", f3Body: "Conexión web en vivo para conocer los restaurantes y eventos VIP de tu ciudad elegida.",
+                f4Title: "Suscripciones y Pases VIP", f4Body: "Acceso VIP semanal y anual vía RevenueCat sin anuncios y con renderizado prioritario.",
+                f5Title: "Bóveda de Créditos", f5Body: "Paquetes permanentes de 10, 25, 60 o 150 créditos sin caducidad.",
+                f6Title: "Privacidad y Borrado en 1 Clic", f6Body: "Control total con eliminación instantánea de tu cuenta y datos en cualquier momento.",
+                faqHeading: "PREGUNTAS FRECUENTES", faqSub: "Todo sobre suscripciones y créditos Parallis VIP.",
+                q1: "¿Qué es la Suscripción Parallis VIP?", a1: "Desbloquea perfiles ilimitados, sin anuncios y renderizado prioritario en 8K con fal.ai (Nano Banana 2 Lite).",
+                q2: "¿Cómo funcionan los créditos?", a2: "Los créditos nunca caducan y te permiten generar escenas 8K adicionales cuando quieras.",
+                q3: "¿Cómo elimino mis datos?", a3: "Desde la app en Perfil -> Eliminar Cuenta o en nuestra página web.",
+                qrHeading: "Escanear con iPhone", qrSub: "Descarga en App Store"
             },
             ru: {
-                navFeatures: "Функции", navFaq: "FAQ", navSupport: "Поддержка", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить Аккаунт",
-                btnDownload: "Скачать", heroBadge: "ИИ-Симулятор Мечты Нового Поколения",
-                heroTitle: "ВОПЛОЩАЙТЕ РОСКОШНУЮ ЖИЗНЬ НА 8 ЯЗЫКАХ",
-                heroBody: "Создавайте параллельные личности и генерируйте гиперреалистичные фото роскоши с ИИ.",
-                ctaDownload: "Скачать в App Store", ctaSupport: "Служба Поддержки",
-                featuresHeading: "МОЩНЫЙ ИИ-ДВИЖОК", featuresSub: "Премиальный уровень визуализации ваших желаний.",
-                f1Title: "Режиссер Стиля", f1Body: "Пентхаусы, частные джеты и суперкары генерируются мгновенно с fal.ai (Nano Banana 2 Lite).",
-                f2Title: "Поддержка 8 Языков", f2Body: "Родная локализация на русский, английский, турецкий, французский, немецкий, итальянский, испанский и арабский.",
-                f3Title: "VIP-Подписки", f3Body: "Еженедельный и ежемесячный VIP-доступ через RevenueCat без рекламы.",
-                f4Title: "Хроники и Соцсети", f4Body: "Сценарии и тексты для Instagram и TikTok для вашего виртуального профиля.",
-                f5Title: "Пакеты Кредитов", f5Body: "Постоянные кредиты (10, 25, 60 или 150) без срока годности.",
-                f6Title: "Конфиденциальность", f6Body: "Полный контроль с удалением аккаунта в 1 клик прямо в приложении.",
-                faqHeading: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ", faqSub: "Все о VIP-подписках и кредитах.",
-                q1: "Что такое VIP-подписка Parallis?", a1: "Дает неограниченные профили, отсутствие рекламы и приоритетный ИИ. Отмена в любое время.",
-                q2: "Как работают кредиты?", a2: "Кредиты не сгорают и позволяют создавать дополнительные ИИ-сцены.",
-                q3: "Как удалить аккаунт?", a3: "В приложении Профиль -> Удалить Аккаунт или на нашем сайте."
+                navShowcase: "8K Галерея", navFeatures: "Функции", navExperience: "Опыт", navFaq: "FAQ", navSupport: "Поддержка", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить аккаунт",
+                btnDownload: "Скачать App", heroBadge: "AI-симулятор мечты и параллельной жизни нового поколения",
+                heroTitlePrefix: "ВОПЛОТИТЕ СВОЮ", heroTitleHighlight: "ПАРАЛЛЕЛЬНУЮ РОСКОШНУЮ ЖИЗНЬ", heroTitleSuffix: "НА 8 ЯЗЫКАХ",
+                heroBody: "Шагните в свою высшую реальность. Создавайте ультрареалистичные 8K-фотохроники с fal.ai (Nano Banana 2 Lite), получайте квантовые письма от себя из будущего и настраивайтесь на 528 Гц.",
+                ctaDownload: "Скачать в App Store", ctaExplore: "Смотреть 8K галерею",
+                specFrequency: "Калибровка 528 Гц", specLanguages: "8 Языков", specLive: "Данные городов Tavily",
+                showcaseHeading: "ИНТЕРАКТИВНАЯ 8K ГАЛЕРЕЯ СИМУЛЯЦИЙ", showcaseSub: "Переключайтесь между архетипами и смотрите, как fal.ai (Nano Banana 2 Lite) материализует ваши мечты.",
+                tabMonaco: "Суперъяхта в Монако", tabParis: "Пентхаус в Париже", tabSwiss: "Шале в Альпах", tabTokyo: "Кибер-поместье в Токио", tabDubai: "Скай-вилла в Дубае",
+                promptLabel: "Промпт fal.ai (Nano Banana 2 Lite)", btnSimulateThis: "Симулировать эту жизнь",
+                expHeading: "КВАНТОВЫЙ ОПЫТ МАНИФЕСТАЦИИ", expSub: "Создан на стыке нейробиологии, частот 528 Гц и генеративного искусственного интеллекта.",
+                exp1Title: "Портал 528 Гц", exp1Body: "Настройте сознание на частоту трансформации и квантового выравнивания реальности.",
+                exp2Title: "Квантовые письма из будущего", exp2Body: "Получайте вдохновляющие послания, написанные от лица вашего успешного «я» из 2030 года.",
+                exp3Title: "Хранилище активов и капитала", exp3Body: "Отслеживайте элитную недвижимость, коллекционные суперкары и частные джеты.",
+                featuresHeading: "МОЩНЫЙ ДВИЖОК СИМУЛЯЦИИ", featuresSub: "Персонализированный AI-опыт для ваших самых грандиозных жизненных целей.",
+                f1Title: "Движок fal.ai (Nano Banana 2 Lite)", f1Body: "Мгновенный 8K-рендеринг пентхаусов, суперъяхт и эксклюзивного образа жизни.",
+                f2Title: "8-язычная AI-архитектура", f2Body: "Нативная поддержка русского, английского, турецкого, французского, немецкого, итальянского, испанского и арабского.",
+                f3Title: "Городской интеллект Tavily", f3Body: "Свежие данные о лучших ресторанах Michelin и VIP-событиях в выбранном городе.",
+                f4Title: "VIP-подписка и пассы", f4Body: "Еженедельный и годовой VIP-доступ через RevenueCat без рекламы с приоритетным рендерингом.",
+                f5Title: "Хранилище кредитов", f5Body: "Бессрочные пакеты на 10, 25, 60 или 150 кредитов для дополнительных генераций.",
+                f6Title: "Приватность и удаление в 1 клик", f6Body: "Полный контроль с мгновенным удалением аккаунта и данных прямо в приложении.",
+                faqHeading: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ", faqSub: "Всё о подписке и кредитах Parallis VIP.",
+                q1: "Что дает подписка Parallis VIP?", a1: "Неограниченное число профилей, отсутствие рекламы и приоритетный 8K-рендеринг с fal.ai (Nano Banana 2 Lite).",
+                q2: "Как работают кредиты?", a2: "Кредиты никогда не сгорают и позволяют создавать дополнительные 8K-изображения в любой момент.",
+                q3: "Как удалить свои данные?", a3: "В приложении через Профиль -> Удалить аккаунт или на странице нашего сайта.",
+                qrHeading: "Сканировать iPhone", qrSub: "Скачать в App Store"
             },
             ar: {
-                navFeatures: "المميزات", navFaq: "الأسئلة الشائعة", navSupport: "الدعم الفني", navPrivacy: "سياسة الخصوصية", navTerms: "شروط الاستخدام", navDelete: "حذف الحساب",
-                btnDownload: "حمل التطبيق", heroBadge: "جيل جديد من محاكي الأحلام بالذكاء الاصطناعي",
-                heroTitle: "جسّد حياة الرفاهية بـ 8 لغات عالمية",
-                heroBody: "قم بتصميم شخصيات موازية وإنشاء صور ومقاطع فاخرة فائقة الواقعية باستخدام الذكاء الاصطناعي.",
-                ctaDownload: "تحميل من App Store", ctaSupport: "الدعم والمساعدة",
-                featuresHeading: "محرك محاكاة قوي جداً", featuresSub: "تجربة ذكاء اصطناعي مصممة خصيصاً لتحقيق طموحاتك.",
-                f1Title: "مخرج أسلوب الحياة", f1Body: "شرفات فاخرة، طائرات خاصة، وسيارات فارهة يتم إنشاؤها فورياً عبر fal.ai (Nano Banana 2 Lite).",
-                f2Title: "دعم 8 لغات عالمية", f2Body: "دعم كامل للعربية، الإنجليزية، التركية، الفرنسية، الألمانية، الإيطالية، الإسبانية، والروسية.",
-                f3Title: "اشتراكات VIP الفاخرة", f3Body: "وصول VIP أسبوعي وشهري عبر RevenueCat بدون إعلانات وبأولوية معالجة.",
-                f4Title: "حزم القصص ومواقع التواصل", f4Body: "نصوص سيناريوهات وبطاقات قصص مخصصة لإنستغرام وتيك توك.",
-                f5Title: "خزينة رصيد المحاكاة", f5Body: "باقات رصيد دائمة (10، 25، 60، أو 150) لا تنتهي صلاحيتها أبداً.",
-                f6Title: "خصوصية كاملة للأقسام", f6Body: "تحكم كامل ببياناتك مع إمكانية حذف الحساب بضغطة واحدة.",
-                faqHeading: "الأسئلة الأكثر تكراراً", faqSub: "كل ما تحتاج معرفته عن اشتراكات وباقات Parallis.",
-                q1: "ما هو اشتراك Parallis VIP؟", a1: "يمنحك بروفايلات غير محدودة، تجربة بدون إعلانات، وأولوية التوليد بالذكاء الاصطناعي. يمكن إلغاؤه في أي وقت.",
-                q2: "كيف تعمل باقات الرصيد؟", a2: "الباقات لا تنتهي صلاحيتها أبداً ويمكنك استخدامها لتوليد صور إضافية.",
-                q3: "كيف يمكنني حذف حسابي؟", a3: "من داخل التطبيق عبر الملف الشخصي -> حذف الحساب أو من صفحة حذف الحساب على الموقع."
+                navShowcase: "معرض 8K", navFeatures: "المميزات", navExperience: "التجربة", navFaq: "الأسئلة الشائعة", navSupport: "الدعم", navPrivacy: "الخصوصية", navTerms: "الشروط", navDelete: "حذف الحساب",
+                btnDownload: "تحميل التطبيق", heroBadge: "الجيل الجديد من محاكي الأحلام والحياة بالذكاء الاصطناعي",
+                heroTitlePrefix: "حقق واقعك في", heroTitleHighlight: "حياة الرفاهية الموازية", heroTitleSuffix: "بـ 8 لغات",
+                heroBody: "ادخل إلى أسمى واقع لك. أنشئ صوراً وسيناريوهات فائقة الدقة بدقة 8K باستخدام fal.ai (Nano Banana 2 Lite)، وتلقَّ رسائل كمومية من ذاتك المستقبلية، واضبط ترددك على 528 هرتز.",
+                ctaDownload: "تحميل من App Store", ctaExplore: "استكشف معرض 8K",
+                specFrequency: "معايرة تردد 528 هرتز", specLanguages: "8 لغات أصلية", specLive: "ذكاء المدن المباشر Tavily",
+                showcaseHeading: "معرض المحاكاة التفاعلي بدقة 8K", showcaseSub: "تنقل بين الأنماط وشاهد كيف يجسد محرك fal.ai (Nano Banana 2 Lite) رؤى حياتك الفاخرة.",
+                tabMonaco: "يخت موناكو الفاخر", tabParis: "بنتهاوس باريس", tabSwiss: "شاليه جبال الألب السويسرية", tabTokyo: "قصر طوكيو السيبراني", tabDubai: "فيلا دبي السماوية",
+                promptLabel: "مخطط الأوامر المجمّع لـ fal.ai (Nano Banana 2 Lite)", btnSimulateThis: "محاكاة هذا الواقع",
+                expHeading: "تجربة التجلي الكمومي", expSub: "مصممة بعلوم الأعصاب وترددات 528 هرتز والذكاء الاصطناعي التوليدي الفوري.",
+                exp1Title: "بوابة تردد 528 هرتز", exp1Body: "اضبط ذهنك على التردد الدقيق المرتبط بالتحول وإعادة المحاذاة الكمومية للواقع.",
+                exp2Title: "رسائل كمومية من المستقبل", exp2Body: "احصل يومياً على رسائل ملهمة مكتوبة من منظور ذاتك المحققة لأهدافها في عام 2030.",
+                exp3Title: "خزينة الأصول وصافي الثروة", exp3Body: "تتبع عقاراتك الفارهة، وسياراتك الخارقة، وأسطول طائراتك الخاصة.",
+                featuresHeading: "محرك محاكاة فائق القوة", featuresSub: "تجربة ذكاء اصطناعي مصممة خصيصاً لأرقى تطلعاتك في الحياة.",
+                f1Title: "محرك fal.ai (Nano Banana 2 Lite)", f1Body: "توليد سينمائي فوري بدقة 8K لليخوت والبنتهاوس الفاخر بأعلى معايير الواقعية.",
+                f2Title: "بنية ذكاء اصطناعي بـ 8 لغات", f2Body: "دعم أصلي للعربية، والإنجليزية، والتركية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والروسية.",
+                f3Title: "ذكاء المدن المباشر Tavily", f3Body: "استكشاف مباشر لأرقى المطاعم والفعاليات الحصرية في مدينتك المختارة يومياً.",
+                f4Title: "اشتراكات وباقات VIP", f4Body: "وصول VIP أسبوعي وسنوي عبر RevenueCat بدون إعلانات مع أولوية المعالجة.",
+                f5Title: "خزينة أرصدة المحاكاة", f5Body: "باقات رصيد دائمة (10، 25، 60، أو 150) لا تنتهي صلاحيتها أبداً.",
+                f6Title: "الخصوصية والحذف بنقرة واحدة", f6Body: "تحكم كامل مع إمكانية حذف حسابك وبياناتك فورياً في أي وقت داخل التطبيق.",
+                faqHeading: "الأسئلة الشائعة", faqSub: "كل ما تحتاج معرفته عن باقات واشتراكات Parallis VIP.",
+                q1: "ما هو اشتراك Parallis VIP؟", a1: "يفتح لك ملفات غير محدودة وتجربة خالية من الإعلانات وتوليد 8K بأولوية فائقة مع fal.ai (Nano Banana 2 Lite).",
+                q2: "كيف تعمل باقات الرصيد؟", a2: "أرصدة المحاكاة لا تنتهي صلاحيتها وتتيح لك إنشاء مشاهد 8K إضافية في أي وقت.",
+                q3: "كيف يمكنني حذف بياناتي؟", a3: "من داخل التطبيق عبر الملف الشخصي -> حذف الحساب أو عبر صفحة الويب المخصصة.",
+                qrHeading: "امسح باستخدام iPhone", qrSub: "تحميل فوري من App Store"
             }
         };
 
         function setLanguage(lang) {
-            const root = document.getElementById('html-root');
+            const htmlRoot = document.getElementById('html-root');
+            htmlRoot.setAttribute('lang', lang);
+            
             if (lang === 'ar') {
-                root.setAttribute('dir', 'rtl');
+                htmlRoot.setAttribute('dir', 'rtl');
             } else {
-                root.removeAttribute('dir');
+                htmlRoot.removeAttribute('dir');
             }
 
             document.getElementById('current-lang-code').innerText = lang.toUpperCase();
 
-            const dict = translations[lang] || translations.en;
+            const dict = translations[lang] || translations['en'];
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
@@ -358,38 +739,38 @@
                 }
             });
 
-            document.querySelectorAll('.lang-option').forEach(opt => {
-                opt.classList.remove('active');
-            });
-            
+            // Persist language choice
+            localStorage.setItem('parallis_lang', lang);
             closeLangMenu();
         }
 
         function toggleLangMenu() {
-            document.getElementById('lang-menu').classList.toggle('show');
+            const menu = document.getElementById('lang-menu');
+            menu.classList.toggle('show');
         }
 
         function closeLangMenu() {
-            document.getElementById('lang-menu').classList.remove('show');
+            const menu = document.getElementById('lang-menu');
+            menu.classList.remove('show');
         }
 
-        function toggleFaq(el) {
-            el.classList.toggle('active');
-        }
-
-        window.onclick = function(e) {
+        window.addEventListener('click', (e) => {
             if (!e.target.closest('.lang-dropdown')) {
                 closeLangMenu();
             }
+        });
+
+        function toggleFaq(item) {
+            item.classList.toggle('active');
         }
-    
-        // Auto-detect language from URL query parameter (?lang=tr, ?lang=de, etc.)
-        window.addEventListener("DOMContentLoaded", () => {
+
+        // Initialize language from URL query or localStorage
+        window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const langParam = urlParams.get("lang");
-            if (langParam) {
-                setLanguage(langParam.toLowerCase());
-            }
+            const queryLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('parallis_lang') || navigator.language.slice(0,2) || 'en';
+            const initialLang = queryLang || (translations[savedLang] ? savedLang : 'en');
+            setLanguage(initialLang);
         });
     </script>
 </body>
