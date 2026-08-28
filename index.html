@@ -33,8 +33,6 @@
                     <li><a href="#experience" data-i18n="navExperience">Experience</a></li>
                     <li><a href="#faq" data-i18n="navFaq">FAQ</a></li>
                     <li><a href="support.html" data-i18n="navSupport">Support</a></li>
-                    <li><a href="privacy.html" data-i18n="navPrivacy">Privacy</a></li>
-                    <li><a href="terms.html" data-i18n="navTerms">Terms</a></li>
                 </ul>
 
                 <div class="nav-right">
@@ -374,53 +372,324 @@
 
     <!-- Interactive Scripts & 8 Languages Matrix -->
     <script>
-        // Interactive 8K Showcase Data
-        const showcaseData = [
-            {
-                img: "assets/images/monaco_yacht.jpg",
-                tag: "MONTE CARLO, MONACO",
-                title: "Sunset Horizon on Private Superyacht",
-                desc: "Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.",
-                prompt: '"8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."'
-            },
-            {
-                img: "assets/images/paris_penthouse.jpg",
-                tag: "PARIS, FRANCE",
-                title: "Eiffel View Penthouse Terrace",
-                desc: "Waking up to panoramic Parisian rooftop horizons, custom marble fireplaces, and bespoke designer furniture.",
-                prompt: '"8k architectural masterpiece, luxury penthouse terrace overlooking Eiffel tower at dusk, warm ambient interior illumination, hyper-realistic fal.ai detail."'
-            },
-            {
-                img: "assets/images/swiss_chalet.jpg",
-                tag: "ZERMATT, SWITZERLAND",
-                title: "Matterhorn Peak Private Alpine Chalet",
-                desc: "Cozy wood-fired hearths, infinity hot tub overlooking snowy alpine peaks, and private ski-in helicopter hangar.",
-                prompt: '"8k photorealistic alpine estate in Zermatt, glowing glass architecture against snowy Matterhorn mountain, ultra-crisp atmospheric mist."'
-            },
-            {
-                img: "assets/images/tokyo_estate.jpg",
-                tag: "SHIBUYA, TOKYO",
-                title: "Cyberpunk Tech Founder Sky Suite",
-                desc: "Floor-to-ceiling glass looking down onto vibrant Tokyo neon lights, high-frequency quantum workstations, and minimalist bonsai zen gardens.",
-                prompt: '"8k futuristic penthouse in Tokyo skyline, neon reflections on wet glass, luxury minimalist billionaire interior, sharp Hasselblad color science."'
-            },
-            {
-                img: "assets/images/dubai_villa.jpg",
-                tag: "PALM JUMEIRAH, DUBAI",
-                title: "Ultra-Luxury Waterfront Sky Estate",
-                desc: "Private white sand coastline, cantilevered infinity pools, and rare supercar showroom built into the living pavilion.",
-                prompt: '"8k ultra-luxury Palm Jumeirah villa, crystal blue gulf waters, modern organic architecture, golden sun reflections, 100MP photorealism."'
-            }
-        ];
+        // Localized 8K Showcase Data across 8 Languages
+        const localizedShowcase = {
+            en: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MONACO",
+                    title: "Sunset Horizon on Private Superyacht",
+                    desc: "Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.",
+                    prompt: '"8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARIS, FRANCE",
+                    title: "Eiffel View Penthouse Terrace",
+                    desc: "Waking up to panoramic Parisian rooftop horizons, custom marble fireplaces, and bespoke designer furniture.",
+                    prompt: '"8k architectural masterpiece, luxury penthouse terrace overlooking Eiffel tower at dusk, warm ambient interior illumination, hyper-realistic fal.ai detail."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, SWITZERLAND",
+                    title: "Matterhorn Peak Private Alpine Chalet",
+                    desc: "Cozy wood-fired hearths, infinity hot tub overlooking snowy alpine peaks, and private ski-in helicopter hangar.",
+                    prompt: '"8k photorealistic alpine estate in Zermatt, glowing glass architecture against snowy Matterhorn mountain, ultra-crisp atmospheric mist."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKYO",
+                    title: "Cyberpunk Tech Founder Sky Suite",
+                    desc: "Floor-to-ceiling glass looking down onto vibrant Tokyo neon lights, high-frequency quantum workstations, and minimalist bonsai zen gardens.",
+                    prompt: '"8k futuristic penthouse in Tokyo skyline, neon reflections on wet glass, luxury minimalist billionaire interior, sharp Hasselblad color science."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBAI",
+                    title: "Ultra-Luxury Waterfront Sky Estate",
+                    desc: "Private white sand coastline, cantilevered infinity pools, and rare supercar showroom built into the living pavilion.",
+                    prompt: '"8k ultra-luxury Palm Jumeirah villa, crystal blue gulf waters, modern organic architecture, golden sun reflections, 100MP photorealism."'
+                }
+            ],
+            tr: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MONAKO",
+                    title: "Özel Süperyatta Gün Batımı Seyri",
+                    desc: "Akdeniz sularında özel helikopter pisti, şampanya servisi ve titanyum işçilikle donatılmış lüks süperyat yolculuğu.",
+                    prompt: '"8k ultra-sinematik fotoğraf, Monako limanında 95 metrelik özel süperyat, altın saat gün batımı ışığı, fal.ai (Nano Banana 2 Lite) kusursuzluğu."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARİS, FRANSA",
+                    title: "Eyfel Manzaralı Çatı Katı Terası",
+                    desc: "Paris silüetine uyanan panoramik çatı katı, özel mermer şömineler ve kişiye özel tasarım mobilyalar.",
+                    prompt: '"8k mimari şaheser, gün batımında Eyfel kulesine bakan lüks penthouse terası, sıcak iç aydınlatma, fal.ai ultra detay."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, İSVİÇRE",
+                    title: "Matterhorn Zirvesi Özel Alpler Şatosu",
+                    desc: "Karlı zirvelere bakan sonsuzluk jakuzisi, sıcak şömine salonu ve helikopter iniş pistli özel kış köşkü.",
+                    prompt: '"8k foto-gerçekçi Zermatt dağ köşkü, karlı Matterhorn dağı manzaralı parıldayan cam mimari, kristal berraklık."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKYO",
+                    title: "Teknoloji Lideri Siber Rezidansı",
+                    desc: "Tokyo neon ışıklarına bakan cam kule, yüksek frekanslı çalışma istasyonları ve minimalist zen bahçeleri.",
+                    prompt: '"8k fütüristik Tokyo penthouse dairesi, ıslak camda neon yansımaları, lüks minimalist milyarder iç mekanı."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBAİ",
+                    title: "Sahil Kıyısında Ultra-Lüks Sky Villa",
+                    desc: "Özel beyaz kum sahili, cam tabanlı sonsuzluk havuzları ve salona entegre süper araba vitrini.",
+                    prompt: '"8k ultra-lüks Palm Jumeirah villası, berrak turkuaz körfez suları, modern organik mimari, 100MP netlik."'
+                }
+            ],
+            fr: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MONACO",
+                    title: "Coucher de Soleil sur Superyacht Privé",
+                    desc: "Navigation en Méditerranée avec héliport privé, service de champagne et finitions en titane sur mesure.",
+                    prompt: '"8k photographie ultra-cinématographique, superyacht de 95 m dans le port de Monaco, lumière dorée au coucher du soleil."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARIS, FRANCE",
+                    title: "Terrasse Penthouse Vue Tour Eiffel",
+                    desc: "Réveil face aux toits de Paris, cheminées en marbre et mobilier design d'exception.",
+                    prompt: '"8k chef-d'œuvre architectural, terrasse penthouse de luxe dominant la tour Eiffel au crépuscule, détails fal.ai."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, SUISSE",
+                    title: "Chalet Alpin Privé au Mont Cervin",
+                    desc: "Jacuzzi à débordement face aux sommets enneigés, feu de bois chaleureux et héliport privé.",
+                    prompt: '"8k domaine alpin photoréaliste à Zermatt, architecture de verre scintillante devant le mont Cervin."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKYO",
+                    title: "Sky Suite Fondateur Cyberpunk",
+                    desc: "Baies vitrées panoramiques sur les néons de Tokyo, stations quantiques et jardins zen minimalistes.",
+                    prompt: '"8k penthouse futuriste à Tokyo, reflets néon sur verre mouillé, design intérieur milliardaire ultra-épuré."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBAÏ",
+                    title: "Domaine Céleste Ultra-Luxe en Front de Mer",
+                    desc: "Plage privée de sable blanc, piscines à débordement suspendues et showroom pour supercars intégré.",
+                    prompt: '"8k villa ultra-luxe Palm Jumeirah, eaux turquoise cristallines, architecture organique moderne."'
+                }
+            ],
+            de: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MONACO",
+                    title: "Sonnenuntergang auf Privater Superyacht",
+                    desc: "Kreuzfahrt im Mittelmeer mit Champagnerservice, Hubschrauberlandeplatz und maßgefertigten Titan-Details.",
+                    prompt: '"8k ultra-kinematische Fotografie, 95-Meter-Superyacht im Hafen von Monaco, goldenes Abendlicht."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARIS, FRANKREICH",
+                    title: "Penthouse-Terrasse mit Eiffelturmblick",
+                    desc: "Aufwachen mit Panoramablick über die Dächer von Paris, Marmorkaminen und exklusiven Designermöbeln.",
+                    prompt: '"8k architektonisches Meisterwerk, Luxus-Penthouse mit Blick auf den Eiffelturm in der Dämmerung."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, SCHWEIZ",
+                    title: "Privates Alpenchalet am Matterhorn",
+                    desc: "Infinity-Whirlpool mit Blick auf verschneite Alpengipfel, offener Kamin und privater Helikopterhangar.",
+                    prompt: '"8k fotorealistisches Alpenanwesen in Zermatt, leuchtende Glasarchitektur vor dem verschneiten Matterhorn."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKIO",
+                    title: "Cyberpunk Tech-Gründer Sky Suite",
+                    desc: "Bodentiefe Fenster mit Blick auf die Neonlichter Tokios, Quanten-Workstations und minimalistische Zen-Gärten.",
+                    prompt: '"8k futuristisches Penthouse in der Skyline von Tokio, Neonreflexionen auf nassem Glas, Milliardärs-Interieur."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBAI",
+                    title: "Ultra-Luxus Sky-Anwesen am Wasser",
+                    desc: "Privater weißer Sandstrand, freitragende Infinity-Pools und integrierter Supersportwagen-Showroom.",
+                    prompt: '"8k Ultra-Luxus-Villa auf Palm Jumeirah, kristallklares Wasser, moderne organische Architektur."'
+                }
+            ],
+            it: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MONACO",
+                    title: "Tramonto su Superyacht Privato",
+                    desc: "Navigazione nel Mediterraneo con servizio champagne, eliporto privato e dettagli in titanio su misura.",
+                    prompt: '"8k fotografia ultra-cinematografica, superyacht di 95 metri nel porto di Monaco, luce dorata del tramonto."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARIGI, FRANCIA",
+                    title: "Terrazza Attico Vista Torre Eiffel",
+                    desc: "Risveglio con vista panoramica sui tetti parigini, caminetti in marmo e arredi firmati su misura.",
+                    prompt: '"8k capolavoro architettonico, terrazza attico di lusso affacciata sulla Torre Eiffel al crepuscolo."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, SVIZZERA",
+                    title: "Chalet Alpino Privato al Cervino",
+                    desc: "Idromassaggio a sfioro sulle vette innevate, camino a legna e hangar privato per elicotteri.",
+                    prompt: '"8k tenuta alpina fotorealistica a Zermatt, architettura in vetro scintillante davanti al Cervino."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKYO",
+                    title: "Sky Suite Cyberpunk Tech Founder",
+                    desc: "Vetri a tutta altezza sulle luci al neon di Tokyo, postazioni quantistiche e giardini zen minimalisti.",
+                    prompt: '"8k attico futuristico nello skyline di Tokyo, riflessi al neon su vetro bagnato, interni d'élite."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBAI",
+                    title: "Tenuta Sky Ultra-Lusso Fronte Mare",
+                    desc: "Spiaggia privata di sabbia bianca, piscine a sfioro a sbalzo e showroom per supercar integrato.",
+                    prompt: '"8k villa ultra-lusso Palm Jumeirah, acque cristalline del golfo, architettura organica moderna."'
+                }
+            ],
+            es: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "MONTE CARLO, MÓNACO",
+                    title: "Atardecer en Superyate Privado",
+                    desc: "Navegación por el Mediterráneo con servicio de champán, helipuerto privado y acabados de titanio personalizados.",
+                    prompt: '"8k fotografía ultra-cinematográfica, superyate de 95m en el puerto de Mónaco, luz dorada al atardecer."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "PARÍS, FRANCIA",
+                    title: "Terraza Ático con Vista a la Torre Eiffel",
+                    desc: "Amanecer con vistas panorámicas a los tejados parisinos, chimeneas de mármol y muebles de diseño exclusivo.",
+                    prompt: '"8k obra maestra arquitectónica, terraza de ático de lujo con vistas a la Torre Eiffel al anochecer."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ZERMATT, SUIZA",
+                    title: "Chalet Alpino Privado en el Matterhorn",
+                    desc: "Jacuzzi infinito con vistas a cumbres nevadas, cálida chimenea de leña y hangar privado de helicópteros.",
+                    prompt: '"8k propiedad alpina fotorrealista en Zermatt, arquitectura de cristal brillante frente al Matterhorn."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "SHIBUYA, TOKIO",
+                    title: "Sky Suite Cyberpunk para Fundadores Tech",
+                    desc: "Ventanales de suelo a techo sobre las luces de neón de Tokio, estaciones cuánticas y jardines zen minimalistas.",
+                    prompt: '"8k ático futurista en el horizonte de Tokio, reflejos de neón en cristal mojado, interiorismo multimillonario."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "PALM JUMEIRAH, DUBÁI",
+                    title: "Sky Estate de Ultra-Lujo Frente al Mar",
+                    desc: "Playa privada de arena blanca, piscinas infinitas voladizas y sala de exposición de superdeportivos integrada.",
+                    prompt: '"8k villa de ultra-lujo en Palm Jumeirah, aguas cristalinas del golfo, arquitectura orgánica moderna."'
+                }
+            ],
+            ru: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "МОНТЕ-КАРЛО, МОНАКО",
+                    title: "Закат на частной суперъяхте",
+                    desc: "Круиз по Средиземному морю с шампанским, вертолетной площадкой и титановой отделкой ручной работы.",
+                    prompt: '"8k ультра-кинематографичная фотография, 95-метровая суперъяхта в гавани Монако, золотой закатный свет."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "ПАРИЖ, ФРАНЦИЯ",
+                    title: "Терраса пентхауса с видом на Эйфелеву башню",
+                    desc: "Панорама парижских крыш на рассвете, мраморные камины и эксклюзивная дизайнерская мебель.",
+                    prompt: '"8k архитектурный шедевр, роскошная терраса с видом на Эйфелеву башню в сумерках, детализация fal.ai."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "ЦЕРМАТТ, ШВЕЙЦАРИЯ",
+                    title: "Альпийское шале с видом на Маттерхорн",
+                    desc: "Панорамное джакузи с видом на заснеженные пики, уютный дровяной камин и вертолетный ангар.",
+                    prompt: '"8k фотореалистичное альпийское поместье в Церматте, стеклянная архитектура на фоне горы Маттерхорн."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "СИБУЯ, ТОКИО",
+                    title: "Киберпанк скай-сьют IT-лидера",
+                    desc: "Панорамные окна на неоновый Токио, квантовые рабочие станции и минималистичный сад камней дзен.",
+                    prompt: '"8k футуристичный пентхаус в Токио, отражения неона на мокром стекле, роскошный интерьер миллиардера."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "ПАЛЬМА ДЖУМЕЙРА, ДУБАЙ",
+                    title: "Ультрароскошное поместье на берегу залива",
+                    desc: "Частный пляж с белым песком, консольные пейзажные бассейны и встроенный подиум для суперкаров.",
+                    prompt: '"8k ультрароскошная вилла на Palm Jumeirah, кристальные воды залива, современная биоморфная архитектура."'
+                }
+            ],
+            ar: [
+                {
+                    img: "assets/images/monaco_yacht.jpg",
+                    tag: "مونتي كارلو، موناكو",
+                    title: "غروب الشمس على متن يخت فائق خاص",
+                    desc: "إبحار في مياه البحر الأبيض المتوسط مع مهبط مروحيات خاص وخدمة كبار الشخصيات وتشطيبات تيتانيوم فاخرة.",
+                    prompt: '"8k لقطة سينمائية فائقة، يخت فائق بطول 95 متراً في ميناء موناكو، إضاءة ذهبية ساحرة لغروب الشمس."'
+                },
+                {
+                    img: "assets/images/paris_penthouse.jpg",
+                    tag: "باريس، فرنسا",
+                    title: "شرفة بنتهاوس بإطلالة برج إيفل",
+                    desc: "استيقاظ بانورامي على أفق باريس مع مدافئ رخامية مخصصة وأثاث مصمم خصيصاً.",
+                    prompt: '"8k تحفة معمارية، شرفة بنتهاوس فاخرة تطل على برج إيفل وقت الغسق، تفاصيل fal.ai فائقة الواقعية."'
+                },
+                {
+                    img: "assets/images/swiss_chalet.jpg",
+                    tag: "زيرمات، سويسرا",
+                    title: "شاليه ألب خاص في قمة ماترهورن",
+                    desc: "جاكوزي لا متناهٍ يطل على القمم المغطاة بالثلوج، ومدفأة حطب دافئة ومهبط مروحيات خاص للتزلج.",
+                    prompt: '"8k قصر جبلي فوتوغرافي في زيرمات، هندسة زجاجية متألقة أمام جبل ماترهورن الثلجي."'
+                },
+                {
+                    img: "assets/images/tokyo_estate.jpg",
+                    tag: "شيبويا، طوكيو",
+                    title: "جناح سماوي سيبراني لمؤسس التكنولوجيا",
+                    desc: "نوافذ زجاجية ممتدة على أضواء نيون طوكيو، ومحطات عمل كمومية، وحدائق زن يابانية مصغرة.",
+                    prompt: '"8k بنتهاوس مستقبلي في أفق طوكيو، انعكاسات نيون على الزجاج، تصميم داخلي فاره للمليارديرات."'
+                },
+                {
+                    img: "assets/images/dubai_villa.jpg",
+                    tag: "نخلة جميرا، دبي",
+                    title: "قصر سماوي فائق الفخامة على الواجهة البحرية",
+                    desc: "شاطئ رملي أبيض خاص، ومسابح لا متناهية معلقة، ومعرض سيارات خارقة مدمج في الصالون الرئيسي.",
+                    prompt: '"8k فيلا فائقة الفخامة في نخلة جميرا، مياه خليج فيروزية صافية، هندسة معمارية عضوية حديثة."'
+                }
+            ]
+        };
+
+        let currentShowcaseIndex = 0;
+
+        function getActiveLang() {
+            return document.getElementById('html-root').getAttribute('lang') || 'en';
+        }
 
         function switchShowcase(index) {
+            currentShowcaseIndex = index;
             const tabs = document.querySelectorAll('.showcase-tab');
             tabs.forEach((tab, i) => {
                 if (i === index) tab.classList.add('active');
                 else tab.classList.remove('active');
             });
 
-            const data = showcaseData[index];
+            const lang = getActiveLang();
+            const list = localizedShowcase[lang] || localizedShowcase['en'];
+            const data = list[index];
+
             const imgEl = document.getElementById('showcase-img');
             imgEl.style.opacity = '0';
             setTimeout(() => {
@@ -430,46 +699,7 @@
                 document.getElementById('showcase-desc').innerText = data.desc;
                 document.getElementById('showcase-prompt').innerText = data.prompt;
                 imgEl.style.opacity = '1';
-            }, 200);
-        }
-
-        // 528Hz Interactive Quantum Canvas Animation
-        const canvas = document.getElementById('quantum-canvas');
-        const ctx = canvas.getContext('2d');
-        let width, height;
-        let particles = [];
-
-        function resizeCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class QuantumParticle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.6;
-                this.vy = (Math.random() - 0.5) * 0.6;
-                this.radius = Math.random() * 2 + 1;
-                this.alpha = Math.random() * 0.5 + 0.2;
-                this.color = Math.random() > 0.4 ? '212, 175, 55' : '147, 51, 234';
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
-                ctx.shadowBlur = 10;
-                ctx.shadowColor = `rgba(${this.color}, 0.8)`;
-                ctx.fill();
-            }
+            }, 180);
         }
 
         for (let i = 0; i < 45; i++) {
@@ -738,6 +968,11 @@
                     el.innerText = dict[key];
                 }
             });
+
+                        // Refresh active showcase tab with new language strings
+            if (typeof switchShowcase === 'function') {
+                switchShowcase(currentShowcaseIndex);
+            }
 
             // Persist language choice
             localStorage.setItem('parallis_lang', lang);
