@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help & Support - Parallis: AI Dream Simulator</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,12 +19,13 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
+                    <img src="assets/images/app_icon.png" alt="Parallis App Icon" class="logo-icon-img">
                     <span class="logo-badge">Parallis</span>
                     <span class="sub">Support</span>
                 </a>
                 <div class="nav-right">
                     <div class="lang-dropdown">
-                        <button class="lang-btn" onclick="toggleLangMenu()">
+                        <button class="lang-btn" onclick="toggleLangMenu()" aria-label="Language Selector">
                             <i class="fa-solid fa-globe"></i>
                             <span id="current-lang-code">EN</span>
                             <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
@@ -37,7 +41,10 @@
                             <div class="lang-option" onclick="setLanguage('ar')">🇸🇦 العربية</div>
                         </div>
                     </div>
-                    <a href="index.html" class="btn btn-glass"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="index.html" class="btn btn-glass">
+                        <i class="fa-solid fa-house"></i>
+                        <span data-i18n="navHome">Home</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -45,71 +52,138 @@
 
     <div class="container">
         <div class="legal-container" style="text-align: center;">
-            <h1 data-i18n="sTitle">HELP & SUPPORT CENTER</h1>
-            <p data-i18n="sBody" style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 36px auto;">Have questions about Parallis VIP subscriptions, credits, or visual generations? Our support team is here to assist you 24/7.</p>
+            
+            <!-- Hero Badge -->
+            <div class="hero-badge" style="margin-bottom: 20px;">
+                <span class="badge-dot"></span>
+                <span data-i18n="sBadge">24/7 VIP Concierge & Support</span>
+            </div>
 
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 48px; text-align: left;">
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <h3>Direct Email Support</h3>
-                    <p>Send an email directly to our support engineers: <br><a href="mailto:parallisapps@gmail.com" style="color: var(--gold-light); font-weight: 600;">parallisapps@gmail.com</a></p>
+            <!-- Page Title & Subtitle -->
+            <h1 data-i18n="sTitle" style="font-family: var(--font-heading); font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 900; letter-spacing: -0.5px; margin-bottom: 16px;">
+                HELP & SUPPORT CENTER
+            </h1>
+            <p data-i18n="sBody" style="font-size: 1.08rem; color: var(--text-secondary); max-width: 650px; margin: 0 auto 42px auto; line-height: 1.65;">
+                Have questions about Parallis VIP subscriptions, credits, or visual generations? Our priority support team is here to assist you 24/7.
+            </p>
+
+            <!-- Quick Action Cards Grid -->
+            <div class="support-cards-grid">
+                <!-- Direct Email Card -->
+                <div class="support-action-card">
+                    <div>
+                        <div class="card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <h3 data-i18n="card1Title">Direct Email Support</h3>
+                        <p data-i18n="card1Body">Reach out directly to our dedicated support engineers for personalized assistance:</p>
+                    </div>
+                    <a href="mailto:parallisapps@gmail.com" class="card-action-link">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-i18n="card1Cta">parallisapps@gmail.com</span>
+                        <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
+                    </a>
                 </div>
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fa-solid fa-user-shield"></i></div>
-                    <h3>Account Deletion</h3>
-                    <p>Want to purge your profile or simulation data? <br><a href="delete-account.html" style="color: var(--gold-light); font-weight: 600;">Go to Delete Account Page</a></p>
+
+                <!-- Account Deletion Card -->
+                <div class="support-action-card">
+                    <div>
+                        <div class="card-icon" style="background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.3); color: #ff6b6b;">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 data-i18n="card2Title">Account & Data Erasure</h3>
+                        <p data-i18n="card2Body">Want to permanently purge your profile, generations, or account data?</p>
+                    </div>
+                    <a href="delete-account.html" class="card-action-link" style="color: #ff7675;">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <span data-i18n="card2Cta">Go to Delete Account Page</span>
+                        <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="section-title" style="margin-bottom: 32px;">
-                <h2 data-i18n="formTitle">SEND US A MESSAGE</h2>
+            <!-- Send Us a Message Section Heading -->
+            <div style="text-align: center; margin-bottom: 24px;">
+                <h2 data-i18n="formTitle" style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 8px;">
+                    SEND US A MESSAGE
+                </h2>
+                <p data-i18n="formSub" style="color: var(--text-muted); font-size: 0.95rem; max-width: 540px; margin: 0 auto;">
+                    Fill in the priority ticket details below. Our concierge team will review and reply within 24 hours.
+                </p>
             </div>
 
-            <form class="contact-form" action="https://formsubmit.co/parallisapps@gmail.com" method="POST">
-                <!-- FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="Yeni Destek Talebi - Parallis Web Sitesi">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://parallis.app/support.html?success=true">
-                
-                <div class="form-group">
-                    <label data-i18n="lblEmail">Your Email Address</label>
-                    <input type="email" name="email" class="form-control" required placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label data-i18n="lblSubject">Subject / Inquiry Type</label>
-                    <select name="subject" class="form-control" required>
-                        <option value="VIP Subscription Help">VIP Subscription Help</option>
-                        <option value="Credit Pack Inquiry">Credit Pack Inquiry</option>
-                        <option value="Technical Issue">Technical Issue</option>
-                        <option value="Other Inquiry">Other Inquiry</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label data-i18n="lblMessage">Message Details</label>
-                    <textarea name="message" class="form-control" required placeholder="Describe your issue or feedback in detail..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px; font-size: 1rem;">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <span data-i18n="btnSend">Send Message</span>
-                </button>
-            </form>
+            <!-- UI/UX Pro Max Form Card -->
+            <div class="contact-form-card">
+                <form class="contact-form" action="https://formsubmit.co/parallisapps@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Yeni Destek Talebi - Parallis Web">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://parallis.app/support.html?success=true">
+                    
+                    <!-- 2-Column Row for Desktop -->
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fa-solid fa-at"></i>
+                                <span data-i18n="lblEmail">Your Email Address</span>
+                            </label>
+                            <input type="email" name="email" class="form-control" required placeholder="name@example.com" data-i18n-ph="phEmail">
+                        </div>
 
-            <div id="form-success" style="display: none; margin-top: 24px; padding: 16px; background: rgba(39, 174, 96, 0.2); border: 1px solid #27ae60; border-radius: var(--radius-md); color: #2ecc71; font-weight: 600;">
-                Thank you! Your message has been sent successfully. We will reply within 24 hours.
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fa-solid fa-list-check"></i>
+                                <span data-i18n="lblSubject">Inquiry Type</span>
+                            </label>
+                            <select name="subject" class="form-control" required>
+                                <option value="VIP Subscription Help" data-i18n="optVip">VIP Subscription & Passes</option>
+                                <option value="Credit Pack Inquiry" data-i18n="optCredits">Simulation Credit Packs</option>
+                                <option value="Technical Issue" data-i18n="optTech">Technical & Generation Issue</option>
+                                <option value="Other Inquiry" data-i18n="optOther">Other Inquiry / Feedback</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Full Width Message Textarea -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fa-solid fa-message"></i>
+                            <span data-i18n="lblMessage">Message Details</span>
+                        </label>
+                        <textarea name="message" class="form-control" required placeholder="Describe your issue, question, or feedback in detail..." data-i18n-ph="phMessage"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form-submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-i18n="btnSend">Send Priority Message</span>
+                    </button>
+
+                    <!-- Trust / SLA Note -->
+                    <div class="form-note">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--gold-light);"></i>
+                        <span data-i18n="formNote">256-bit encrypted transmission • Response guaranteed within 24 hours</span>
+                    </div>
+                </form>
+
+                <!-- Success Notification Alert -->
+                <div id="form-success" class="form-success-banner">
+                    <i class="fa-solid fa-circle-check" style="font-size: 1.4rem;"></i>
+                    <span data-i18n="formSuccess">Thank you! Your message has been sent successfully. Our support team will reply within 24 hours.</span>
+                </div>
             </div>
+
         </div>
     </div>
 
     <footer>
         <div class="container">
             <div class="footer-wrapper">
-                <div>Parallis: AI Dream Simulator &copy; 2026. All rights reserved.</div>
+                <div data-i18n="footerRights">Parallis: AI Dream Simulator &copy; 2026. All rights reserved.</div>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                    <li><a href="delete-account.html">Delete Account</a></li>
+                    <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                    <li><a href="privacy.html" data-i18n="navPrivacy">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-i18n="navTerms">Terms of Use</a></li>
+                    <li><a href="delete-account.html" data-i18n="navDelete">Delete Account</a></li>
                 </ul>
             </div>
         </div>
@@ -117,33 +191,273 @@
 
     <script>
         const translations = {
-            en: { sTitle: "HELP & SUPPORT CENTER", sBody: "Have questions about Parallis VIP subscriptions, credits, or visual generations? Our support team is here to assist you 24/7.", formTitle: "SEND US A MESSAGE", lblEmail: "Your Email Address", lblSubject: "Subject / Inquiry Type", lblMessage: "Message Details", btnSend: "Send Message" },
-            tr: { sTitle: "DESTEK VE İLETİŞİM MERKEZİ", sBody: "Parallis VIP üyeliği, kredi paketleri veya görsel üretimi hakkında bir sorunuz mu var? Destek ekibimiz 7/24 hizmetinizde.", formTitle: "BİZE MESAJ GÖNDERİN", lblEmail: "E-posta Adresiniz", lblSubject: "Konu / Başlık", lblMessage: "Mesajınızın Detayları", btnSend: "Mesajı Gönder" }
+            en: {
+                navHome: "Home", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
+                footerRights: "Parallis: AI Dream Simulator © 2026. All rights reserved.",
+                sBadge: "24/7 VIP Concierge & Support",
+                sTitle: "HELP & SUPPORT CENTER",
+                sBody: "Have questions about Parallis VIP subscriptions, credits, or visual generations? Our priority support team is here to assist you 24/7.",
+                card1Title: "Direct Email Support",
+                card1Body: "Reach out directly to our dedicated support engineers for personalized assistance:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Account & Data Erasure",
+                card2Body: "Want to permanently purge your profile, generations, or account data?",
+                card2Cta: "Go to Delete Account Page",
+                formTitle: "SEND US A MESSAGE",
+                formSub: "Fill in the priority ticket details below. Our concierge team will review and reply within 24 hours.",
+                lblEmail: "Your Email Address",
+                lblSubject: "Inquiry Type",
+                lblMessage: "Message Details",
+                optVip: "VIP Subscription & Passes",
+                optCredits: "Simulation Credit Packs",
+                optTech: "Technical & Generation Issue",
+                optOther: "Other Inquiry / Feedback",
+                phEmail: "name@example.com",
+                phMessage: "Describe your issue, question, or feedback in detail...",
+                btnSend: "Send Priority Message",
+                formNote: "256-bit encrypted transmission • Response guaranteed within 24 hours",
+                formSuccess: "Thank you! Your message has been sent successfully. Our support team will reply within 24 hours."
+            },
+            tr: {
+                navHome: "Ana Sayfa", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Tüm hakları saklıdır.",
+                sBadge: "7/24 VIP Destek ve İletişim",
+                sTitle: "DESTEK VE İLETİŞİM MERKEZİ",
+                sBody: "Parallis VIP üyeliği, kredi paketleri veya görsel simülasyonları hakkında bir sorunuz mu var? Öncelikli destek ekibimiz 7/24 hizmetinizdedir.",
+                card1Title: "Doğrudan E-posta Desteği",
+                card1Body: "Kişiselleştirilmiş destek için doğrudan teknik destek mühendislerimize ulaşın:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Hesap ve Veri Silme",
+                card2Body: "Profilinizi, oluşturduğunuz sahneleri veya tüm hesabınızı kalıcı olarak silmek mi istiyorsunuz?",
+                card2Cta: "Hesabı Sil Sayfasına Git",
+                formTitle: "BİZE BİR MESAJ GÖNDERİN",
+                formSub: "Aşağıdaki destek formunu doldurun. Ekibimiz talebinizi inceleyip en geç 24 saat içinde geri dönüş yapacaktır.",
+                lblEmail: "E-posta Adresiniz",
+                lblSubject: "Destek Konusu / Başlık",
+                lblMessage: "Mesajınızın Detayları",
+                optVip: "VIP Üyelik & Abonelik",
+                optCredits: "Kredi Paketleri & Yükleme",
+                optTech: "Teknik Sorun & Görsel Üretimi",
+                optOther: "Diğer Konular & Geri Bildirim",
+                phEmail: "ornek@eposta.com",
+                phMessage: "Sorununuzu, sorunuzu veya geri bildiriminizi detaylı olarak açıklayın...",
+                btnSend: "Öncelikli Mesajı Gönder",
+                formNote: "256-bit şifreli güvenli iletim • En geç 24 saat içinde yanıt garantisi",
+                formSuccess: "Teşekkürler! Mesajınız başarıyla iletildi. Destek ekibimiz 24 saat içinde e-posta adresinize dönüş yapacaktır."
+            },
+            fr: {
+                navHome: "Accueil", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Tous droits réservés.",
+                sBadge: "Conciergerie & Support VIP 24/7",
+                sTitle: "CENTRE D'AIDE ET DE SUPPORT",
+                sBody: "Des questions sur vos abonnements Parallis VIP, vos crédits ou vos générations visuelles? Notre équipe d'assistance prioritaire est là 24/7.",
+                card1Title: "Support par E-mail Direct",
+                card1Body: "Contactez directement nos ingénieurs support pour une assistance personnalisée:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Suppression du Compte & Données",
+                card2Body: "Vous souhaitez effacer définitivement vos profils, simulations ou données de compte?",
+                card2Cta: "Aller à la Page de Suppression",
+                formTitle: "ENVOYEZ-NOUS UN MESSAGE",
+                formSub: "Remplissez le formulaire prioritaire ci-dessous. Notre équipe examinera votre demande sous 24h.",
+                lblEmail: "Votre Adresse E-mail",
+                lblSubject: "Type de Demande",
+                lblMessage: "Détails du Message",
+                optVip: "Abonnement VIP & Pass",
+                optCredits: "Packs de Crédits",
+                optTech: "Problème Technique & Rendu",
+                optOther: "Autre Demande & Avis",
+                phEmail: "nom@exemple.com",
+                phMessage: "Décrivez votre problème ou question en détail...",
+                btnSend: "Envoyer le Message Prioritaire",
+                formNote: "Transmission chiffrée 256 bits • Réponse garantie sous 24h",
+                formSuccess: "Merci! Votre message a bien été envoyé. Notre équipe vous répondra sous 24h."
+            },
+            de: {
+                navHome: "Startseite", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto löschen",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Alle Rechte vorbehalten.",
+                sBadge: "24/7 VIP Concierge & Support",
+                sTitle: "HILFE- UND SUPPORT-CENTER",
+                sBody: "Haben Sie Fragen zu Parallis VIP-Abonnements, Credits oder Bildgenerierungen? Unser Support-Team ist rund um die Uhr für Sie da.",
+                card1Title: "Direkter E-Mail-Support",
+                card1Body: "Wenden Sie sich direkt an unsere Support-Ingenieure für persönliche Hilfe:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Konto & Datenlöschung",
+                card2Body: "Möchten Sie Ihr Profil, Ihre Simulationen oder Kontodaten dauerhaft löschen?",
+                card2Cta: "Zur Seite Konto löschen",
+                formTitle: "SCHREIBEN SIE UNS EINE NACHRICHT",
+                formSub: "Füllen Sie das Ticket-Formular aus. Unser Team wird Ihre Anfrage innerhalb von 24 Stunden beantworten.",
+                lblEmail: "Ihre E-Mail-Adresse",
+                lblSubject: "Art der Anfrage",
+                lblMessage: "Nachrichtendetails",
+                optVip: "VIP-Abonnement & Pässe",
+                optCredits: "Credit-Pakete & Aufladung",
+                optTech: "Technisches Problem & Generierung",
+                optOther: "Sonstige Anfrage & Feedback",
+                phEmail: "name@beispiel.de",
+                phMessage: "Beschreiben Sie Ihr Anliegen bitte detailliert...",
+                btnSend: "Prioritäre Nachricht Senden",
+                formNote: "256-Bit verschlüsselte Übertragung • Antwort innerhalb 24h garantiert",
+                formSuccess: "Vielen Dank! Ihre Nachricht wurde gesendet. Unser Team wird innerhalb von 24h antworten."
+            },
+            it: {
+                navHome: "Home", navPrivacy: "Informativa Privacy", navTerms: "Termini d'Uso", navDelete: "Elimina Account",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Tutti i diritti riservati.",
+                sBadge: "Assistenza & Concierge VIP 24/7",
+                sTitle: "CENTRO ASSISTENZA E SUPPORTO",
+                sBody: "Hai domande su abbonamenti VIP Parallis, crediti o generazioni visive? Il nostro team di assistenza prioritario è attivo 24/7.",
+                card1Title: "Assistenza E-mail Diretta",
+                card1Body: "Contatta direttamente i nostri ingegneri di supporto per ricevere assistenza:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Cancellazione Account e Dati",
+                card2Body: "Vuoi cancellare definitivamente il tuo profilo, le simulazioni o i dati dell'account?",
+                card2Cta: "Vai alla Pagina di Cancellazione",
+                formTitle: "INVIACI UN MESSAGGIO",
+                formSub: "Compila il modulo sottostante. Il nostro team esaminerà la richiesta rispondendo entro 24 ore.",
+                lblEmail: "Il Tuo Indirizzo E-mail",
+                lblSubject: "Tipo di Richiesta",
+                lblMessage: "Dettagli del Messaggio",
+                optVip: "Abbonamento VIP & Pass",
+                optCredits: "Pacchetti Crediti",
+                optTech: "Problema Tecnico & Generazione",
+                optOther: "Altro / Feedback",
+                phEmail: "nome@esempio.it",
+                phMessage: "Descrivi il tuo problema o domanda in dettaglio...",
+                btnSend: "Invia Messaggio Prioritario",
+                formNote: "Trasmissione crittografata a 256 bit • Risposta garantita entro 24 ore",
+                formSuccess: "Grazie! Il tuo messaggio è stato inviato. Ti risponderemo entro 24 ore."
+            },
+            es: {
+                navHome: "Inicio", navPrivacy: "Política de Privacidad", navTerms: "Términos de Uso", navDelete: "Eliminar Cuenta",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Todos los derechos reservados.",
+                sBadge: "Conserjería y Soporte VIP 24/7",
+                sTitle: "CENTRO DE AYUDA Y SOPORTE",
+                sBody: "¿Preguntas sobre suscripciones VIP Parallis, créditos o generaciones visuales? Nuestro equipo de soporte prioritario está a tu disposición 24/7.",
+                card1Title: "Soporte Directo por Email",
+                card1Body: "Contacta directamente con nuestros ingenieros de soporte para asistencia personalizada:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Eliminación de Cuenta y Datos",
+                card2Body: "¿Deseas eliminar permanentemente tu perfil, simulaciones o datos de cuenta?",
+                card2Cta: "Ir a la Página de Eliminación",
+                formTitle: "ENVÍANOS UN MENSAJE",
+                formSub: "Completa el formulario a continuación. Nuestro equipo revisará tu solicitud y responderá en menos de 24 horas.",
+                lblEmail: "Tu Correo Electrónico",
+                lblSubject: "Tipo de Consulta",
+                lblMessage: "Detalles del Mensaje",
+                optVip: "Suscripción VIP y Pases",
+                optCredits: "Paquetes de Créditos",
+                optTech: "Problema Técnico y Renderizado",
+                optOther: "Otra Consulta / Comentarios",
+                phEmail: "nombre@ejemplo.com",
+                phMessage: "Describe tu consulta o sugerencia en detalle...",
+                btnSend: "Enviar Mensaje Prioritario",
+                formNote: "Transmisión cifrada de 256 bits • Respuesta garantizada en 24 horas",
+                formSuccess: "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos en menos de 24 horas."
+            },
+            ru: {
+                navHome: "Главная", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить аккаунт",
+                footerRights: "Parallis: AI Dream Simulator © 2026. Все права защищены.",
+                sBadge: "Круглосуточный VIP-консьерж и поддержка",
+                sTitle: "ЦЕНТР ПОДДЕРЖКИ И ПОМОЩИ",
+                sBody: "Есть вопросы по VIP-подписке Parallis, кредитам или генерации изображений? Наша служба поддержки готова помочь вам 24/7.",
+                card1Title: "Прямая поддержка по email",
+                card1Body: "Свяжитесь напрямую с нашими инженерами поддержки для оперативной помощи:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "Удаление аккаунта и данных",
+                card2Body: "Хотите навсегда стереть свой профиль, историю симуляций или данные аккаунта?",
+                card2Cta: "Перейти к удалению аккаунта",
+                formTitle: "ОТПРАВИТЬ СООБЩЕНИЕ",
+                formSub: "Заполните форму ниже. Наша команда рассмотрит ваше обращение и ответит в течение 24 часов.",
+                lblEmail: "Ваш адрес электронной почты",
+                lblSubject: "Тема обращения",
+                lblMessage: "Подробности сообщения",
+                optVip: "VIP-подписка и пропуски",
+                optCredits: "Пакеты кредитов",
+                optTech: "Техническая проблема и генерация",
+                optOther: "Другой вопрос и отзывы",
+                phEmail: "name@example.com",
+                phMessage: "Опишите ваш вопрос или проблему подробно...",
+                btnSend: "Отправить сообщение",
+                formNote: "256-битное шифрование • Гарантия ответа в течение 24 часов",
+                formSuccess: "Спасибо! Ваше сообщение отправлено. Мы ответим вам в течение 24 часов."
+            },
+            ar: {
+                navHome: "الرئيسية", navPrivacy: "سياسة الخصوصية", navTerms: "الشروط", navDelete: "حذف الحساب",
+                footerRights: "Parallis: AI Dream Simulator © 2026. جميع الحقوق محفوظة.",
+                sBadge: "خدمة كونسيرج ودعم VIP على مدار الساعة",
+                sTitle: "مركز المساعدة والدعم الفني",
+                sBody: "هل لديك أسئلة حول اشتراكات Parallis VIP أو باقات الرصيد أو محاكاة الصور؟ فريق الدعم المخصص في خدمتكم على مدار الساعة.",
+                card1Title: "الدعم المباشر عبر البريد",
+                card1Body: "تواصل مباشرة مع مهندسي الدعم الفني للحصول على مساعدة مخصصة:",
+                card1Cta: "parallisapps@gmail.com",
+                card2Title: "حذف الحساب والبيانات",
+                card2Body: "هل ترغب في حذف ملفاتك أو مشاهدك المحاكاة أو بيانات حسابك نهائياً؟",
+                card2Cta: "الانتقال إلى صفحة حذف الحساب",
+                formTitle: "أرسل لنا رسالة",
+                formSub: "املأ نموذج التذكرة أدناه. سيقوم فريقنا بمراجعة طلبك والرد عليك في غضون 24 ساعة.",
+                lblEmail: "عنوان بريدك الإلكتروني",
+                lblSubject: "نوع الاستفسار",
+                lblMessage: "تفاصيل الرسالة",
+                optVip: "اشتراك وباقات VIP",
+                optCredits: "باقات رصيد المحاكاة",
+                optTech: "مشكلة فنية أو في التوليد",
+                optOther: "استفسار آخر أو ملاحظات",
+                phEmail: "name@example.com",
+                phMessage: "يرجى وصف المشكلة أو الملاحظات بالتفصيل...",
+                btnSend: "إرسال الرسالة ذات الأولوية",
+                formNote: "إرسال مشفر بمعيار 256 بت • ضمان الرد خلال 24 ساعة",
+                formSuccess: "شكراً لك! تم إرسال رسالتك بنجاح. سيقوم فريقنا بالرد عليك خلال 24 ساعة."
+            }
         };
+
         function setLanguage(lang) {
             const root = document.getElementById('html-root');
             if (lang === 'ar') root.setAttribute('dir', 'rtl'); else root.removeAttribute('dir');
             document.getElementById('current-lang-code').innerText = lang.toUpperCase();
             const dict = translations[lang] || translations.en;
+            
+            // Text nodes
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) el.innerText = dict[key];
             });
+
+            // Input Placeholders
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (dict[key]) el.setAttribute('placeholder', dict[key]);
+            });
+
             closeLangMenu();
         }
-        function toggleLangMenu() { document.getElementById('lang-menu').classList.toggle('show'); }
-        function closeLangMenu() { document.getElementById('lang-menu').classList.remove('show'); }
-        
+
+        function toggleLangMenu() {
+            document.getElementById('lang-menu').classList.toggle('show');
+        }
+
+        function closeLangMenu() {
+            document.getElementById('lang-menu').classList.remove('show');
+        }
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.closest('.lang-dropdown')) {
+                closeLangMenu();
+            }
+        });
+
         // Show success alert on FormSubmit return
         if (window.location.search.includes('success=true')) {
-            document.getElementById('form-success').style.display = 'block';
+            const successEl = document.getElementById('form-success');
+            if (successEl) {
+                successEl.style.display = 'flex';
+                successEl.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     
-        // Auto-detect language from URL query parameter (?lang=tr, ?lang=de, etc.)
+        // Auto-detect language from URL query parameter (?lang=tr, ?lang=fr, etc.)
         window.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
             const langParam = urlParams.get("lang");
-            if (langParam) {
+            if (langParam && translations[langParam.toLowerCase()]) {
                 setLanguage(langParam.toLowerCase());
             }
         });
