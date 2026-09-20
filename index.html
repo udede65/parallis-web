@@ -8,6 +8,194 @@
     <meta name="description" content="Parallis: AI Dream Simulator - Manifest your parallel luxury life in 8K using fal.ai 8K Neural Vision Engine, 528Hz quantum portal, and live city intelligence in 8 languages.">
     <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style id="showcase-theatre-css">
+        /* 8K Showcase Theatre UI/UX Pro Max */
+        .showcase-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .showcase-tab {
+            background: rgba(18, 18, 28, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #B0B3C6;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            user-select: none;
+        }
+        .showcase-tab:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .showcase-tab.active {
+            background: rgba(212, 175, 55, 0.16);
+            border-color: #D4AF37;
+            color: #F3E5AB;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .showcase-display {
+            background: rgba(14, 14, 22, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.15);
+            max-width: 1060px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+
+        .showcase-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #06060A;
+        }
+
+        #showcase-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            transition: opacity 0.25s ease, transform 0.35s ease;
+        }
+
+        .showcase-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 65%, rgba(7,7,11,0.85) 100%);
+            pointer-events: none;
+        }
+
+        .showcase-badge-8k {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            color: #F3E5AB;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            padding: 7px 16px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            z-index: 5;
+        }
+        [dir="rtl"] .showcase-badge-8k {
+            left: auto;
+            right: 18px;
+        }
+
+        .showcase-content {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 28px;
+            padding: 28px 32px;
+            background: rgba(11, 11, 18, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            align-items: center;
+        }
+        @media (max-width: 860px) {
+            .showcase-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 22px 20px;
+            }
+        }
+
+        .showcase-meta-col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
+        [dir="rtl"] .showcase-meta-col {
+            text-align: right;
+        }
+        .showcase-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #D4AF37;
+            text-transform: uppercase;
+        }
+        #showcase-title {
+            font-family: "Outfit", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin: 0;
+            line-height: 1.25;
+        }
+        #showcase-desc {
+            font-size: 0.95rem;
+            color: #B0B3C6;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        .showcase-prompt-col {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+        .showcase-prompt-box {
+            background: #08080E;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 14px;
+            padding: 16px 18px;
+            text-align: left;
+        }
+        [dir="rtl"] .showcase-prompt-box {
+            text-align: right;
+        }
+        .prompt-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+        .prompt-text {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 0.82rem;
+            color: #A0A3B8;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+    </style>
 </head>
 <body>
 
@@ -149,11 +337,7 @@
             <!-- Showcase Display Card -->
             <div class="showcase-display" id="showcase-display">
                 <div class="showcase-image-wrapper">
-                    <img class="showcase-slide active" src="assets/images/monaco_yacht.jpg" alt="Monaco Superyacht" loading="eager">
-                    <img class="showcase-slide" src="assets/images/paris_penthouse.jpg" alt="Paris Penthouse" loading="eager">
-                    <img class="showcase-slide" src="assets/images/swiss_chalet.jpg" alt="Swiss Alps Chalet" loading="eager">
-                    <img class="showcase-slide" src="assets/images/tokyo_estate.jpg" alt="Tokyo Cyber Estate" loading="eager">
-                    <img class="showcase-slide" src="assets/images/dubai_villa.jpg" alt="Dubai Sky Villa" loading="eager">
+                    <img id="showcase-img" src="assets/images/monaco_yacht.jpg" alt="Monaco Superyacht" loading="eager">
                     <div class="showcase-image-overlay"></div>
                     <div class="showcase-badge-8k">
                         <i class="fa-solid fa-gem"></i> 8K ULTRA-PHOTOREALISTIC
@@ -161,26 +345,29 @@
                 </div>
 
                 <div class="showcase-content">
-                    <div class="showcase-tag" id="showcase-tag">
-                        <i class="fa-solid fa-location-dot"></i> <span>MONTE CARLO, MONACO</span>
+                    <div class="showcase-meta-col">
+                        <div class="showcase-tag" id="showcase-tag">
+                            <i class="fa-solid fa-location-dot"></i> <span>MONTE CARLO, MONACO</span>
+                        </div>
+                        <h3 id="showcase-title">Sunset Horizon on Private Superyacht</h3>
+                        <p id="showcase-desc">Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.</p>
+                        <a href="https://apps.apple.com/app/parallis/id6793040335" class="btn btn-gold" style="align-self: flex-start; margin-top: 8px;">
+                            <i class="fa-solid fa-wand-sparkles"></i>
+                            <span data-i18n="btnSimulateThis">Simulate This Reality</span>
+                        </a>
                     </div>
-                    <h3 id="showcase-title">Sunset Horizon on Private Superyacht</h3>
-                    <p id="showcase-desc">Sailing Mediterranean waters with champagne service, private helicopter pad, and state-of-the-art titanium finishes.</p>
                     
-                    <div class="showcase-prompt-box">
-                        <div class="prompt-label">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            <span data-i18n="promptLabel">fal.ai 8K Neural Vision Engine Compiled Blueprint</span>
-                        </div>
-                        <div class="prompt-text" id="showcase-prompt">
-                            "8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."
+                    <div class="showcase-prompt-col">
+                        <div class="showcase-prompt-box">
+                            <div class="prompt-label">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span data-i18n="promptLabel">fal.ai 8K Neural Vision Engine Compiled Blueprint</span>
+                            </div>
+                            <div class="prompt-text" id="showcase-prompt">
+                                "8k ultra-cinematic photograph, private 95m superyacht in Monaco harbor, sunset golden hour rim lighting, bespoke luxury deck, Hasselblad 100MP clarity."
+                            </div>
                         </div>
                     </div>
-
-                    <a href="https://apps.apple.com/app/parallis/id6793040335" class="btn btn-gold" style="align-self: flex-start;">
-                        <i class="fa-solid fa-wand-sparkles"></i>
-                        <span data-i18n="btnSimulateThis">Simulate This Reality</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -988,33 +1175,53 @@
 
         let currentShowcaseIndex = 0;
 
+        // Preload Showcase 8K Images for zero-latency switching
+        const showcaseImages = [
+            "assets/images/monaco_yacht.jpg",
+            "assets/images/paris_penthouse.jpg",
+            "assets/images/swiss_chalet.jpg",
+            "assets/images/tokyo_estate.jpg",
+            "assets/images/dubai_villa.jpg"
+        ];
+        showcaseImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+
         function getActiveLang() {
             return document.getElementById('html-root').getAttribute('lang') || 'en';
         }
 
         function switchShowcase(index) {
             currentShowcaseIndex = index;
-            const tabs = document.querySelectorAll('.showcase-tab');
+            const tabs = document.querySelectorAll(".showcase-tab");
             tabs.forEach((tab, i) => {
-                if (i === index) tab.classList.add('active');
-                else tab.classList.remove('active');
-            });
-
-            const slides = document.querySelectorAll('.showcase-slide');
-            slides.forEach((slide, i) => {
-                if (i === index) slide.classList.add('active');
-                else slide.classList.remove('active');
+                if (i === index) tab.classList.add("active");
+                else tab.classList.remove("active");
             });
 
             const lang = getActiveLang();
-            const list = localizedShowcase[lang] || localizedShowcase['en'];
-            const data = list[index];
+            const list = localizedShowcase[lang] || localizedShowcase["en"];
+            const data = list ? list[index] : null;
 
             if (data) {
-                const tagEl = document.getElementById('showcase-tag');
-                const titleEl = document.getElementById('showcase-title');
-                const descEl = document.getElementById('showcase-desc');
-                const promptEl = document.getElementById('showcase-prompt');
+                const imgEl = document.getElementById("showcase-img");
+                if (imgEl && data.img) {
+                    imgEl.style.opacity = "0.2";
+                    imgEl.style.transform = "scale(0.99)";
+                    setTimeout(() => {
+                        imgEl.src = data.img;
+                        imgEl.alt = data.title;
+                        imgEl.style.opacity = "1";
+                        imgEl.style.transform = "scale(1)";
+                    }, 110);
+                }
+
+                const tagEl = document.getElementById("showcase-tag");
+                const titleEl = document.getElementById("showcase-title");
+                const descEl = document.getElementById("showcase-desc");
+                const promptEl = document.getElementById("showcase-prompt");
                 if (tagEl) tagEl.innerHTML = `<i class="fa-solid fa-location-dot"></i> <span>${data.tag}</span>`;
                 if (titleEl) titleEl.textContent = data.title;
                 if (descEl) descEl.textContent = data.desc;

@@ -495,7 +495,7 @@ header {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
 }
 
-/* Showcase Display Card */
+/* Showcase Display Card (16:9 Widescreen Theatre UI/UX Pro Max) */
 .showcase-display {
     position: relative;
     background: var(--bg-card);
@@ -503,132 +503,156 @@ header {
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-card), 0 0 50px rgba(212, 175, 55, 0.15);
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    min-height: 520px;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    max-width: 1060px;
+    margin: 0 auto;
 }
 
 .showcase-image-wrapper {
     position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    min-height: 380px;
-    background: #0d0d12;
+    background: #06060A;
 }
 
-.showcase-slide {
-    position: absolute;
-    inset: 0;
+#showcase-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(1.04);
-    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 0;
-}
-
-.showcase-slide.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: scale(1);
-    z-index: 1;
-}
-
-.showcase-display:hover .showcase-slide.active {
-    transform: scale(1.025);
+    object-position: center center;
+    display: block;
+    transition: opacity 0.25s ease, transform 0.35s ease;
 }
 
 .showcase-image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.75) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 65%, rgba(7,7,11,0.85) 100%);
     pointer-events: none;
-    z-index: 2;
 }
 
 .showcase-badge-8k {
     position: absolute;
     top: 18px;
     left: 18px;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    color: var(--accent-gold);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 6px 14px;
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: var(--gold-light);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    padding: 7px 16px;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    z-index: 3;
+    gap: 7px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+[dir="rtl"] .showcase-badge-8k {
+    left: auto;
+    right: 18px;
 }
 
 .showcase-content {
-    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    padding: 28px 32px;
+    background: rgba(11, 11, 18, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+    .showcase-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 22px 20px;
+    }
+}
+
+.showcase-meta-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(20,20,28,0.95) 0%, rgba(12,12,18,0.98) 100%);
-    box-sizing: border-box;
+    gap: 10px;
+    text-align: left;
+}
+
+[dir="rtl"] .showcase-meta-col {
+    text-align: right;
 }
 
 .showcase-tag {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: var(--gold-primary);
-    font-size: 0.82rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 800;
     letter-spacing: 1.5px;
-    margin-bottom: 10px;
+    color: var(--gold-primary);
+    text-transform: uppercase;
 }
 
-.showcase-content h3 {
+#showcase-title {
     font-family: var(--font-heading);
-    font-size: 1.85rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 12px;
+    color: #FFFFFF;
+    margin: 0;
     line-height: 1.25;
 }
 
-.showcase-content p {
+#showcase-desc {
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    font-size: 0.98rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.showcase-prompt-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 .showcase-prompt-box {
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid var(--border-subtle);
-    padding: 14px 16px;
-    border-radius: var(--radius-md);
-    margin-bottom: 24px;
+    background: #08080E;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 14px;
+    padding: 16px 18px;
+    text-align: left;
+}
+
+[dir="rtl"] .showcase-prompt-box {
+    text-align: right;
 }
 
 .prompt-label {
-    font-size: 0.74rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
 }
 
 .prompt-text {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
     font-size: 0.82rem;
     color: var(--text-muted);
-    font-style: italic;
-    line-height: 1.45;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
 /* iPhone 16 Pro Mockup Section */
