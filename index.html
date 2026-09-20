@@ -382,61 +382,68 @@
             </div>
 
             <div class="mockup-grid">
-                <!-- Left Details -->
-                <div class="mockup-info">
-                    <div class="glass-card" style="margin-bottom: 24px;">
-                        <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
-                        <h3 data-i18n="exp1Title">528Hz Solfeggio Portal</h3>
+                <!-- Left Details: Interactive Feature Tabs -->
+                <div class="mockup-info" id="expCardsContainer">
+                    <div class="glass-card exp-card active" data-exp-index="0" onclick="setExperienceSlide(0)">
+                        <div class="exp-card-header">
+                            <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+                            <div class="exp-card-meta">
+                                <span class="exp-badge" data-i18n="expBadge1">01 // VISION & FEED</span>
+                                <h3 data-i18n="exp1Title">528Hz Solfeggio Portal</h3>
+                            </div>
+                        </div>
                         <p data-i18n="exp1Body">Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.</p>
+                        <div class="exp-card-progress"><div class="exp-progress-bar"></div></div>
                     </div>
 
-                    <div class="glass-card" style="margin-bottom: 24px;">
-                        <div class="card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-                        <h3 data-i18n="exp2Title">Future Self Quantum Letters</h3>
+                    <div class="glass-card exp-card" data-exp-index="1" onclick="setExperienceSlide(1)">
+                        <div class="exp-card-header">
+                            <div class="card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                            <div class="exp-card-meta">
+                                <span class="exp-badge" data-i18n="expBadge2">02 // QUANTUM LETTERS</span>
+                                <h3 data-i18n="exp2Title">Future Self Quantum Letters</h3>
+                            </div>
+                        </div>
                         <p data-i18n="exp2Body">Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.</p>
+                        <div class="exp-card-progress"><div class="exp-progress-bar"></div></div>
                     </div>
 
-                    <div class="glass-card">
-                        <div class="card-icon"><i class="fa-solid fa-vault"></i></div>
-                        <h3 data-i18n="exp3Title">Net Worth & Asset Portfolio</h3>
+                    <div class="glass-card exp-card" data-exp-index="2" onclick="setExperienceSlide(2)">
+                        <div class="exp-card-header">
+                            <div class="card-icon"><i class="fa-solid fa-vault"></i></div>
+                            <div class="exp-card-meta">
+                                <span class="exp-badge" data-i18n="expBadge3">03 // ASSET VAULT</span>
+                                <h3 data-i18n="exp3Title">Net Worth & Asset Portfolio</h3>
+                            </div>
+                        </div>
                         <p data-i18n="exp3Body">Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.</p>
+                        <div class="exp-card-progress"><div class="exp-progress-bar"></div></div>
                     </div>
                 </div>
 
-                <!-- Right iPhone 16 Pro Mockup Frame -->
-                <div class="mockup-phone">
-                    <div class="mockup-island"></div>
-                    <div class="mockup-screen">
-                        <div class="mockup-ui-card">
-                            <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold-light); letter-spacing: 1.5px; text-transform: uppercase;">
-                                QUANTUM FREQUENCY PORTAL
+                <!-- Right iPhone 16 Pro Mockup Frame with Live App Showcase -->
+                <div class="mockup-phone-container">
+                    <div class="mockup-phone">
+                        <div class="mockup-screen">
+                            <div class="mockup-slider" id="mockupSlider">
+                                <div class="mockup-slide active" data-slide="0">
+                                    <img src="assets/images/mockup_portal.png" alt="Parallis 528Hz Quantum Portal & Feed" class="mockup-img" loading="eager">
+                                </div>
+                                <div class="mockup-slide" data-slide="1">
+                                    <img src="assets/images/mockup_letter.png" alt="Parallis Future Self Quantum Letter" class="mockup-img" loading="lazy">
+                                </div>
+                                <div class="mockup-slide" data-slide="2">
+                                    <img src="assets/images/mockup_vault.jpg" alt="Parallis Luxury Asset Portfolio" class="mockup-img" loading="lazy">
+                                </div>
                             </div>
-                            <div class="mockup-portal-orb"></div>
-                            <div style="font-size: 1.2rem; font-weight: 800; color: #FFFFFF; margin-top: 10px;">
-                                528 Hz
-                            </div>
-                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
-                                Miracle Tone & Reality Lock
-                            </div>
+                            <div class="mockup-glare"></div>
                         </div>
-
-                        <div style="margin: 0 14px; background: rgba(255,255,255,0.05); border-radius: 16px; padding: 14px; border: 1px solid var(--border-gold);">
-                            <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--gold-light); font-weight: 700;">
-                                <span><i class="fa-solid fa-sun"></i> MORNING VIP BRIEFING</span>
-                                <span>LIVE</span>
-                            </div>
-                            <div style="font-size: 0.82rem; color: #FFFFFF; margin-top: 6px; line-height: 1.4;">
-                                "Your espresso is ready overlooking Monaco harbor. Major private equity deal on the table today, Visionary."
-                            </div>
-                        </div>
-
-                        <div style="margin: 10px 14px 0; background: rgba(0,0,0,0.5); border-radius: 16px; padding: 12px; border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
-                            <div>
-                                <div style="font-size: 0.7rem; color: var(--text-muted);">SIMULATED NET WORTH</div>
-                                <div style="font-size: 1.1rem; font-weight: 800; color: var(--gold-light);">$48,500,000</div>
-                            </div>
-                            <i class="fa-solid fa-arrow-trend-up" style="color: #10B981; font-size: 1.2rem;"></i>
-                        </div>
+                    </div>
+                    <!-- Navigation Dots under Phone -->
+                    <div class="mockup-dots" id="mockupDots">
+                        <button class="mockup-dot active" onclick="setExperienceSlide(0)" aria-label="Portal Screen"></button>
+                        <button class="mockup-dot" onclick="setExperienceSlide(1)" aria-label="Letter Screen"></button>
+                        <button class="mockup-dot" onclick="setExperienceSlide(2)" aria-label="Portfolio Screen"></button>
                     </div>
                 </div>
             </div>
@@ -626,6 +633,7 @@
                 tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Swiss Alps Chalet", tabTokyo: "Tokyo Cyber Estate", tabDubai: "Dubai Sky Villa",
                 promptLabel: "Parallis 8K Compiled Blueprint", btnSimulateThis: "Simulate This Reality",
                 expHeading: "THE QUANTUM MANIFESTATION EXPERIENCE", expSub: "Engineered with neuroscience, 528Hz solfeggio harmonics, and real-time generative AI intelligence.",
+                expBadge1: "01 // VISION & FEED", expBadge2: "02 // QUANTUM LETTERS", expBadge3: "03 // ASSET VAULT",
                 exp1Title: "528Hz Solfeggio Portal", exp1Body: "Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.",
                 exp2Title: "Future Self Quantum Letters", exp2Body: "Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.",
                 exp3Title: "Net Worth & Asset Portfolio", exp3Body: "Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.",
@@ -658,6 +666,7 @@
                 tabMonaco: "Monako Süperyatı", tabParis: "Paris Penthouse", tabSwiss: "İsviçre Alpleri Şatosu", tabTokyo: "Tokyo Siber Rezidans", tabDubai: "Dubai Sky Villa",
                 promptLabel: "Parallis 8K Derlenmiş İstem Mimarisi", btnSimulateThis: "Bu Hayatı Simüle Et",
                 expHeading: "KUANTUM TEZAHÜR DENEYİMİ", expSub: "Nörobilim, 528Hz solfeggio frekansları ve gerçek zamanlı üretken yapay zeka ile tasarlandı.",
+                expBadge1: "01 // VİZYON & AKIŞ", expBadge2: "02 // KUANTUM MEKTUPLAR", expBadge3: "03 // LÜKS VARLIK KASASI",
                 exp1Title: "528Hz Kuantum Portalı", exp1Body: "Zihninizi dönüşüm, DNA onarımı ve kuantum paralel evren hizalanması frekansı olan 528Hz'e kilitleyin.",
                 exp2Title: "Gelecekten Kuantum Mektuplar", exp2Body: "2030'da zirveye ulaşmış paralel benliğinizin kaleminden her gün size özel yazılmış ilham verici mektuplar alın.",
                 exp3Title: "Lüks Varlık Kasası", exp3Body: "Simüle edilmiş lüks gayrimenkullerinizi, kişiye özel süper arabalarınızı ve özel jet filonuzu takip edin.",
@@ -671,7 +680,7 @@
                 faqHeading: "SIKÇA SORULAN SORULAR", faqSub: "Parallis VIP üyeliği, krediler ve kuantum gerçeklik özellikleri hakkında merak edilen her şey.",
                 q1: "Parallis Nedir ve Paralel Hayat Simülasyonu Nasıl Çalışır?", a1: "Parallis, hayal ettiğiniz alternatif paralel hayatı yapay zeka ile canlandıran yeni nesil bir vizyon ve tezahür simülatörüdür. Karakterinizi seçer; kariyer, lüks yaşam tarzı ve şehrinizi belirlersiniz. Özel Parallis 8K Nöral Görsel Motorumuz bu hayatı size özel 8K sinematik fotoğraf serileri ve ilham verici hikayelerle gerçeğe dönüştürür.",
                 q2: "Parallis VIP Üyeliği Nedir ve Neler Sunar?", a2: "Sınırsız sayıda paralel hayat profili oluşturma, tamamen reklamsız kullanım, en yüksek öncelikli 8K nöral görsel üretimi ve özel lüks hikaye paketleri sunar. Haftalık veya yıllık abonelik seçenekleriyle sunulur ve Apple ID ayarlarınızdan dilediğiniz an tek tıkla iptal edilebilir.",
-                q3: "Simülasyon Kredi Paketleri Nasıl Çalışır, Süresi Biter mi?", a3: "Kredi paketleri (10, 25, 60 veya 150 kredi) tek seferlik satın alımlardır ve asla kullanım süresi dolmaz (non-expiring). VIP üyeliğiniz olsun ya da olmasın, dilediğiniz zaman ekstra 8K simülasyon sahneleri üretmek için süresiz olarak kullanabilirsiniz.",
+                q3: "Simülasyon Kredi Paketleri Nasıl Çalışır, Süresi Biter mi?", a3: "Kredi paketleri (10, 25, 60 veya 150 kredi) tek seferlik alımlardır ve asla kullanım süresi dolmaz (non-expiring). VIP üyeliğiniz olsun ya da olmasın, dilediğiniz zaman ekstra 8K simülasyon sahneleri üretmek için süresiz olarak kullanabilirsiniz.",
                 q4: "Ücret Ödemeden Ücretsiz Simülasyon Kredisi Kazanabilir miyim?", a4: "Evet! Parallis içerisinde kısa ödüllü reklamları izleyerek tamamen ücretsiz simülasyon kredisi kazanabilir ve hayalinizdeki sahneleri sıfır maliyetle görselleştirmeye devam edebilirsiniz.",
                 q5: "528Hz Solfeggio Frekansı Nedir ve Nasıl Kullanılır?", a5: "528Hz, ses terapisi ve nörobilimde 'Dönüşüm ve Mucize Tonu' olarak bilinen saf bir frekanstır. Parallis'in Portal sekmesinde yerleşik 528Hz harmonik oynatıcıyı açarak vizyonlarınızı hayal ederken zihninizi sakinleştirebilir, odaklanabilir ve derin alfa meditasyon durumuna geçebilirsiniz.",
                 q6: "Gelecekten Gelen Benlik Mektupları (Future Self Telegrams) Nedir?", a6: "2030 yılındaki hedeflerine ulaşmış, başarı ve refah içindeki paralel kimliğinizin bakış açısından her gün size özel olarak yazılan ilham verici mektuplardır. Günlük motivasyonunuzu yüksek tutmak ve hedeflerinize odaklanmanızı sağlamak için tasarlanmıştır.",
@@ -690,6 +699,7 @@
                 tabMonaco: "Superyacht Monaco", tabParis: "Penthouse Paris", tabSwiss: "Chalet Alpes Suisses", tabTokyo: "Domaine Cyber Tokyo", tabDubai: "Villa Céleste Dubaï",
                 promptLabel: "Plan compilé Parallis 8K Neural Vision", btnSimulateThis: "Simuler cette réalité",
                 expHeading: "L'EXPÉRIENCE QUANTIQUE", expSub: "Conçu avec les neurosciences, les harmoniques 528Hz et l'IA générative en temps réel.",
+                expBadge1: "01 // VISION & FIL D'ACTUALITÉ", expBadge2: "02 // TÉLÉGRAMMES QUANTIQUES", expBadge3: "03 // COFFRE D'ACTIFS",
                 exp1Title: "Portail Solfeggio 528Hz", exp1Body: "Ajustez votre esprit sur la fréquence de transformation et d'alignement quantique.",
                 exp2Title: "Lettres Quantiques du Futur", exp2Body: "Recevez chaque jour des messages inspirants écrits par votre futur moi accompli en 2030.",
                 exp3Title: "Coffre-fort d'Actifs & Patrimoine", exp3Body: "Suivez votre patrimoine simulé, vos supercars sur mesure et vos jets privés.",
@@ -722,6 +732,7 @@
                 tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Schweizer Alpen Chalet", tabTokyo: "Tokio Cyber Anwesen", tabDubai: "Dubai Sky Villa",
                 promptLabel: "Parallis 8K Neural Blueprint", btnSimulateThis: "Diese Realität simulieren",
                 expHeading: "DAS QUANTEN-MANIFESTATIONS-ERLEBNIS", expSub: "Entwickelt mit Neurowissenschaften, 528Hz Frequenzen und generativer Echtzeit-KI.",
+                expBadge1: "01 // VISION & FEED", expBadge2: "02 // QUANTEN-BRIEFE", expBadge3: "03 // VERMÖGENSTRESOR",
                 exp1Title: "528Hz Solfeggio Portal", exp1Body: "Stimmen Sie Ihren Geist auf die Frequenz der Transformation und Realitätsausrichtung ein.",
                 exp2Title: "Quantenbriefe aus der Zukunft", exp2Body: "Erhalten Sie tägliche Botschaften, geschrieben aus der Sicht Ihres erfolgreichen Ichs im Jahr 2030.",
                 exp3Title: "Vermögens- und Asset-Tresor", exp3Body: "Verfolgen Sie Ihre simulierten Luxusimmobilien, Supersportwagen und Privatjets.",
@@ -754,6 +765,7 @@
                 tabMonaco: "Superyacht Monaco", tabParis: "Attico a Parigi", tabSwiss: "Chalet Alpi Svizzere", tabTokyo: "Tenuta Cyber Tokyo", tabDubai: "Sky Villa Dubai",
                 promptLabel: "Blueprint Parallis 8K Neural Vision", btnSimulateThis: "Simula Questa Realtà",
                 expHeading: "L'ESPERIENZA QUANTISTICA", expSub: "Progettato con neuroscienze, frequenze a 528Hz e intelligenza artificiale generativa in tempo reale.",
+                expBadge1: "01 // VISIONE & FEED", expBadge2: "02 // LETTERE QUANTISTICHE", expBadge3: "03 // FORZIERE ASSET",
                 exp1Title: "Portale Solfeggio 528Hz", exp1Body: "Sintonizza la tua mente sulla frequenza della trasformazione e dell'allineamento quantistico.",
                 exp2Title: "Lettere Quantistiche dal Futuro", exp2Body: "Ricevi ogni giorno messaggi ispiratori scritti dalla prospettiva del tuo io realizzato nel 2030.",
                 exp3Title: "Vault Patrimoniale & Asset", exp3Body: "Monitora i tuoi immobili di lusso, le supercar esclusive e la tua flotta di jet privati.",
@@ -786,6 +798,7 @@
                 tabMonaco: "Superyate en Mónaco", tabParis: "Ático en París", tabSwiss: "Chalet Alpes Suizos", tabTokyo: "Finca Cíber Tokio", tabDubai: "Sky Villa Dubái",
                 promptLabel: "Estructura compilada Parallis 8K Neural Vision", btnSimulateThis: "Simular Esta Realidad",
                 expHeading: "LA EXPERIENCIA CUÁNTICA", expSub: "Diseñado con neurociencia, frecuencias de 528Hz e IA generativa en tiempo real.",
+                expBadge1: "01 // VISIÓN Y FEED", expBadge2: "02 // CARTAS CUÁNTICAS", expBadge3: "03 // BÓVEDA DE ACTIVOS",
                 exp1Title: "Portal Solfeggio 528Hz", exp1Body: "Alinea tu mente con la frecuencia exacta de transformación y sincronización cuántica.",
                 exp2Title: "Cartas Cuánticas del Futuro", exp2Body: "Recibe mensajes inspiradores escritos desde la perspectiva de tu yo realizado en 2030.",
                 exp3Title: "Bóveda de Patrimonio y Activos", exp3Body: "Supervisa tus propiedades exclusivas, superdeportivos y flota de jets privados.",
@@ -818,6 +831,7 @@
                 tabMonaco: "Суперъяхта в Монако", tabParis: "Пентхаус в Париже", tabSwiss: "Шале в Альпах", tabTokyo: "Кибер-поместье в Токио", tabDubai: "Скай-вилла в Дубае",
                 promptLabel: "Скомпилированная структура Parallis 8K", btnSimulateThis: "Симулировать эту жизнь",
                 expHeading: "КВАНТОВЫЙ ОПЫТ МАНИФЕСТАЦИИ", expSub: "Создан на стыке нейробиологии, частот 528 Гц и генеративного искусственного интеллекта.",
+                expBadge1: "01 // ВИДЕНИЕ И ЛЕНТА", expBadge2: "02 // КВАНТОВЫЕ ПИСЬМА", expBadge3: "03 // ХРАНИЛИЩЕ АКТИВОВ",
                 exp1Title: "Портал 528 Гц", exp1Body: "Настройте сознание на частоту трансформации и квантового выравнивания реальности.",
                 exp2Title: "Квантовые письма из будущего", exp2Body: "Получайте вдохновляющие послания, написанные от лица вашего успешного «я» из 2030 года.",
                 exp3Title: "Хранилище активов и капитала", exp3Body: "Отслеживайте элитную недвижимость, коллекционные суперкары и частные джеты.",
@@ -850,6 +864,7 @@
                 tabMonaco: "يخت موناكو الفاخر", tabParis: "بنتهاوس باريس", tabSwiss: "شاليه جبال الألب السويسرية", tabTokyo: "قصر طوكيو السيبراني", tabDubai: "فيلا دبي السماوية",
                 promptLabel: "مخطط أوامر Parallis 8K العصبي", btnSimulateThis: "محاكاة هذا الواقع",
                 expHeading: "تجربة التجلي الكمومي", expSub: "مصممة بعلوم الأعصاب وترددات 528 هرتز والذكاء الاصطناعي التوليدي الفوري.",
+                expBadge1: "01 // الرؤية وخلاصة التجارب", expBadge2: "02 // الرسائل الكمومية", expBadge3: "03 // خزينة الأصول الفاخرة",
                 exp1Title: "بوابة تردد 528 هرتز", exp1Body: "اضبط ذهنك على التردد الدقيق المرتبط بالتحول وإعادة المحاذاة الكمومية للواقع.",
                 exp2Title: "رسائل كمومية من المستقبل", exp2Body: "احصل يومياً على رسائل ملهمة مكتوبة من منظور ذاتك المحققة لأهدافها في عام 2030.",
                 exp3Title: "خزينة الأصول وصافي الثروة", exp3Body: "تتبع عقاراتك الفارهة، وسياراتك الخارقة، وأسطول طائراتك الخاصة.",
@@ -1188,6 +1203,98 @@
             img.src = src;
         });
 
+        // Preload App Mockup Images
+        const mockupImages = [
+            "assets/images/mockup_portal.png",
+            "assets/images/mockup_letter.png",
+            "assets/images/mockup_vault.jpg"
+        ];
+        mockupImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Interactive Experience Showcase Slider (UI/UX Pro Max)
+        let currentExpIndex = 0;
+        let expInterval = null;
+        let expProgressTimer = null;
+        const EXP_SLIDE_DURATION = 6000;
+
+        function setExperienceSlide(index, manual = true) {
+            currentExpIndex = index;
+            const cards = document.querySelectorAll('.exp-card');
+            const slides = document.querySelectorAll('.mockup-slide');
+            const dots = document.querySelectorAll('.mockup-dot');
+
+            cards.forEach((card, i) => {
+                const isActive = (i === index);
+                card.classList.toggle('active', isActive);
+                const pb = card.querySelector('.exp-progress-bar');
+                if (pb && !isActive) {
+                    pb.style.width = '0%';
+                }
+            });
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            if (manual) {
+                restartExpAutoPlay();
+            }
+            startExpProgressBar();
+        }
+
+        function startExpProgressBar() {
+            clearInterval(expProgressTimer);
+            const activeCard = document.querySelector(`.exp-card[data-exp-index="${currentExpIndex}"]`);
+            const activeBar = activeCard ? activeCard.querySelector('.exp-progress-bar') : null;
+            if (!activeBar) return;
+
+            activeBar.style.width = '0%';
+            const startTime = Date.now();
+            expProgressTimer = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                const pct = Math.min(100, (elapsed / EXP_SLIDE_DURATION) * 100);
+                activeBar.style.width = pct + '%';
+                if (pct >= 100) {
+                    clearInterval(expProgressTimer);
+                }
+            }, 40);
+        }
+
+        function nextExperienceSlide() {
+            const nextIdx = (currentExpIndex + 1) % 3;
+            setExperienceSlide(nextIdx, false);
+        }
+
+        function restartExpAutoPlay() {
+            clearInterval(expInterval);
+            expInterval = setInterval(nextExperienceSlide, EXP_SLIDE_DURATION);
+        }
+
+        function pauseExpAutoPlay() {
+            clearInterval(expInterval);
+            clearInterval(expProgressTimer);
+        }
+
+        function initExperienceShowcase() {
+            const expContainer = document.getElementById('expCardsContainer');
+            if (expContainer) {
+                expContainer.addEventListener('mouseenter', pauseExpAutoPlay);
+                expContainer.addEventListener('mouseleave', () => {
+                    restartExpAutoPlay();
+                    startExpProgressBar();
+                });
+            }
+            setExperienceSlide(0, false);
+            restartExpAutoPlay();
+        }
+
 
         function getActiveLang() {
             return document.getElementById('html-root').getAttribute('lang') || 'en';
@@ -1362,7 +1469,7 @@
             }
         }
 
-        // Initialize Quantum Canvas & Language
+        // Initialize Quantum Canvas, Language & Experience Showcase
         initQuantumCanvas();
 
         function initParallisLanguage() {
@@ -1372,9 +1479,11 @@
                 const savedLang = localStorage.getItem('parallis_lang') || (navigator.language ? navigator.language.slice(0, 2).toLowerCase() : 'en');
                 const initialLang = queryLang || (translations[savedLang] ? savedLang : 'en');
                 setLanguage(initialLang);
+                initExperienceShowcase();
             } catch (err) {
                 console.error("Language initialization failed:", err);
                 setLanguage('en');
+                initExperienceShowcase();
             }
         }
 

@@ -655,74 +655,224 @@ header {
     word-break: break-word;
 }
 
-/* iPhone 16 Pro Mockup Section */
+/* iPhone 16 Pro Mockup Section (UI/UX Pro Max) */
 .mockup-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 36px;
+}
+
+.exp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.exp-card:last-child {
+    margin-bottom: 0;
+}
+
+.exp-card:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+}
+
+.exp-card.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(19, 19, 26, 0.95) 100%);
+    border-color: var(--gold);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.16);
+    transform: translateY(-2px);
+}
+
+.exp-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.exp-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exp-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+}
+
+.exp-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+
+.exp-card.active h3 {
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+}
+
+.exp-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+
+.exp-card.active p {
+    color: #E2E8F0;
+}
+
+.exp-card .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.exp-card.active .card-icon {
+    background: linear-gradient(135deg, #FFE066, #D4AF37);
+    color: #000000;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.45);
+    border-color: transparent;
+}
+
+/* Progress bar inside active card */
+.exp-card-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.exp-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #D4AF37, #FFE066);
+    transition: width 0.05s linear;
+}
+
+/* iPhone Frame */
+.mockup-phone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .mockup-phone {
     position: relative;
     width: 310px;
-    height: 620px;
+    height: 640px;
     margin: 0 auto;
     background: #000000;
-    border-radius: 52px;
-    border: 8px solid #2B2B36;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px var(--gold-glow);
-    padding: 10px;
+    border-radius: 54px;
+    border: 9px solid #23232B;
+    outline: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(212, 175, 55, 0.18);
+    padding: 6px;
     overflow: hidden;
 }
 
 .mockup-screen {
     width: 100%;
     height: 100%;
-    border-radius: 40px;
-    background: #0B0B0F;
+    border-radius: 44px;
+    background: #000000;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
-.mockup-island {
+.mockup-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mockup-slide {
     position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 86px;
-    height: 22px;
-    background: #000000;
-    border-radius: 20px;
-    z-index: 10;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
 }
 
-.mockup-ui-card {
-    margin: 36px 12px 12px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-gold);
-    border-radius: 18px;
-    padding: 16px;
-    text-align: center;
+.mockup-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    z-index: 2;
 }
 
-.mockup-portal-orb {
-    width: 110px;
-    height: 110px;
-    margin: 8px auto;
+.mockup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.mockup-glare {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 35%, rgba(0, 0, 0, 0) 60%, rgba(212, 175, 55, 0.03) 100%);
+    border-radius: 44px;
+}
+
+.mockup-dots {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mockup-dot {
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: radial-gradient(circle, #FFE066 0%, #D4AF37 40%, #7E22CE 100%);
-    box-shadow: 0 0 35px var(--gold-glow);
-    animation: rotatePortal 8s linear infinite;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
 }
 
-@keyframes rotatePortal {
-    0% { transform: rotate(0deg) scale(0.96); }
-    50% { transform: rotate(180deg) scale(1.04); }
-    100% { transform: rotate(360deg) scale(0.96); }
+.mockup-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: var(--gold);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
 
 /* Bento Grid */
@@ -975,7 +1125,10 @@ footer {
     }
     .mockup-grid {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 40px;
+    }
+    .mockup-info {
+        text-align: left;
     }
 }
 
