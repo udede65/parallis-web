@@ -513,17 +513,33 @@ header {
     position: relative;
     overflow: hidden;
     min-height: 380px;
+    background: #0d0d12;
 }
 
-.showcase-image-wrapper img {
+.showcase-slide {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.04);
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
 }
 
-.showcase-display:hover .showcase-image-wrapper img {
-    transform: scale(1.03);
+.showcase-slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.showcase-display:hover .showcase-slide.active {
+    transform: scale(1.025);
 }
 
 .showcase-image-overlay {
@@ -531,6 +547,7 @@ header {
     inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.75) 100%);
     pointer-events: none;
+    z-index: 2;
 }
 
 .showcase-badge-8k {
@@ -538,14 +555,18 @@ header {
     top: 18px;
     left: 18px;
     background: rgba(0, 0, 0, 0.75);
-    border: 1px solid var(--gold-primary);
-    padding: 6px 14px;
-    border-radius: var(--radius-pill);
-    color: var(--gold-light);
-    font-size: 0.78rem;
-    font-weight: 800;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--accent-gold);
+    font-size: 0.72rem;
+    font-weight: 700;
     letter-spacing: 1px;
-    backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 3;
 }
 
 .showcase-content {
