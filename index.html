@@ -6,7 +6,7 @@
     <meta name="tiktok-developers-site-verification" content="v9OdkHOTxzB3ZUgegV8G3WuGj8kKvDRr">
     <title>Parallis: AI Dream Simulator - Official Web Portal</title>
     <meta name="description" content="Parallis: AI Dream Simulator - Manifest your parallel luxury life in 8K using Parallis 8K Neural Vision Engine, 528Hz quantum portal, and live VIP city intelligence in 8 languages.">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style id="showcase-theatre-css">
@@ -194,6 +194,226 @@
             color: #A0A3B8;
             line-height: 1.5;
             word-break: break-word;
+        }
+
+        /* Experience Mockup Section (UI/UX Pro Max) */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 36px;
+        }
+        @media (max-width: 1024px) {
+            .mockup-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        .exp-card {
+            background: #0E0E16;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 22px 24px;
+            margin-bottom: 18px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+            text-align: left;
+        }
+        [dir="rtl"] .exp-card {
+            text-align: right;
+        }
+        .exp-card:last-child {
+            margin-bottom: 0;
+        }
+        .exp-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        .exp-card.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.09) 0%, rgba(19, 19, 28, 0.98) 100%);
+            border-color: #D4AF37;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.16);
+            transform: translateY(-2px);
+        }
+        .exp-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 10px;
+        }
+        [dir="rtl"] .exp-card-header {
+            flex-direction: row-reverse;
+        }
+        .exp-card-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .exp-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #F3E5AB;
+            text-transform: uppercase;
+        }
+        .exp-card h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .exp-card.active h3 {
+            color: #FFFFFF;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+        }
+        .exp-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            color: #8E92A8;
+        }
+        .exp-card.active p {
+            color: #E2E8F0;
+        }
+        .exp-card .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #D4AF37;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .exp-card.active .card-icon {
+            background: linear-gradient(135deg, #FFE066, #D4AF37);
+            color: #000000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.45);
+            border-color: transparent;
+        }
+        .exp-card-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+        .exp-progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #D4AF37, #FFE066);
+            transition: width 0.05s linear;
+        }
+        .mockup-phone-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 0 auto;
+        }
+        .mockup-phone {
+            position: relative;
+            width: 310px;
+            height: 654px;
+            box-sizing: border-box;
+            background: #000000;
+            border-radius: 54px;
+            border: 10px solid #1E1E26;
+            outline: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(212, 175, 55, 0.18);
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .mockup-screen {
+            position: relative;
+            width: 290px;
+            height: 634px;
+            box-sizing: border-box;
+            border-radius: 44px;
+            overflow: hidden;
+            background: #000000;
+            flex-shrink: 0;
+        }
+        .mockup-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .mockup-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: scale(0.97);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .mockup-slide.active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: scale(1) !important;
+            pointer-events: auto !important;
+            z-index: 5 !important;
+        }
+        .mockup-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center top !important;
+            display: block !important;
+            border-radius: 44px;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .mockup-glare {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 35%, transparent 60%, rgba(212, 175, 55, 0.03) 100%);
+            border-radius: 44px;
+        }
+        .mockup-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 4px;
+        }
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        .mockup-dot.active {
+            width: 28px;
+            border-radius: 10px;
+            background: #D4AF37;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
         }
     </style>
 </head>
@@ -426,14 +646,14 @@
                     <div class="mockup-phone">
                         <div class="mockup-screen">
                             <div class="mockup-slider" id="mockupSlider">
-                                <div class="mockup-slide active" data-slide="0">
-                                    <img src="assets/images/mockup_portal.png" alt="Parallis 528Hz Quantum Portal & Feed" class="mockup-img" loading="eager">
+                                <div class="mockup-slide active" data-slide="0" style="opacity: 1; visibility: visible; z-index: 5;">
+                                    <img src="assets/images/mockup_portal.png?v=3" alt="Parallis 528Hz Quantum Portal & Feed" class="mockup-img" loading="eager">
                                 </div>
-                                <div class="mockup-slide" data-slide="1">
-                                    <img src="assets/images/mockup_letter.png" alt="Parallis Future Self Quantum Letter" class="mockup-img" loading="lazy">
+                                <div class="mockup-slide" data-slide="1" style="opacity: 0; visibility: hidden; z-index: 1;">
+                                    <img src="assets/images/mockup_letter.png?v=3" alt="Parallis Future Self Quantum Letter" class="mockup-img" loading="eager">
                                 </div>
-                                <div class="mockup-slide" data-slide="2">
-                                    <img src="assets/images/mockup_vault.jpg" alt="Parallis Luxury Asset Portfolio" class="mockup-img" loading="lazy">
+                                <div class="mockup-slide" data-slide="2" style="opacity: 0; visibility: hidden; z-index: 1;">
+                                    <img src="assets/images/mockup_vault.jpg?v=3" alt="Parallis Luxury Asset Portfolio" class="mockup-img" loading="eager">
                                 </div>
                             </div>
                             <div class="mockup-glare"></div>
@@ -441,9 +661,9 @@
                     </div>
                     <!-- Navigation Dots under Phone -->
                     <div class="mockup-dots" id="mockupDots">
-                        <button class="mockup-dot active" onclick="setExperienceSlide(0)" aria-label="Portal Screen"></button>
-                        <button class="mockup-dot" onclick="setExperienceSlide(1)" aria-label="Letter Screen"></button>
-                        <button class="mockup-dot" onclick="setExperienceSlide(2)" aria-label="Portfolio Screen"></button>
+                        <button type="button" class="mockup-dot active" onclick="setExperienceSlide(0)" aria-label="Portal Screen"></button>
+                        <button type="button" class="mockup-dot" onclick="setExperienceSlide(1)" aria-label="Letter Screen"></button>
+                        <button type="button" class="mockup-dot" onclick="setExperienceSlide(2)" aria-label="Portfolio Screen"></button>
                     </div>
                 </div>
             </div>
@@ -1236,7 +1456,12 @@
             });
 
             slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
+                const isActive = (i === index);
+                slide.classList.toggle('active', isActive);
+                slide.style.opacity = isActive ? '1' : '0';
+                slide.style.visibility = isActive ? 'visible' : 'hidden';
+                slide.style.zIndex = isActive ? '5' : '1';
+                slide.style.transform = isActive ? 'scale(1)' : 'scale(0.97)';
             });
 
             dots.forEach((dot, i) => {
