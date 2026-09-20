@@ -426,6 +426,266 @@
 
     <!-- Interactive Scripts & 8 Languages Matrix -->
     <script>
+        // 8 Languages Dictionary
+        const translations = {
+            en: {
+                navShowcase: "8K Showcase", navFeatures: "Features", navExperience: "Experience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
+                btnDownload: "Get App", heroBadge: "Next-Gen AI Dream & Life Simulator",
+                heroTitlePrefix: "MANIFEST YOUR", heroTitleHighlight: "PARALLEL LUXURY LIFE", heroTitleSuffix: "IN 8 LANGUAGES",
+                heroBody: "Step into your highest reality. Generate hyper-realistic 8K photo chronicles with fal.ai 8K Neural Vision Engine, receive daily telegrams from your future self, and calibrate your frequency at 528Hz.",
+                ctaDownload: "Download on App Store", ctaExplore: "Explore 8K Showcase",
+                specFrequency: "528Hz Quantum Calibration", specLanguages: "8 Native Languages", specLive: "Live Tavily City Intelligence",
+                showcaseHeading: "INTERACTIVE 8K SIMULATION GALLERY", showcaseSub: "Switch between parallel archetypes and witness how fal.ai 8K Neural Vision Engine materializes your ultimate life visions.",
+                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Swiss Alps Chalet", tabTokyo: "Tokyo Cyber Estate", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai 8K Neural Vision Engine Compiled Blueprint", btnSimulateThis: "Simulate This Reality",
+                expHeading: "THE QUANTUM MANIFESTATION EXPERIENCE", expSub: "Engineered with neuroscience, 528Hz solfeggio harmonics, and real-time generative AI intelligence.",
+                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.",
+                exp2Title: "Future Self Quantum Letters", exp2Body: "Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.",
+                exp3Title: "Net Worth & Asset Portfolio", exp3Body: "Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.",
+                featuresHeading: "POWERFUL SIMULATION ENGINE", featuresSub: "Experience state-of-the-art vision building tailored to your ultimate desires.",
+                f1Title: "fal.ai 8K Neural Vision Engine Engine", f1Body: "Instant 8K cinematic rendering for custom penthouses, superyachts, and luxury lifestyles with zero compromise on realism.",
+                f2Title: "8-Language AI Architecture", f2Body: "Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt synthesis.",
+                f3Title: "Live Tavily City Intelligence", f3Body: "Real-time web grounding for chosen destinations. Experience live Michelin dining, galas, and hotspots synthesized daily.",
+                f4Title: "VIP Subscriptions & Passes", f4Body: "Weekly and Yearly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.",
+                f5Title: "Simulation Credit Vault", f5Body: "Flexibility to top up 10, 25, 60, or 150 permanent simulation credits whenever you want extra visual generations.",
+                f6Title: "Privacy First & 1-Click Erasure", f6Body: "Full control over your profiles and data with instant 1-click in-app account deletion anytime.",
+                faqHeading: "FREQUENTLY ASKED QUESTIONS", faqSub: "Everything you need to know about Parallis VIP Subscriptions, credits, and quantum reality features.",
+                q1: "What is Parallis and how does parallel life simulation work?", a1: "Parallis is a next-generation AI manifestation and reality simulator. You define your dream persona, career, luxury destination, and lifestyle. Our fal.ai (Nano Banana 2 Lite) visual engine brings this parallel reality to life with bespoke 8K cinematic chronicles, grounded physics, and deeply personalized narratives.",
+                q2: "What is Parallis VIP Subscription and what benefits does it include?", a2: "Parallis VIP unlocks unlimited parallel simulation profiles, a completely ad-free experience, highest-highest-priority rendering with fal.ai (Nano Banana 2 Lite), and exclusive luxury lifestyle story packs. Subscriptions are available weekly or yearly and can be easily managed or cancelled anytime in your Apple ID Settings.",
+                q3: "How do Simulation Credit Packs work and do they expire?", a3: "Credit packs (10, 25, 60, or 150 credits) are one-time consumable top-ups that never expire. You can keep and use them whenever you wish to produce extra high-resolution 8K vision scenes, whether you have an active VIP subscription or not.",
+                q4: "Can I earn free simulation credits without making a purchase?", a4: "Yes! Parallis features a built-in Rewarded Ads option that allows you to watch short, non-intrusive sponsor clips to earn free simulation credits. You can continuously produce new dreams and visuals 100% free.",
+                q5: "What is the 528Hz Solfeggio frequency and how is it used?", a5: "528Hz is scientifically recognized in sound acoustics and meditation as the 'Transformation & Miracle Tone'. In Parallis's Portal tab, activate the built-in 528Hz harmonic player to calm brainwaves, deepen alpha-frequency focus, and mentally align with your highest goals while visualizing your parallel life.",
+                q6: "What are Future Self Quantum Letters?", a6: "They are personalized, deeply inspiring telegrams delivered daily to your notification feed, written from the first-person perspective of your accomplished, wealthy parallel identity living in 2030. They provide high-level mindset guidance and keep your daily momentum focused on success.",
+                q7: "Which languages does Parallis support?", a7: "Parallis natively supports 8 languages: English, Turkish, French, German, Italian, Spanish, Russian, and Arabic. All character prompts, generated story chronicles, future self telegrams, and user interface elements adapt seamlessly to your chosen language.",
+                q8: "How is my privacy protected and how can I delete my account or data?", a8: "We uphold strict privacy standards and never sell your personal data. You have full sovereignty over your information and can permanently delete your account, created profiles, and generated simulations with a single click in the app under Profile -> Delete Account, or via our web portal.",
+                qrHeading: "Scan with iPhone", qrSub: "Instant App Store Download"
+            },
+            tr: {
+                navShowcase: "8K Vitrin", navFeatures: "Özellikler", navExperience: "Deneyim", navFaq: "SSS", navSupport: "Destek", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
+                btnDownload: "Uygulamayı İndir", heroBadge: "Yeni Nesil AI Vizyon & Hayat Simülatörü",
+                heroTitlePrefix: "HAYALİNİZDEKİ", heroTitleHighlight: "PARALEL LÜKS HAYATI", heroTitleSuffix: "8 DİLDE SİMÜLE EDİN",
+                heroBody: "En yüksek potansiyelinizin gerçekliğine adım atın. fal.ai 8K Sinematik Nöral Motoru ile ultra-gerçekçi fotoğraf serileri üretin, gelecekteki benliğinizden günlük kuantum mektuplar alın ve zihninizi 528Hz frekansına kilitleyin.",
+                ctaDownload: "App Store'dan İndirin", ctaExplore: "8K Vitrini Keşfet",
+                specFrequency: "528Hz Kuantum Frekansı", specLanguages: "8 Anadil Desteği", specLive: "Canlı Tavily Şehir İstihbaratı",
+                showcaseHeading: "İNTERAKTİF 8K SİMÜLASYON GALERİSİ", showcaseSub: "Paralel arketipler arasında geçiş yapın ve fal.ai 8K Sinematik Motorunun hayallerinizi nasıl 8K sinematik görselleştirdiğini canlı görün.",
+                tabMonaco: "Monako Süperyatı", tabParis: "Paris Penthouse", tabSwiss: "İsviçre Alpleri Şatosu", tabTokyo: "Tokyo Siber Rezidans", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai 8K Derlenmiş İstem Mimarisi", btnSimulateThis: "Bu Hayatı Simüle Et",
+                expHeading: "KUANTUM TEZAHÜR DENEYİMİ", expSub: "Nörobilim, 528Hz solfeggio frekansları ve gerçek zamanlı üretken yapay zeka ile tasarlandı.",
+                exp1Title: "528Hz Kuantum Portalı", exp1Body: "Zihninizi dönüşüm, DNA onarımı ve kuantum paralel evren hizalanması frekansı olan 528Hz'e kilitleyin.",
+                exp2Title: "Gelecekten Kuantum Mektuplar", exp2Body: "2030'da zirveye ulaşmış paralel benliğinizin kaleminden her gün size özel yazılmış ilham verici mektuplar alın.",
+                exp3Title: "Lüks Varlık Kasası", exp3Body: "Simüle edilmiş lüks gayrimenkullerinizi, kişiye özel süper arabalarınızı ve özel jet filonuzu takip edin.",
+                featuresHeading: "GÜÇLÜ SİMÜLASYON MOTORU", featuresSub: "Arzuladığınız lüks yaşam standartlarına göre tasarlanmış yapay zeka deneyimi.",
+                f1Title: "fal.ai 8K Sinematik Görsel Motoru", f1Body: "Monako süperyatları ve lüks penthouse sahneleri için sıfır kayıpla anında 8K sinematik görsel üretimi.",
+                f2Title: "8 Dilli AI Mimarisi", f2Body: "Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça akıllı istem sentezi.",
+                f3Title: "Canlı Tavily Şehir Zekası", f3Body: "Seçtiğiniz şehirler için gerçek zamanlı canlı web istihbaratı. Güncel Michelin restoranları ve VIP etkinlikler her gün hazır.",
+                f4Title: "VIP Üyelik & Paketler", f4Body: "Haftalık ve Yıllık VIP erişim ile sınırsız profil üretimi ve reklamsız yüksek öncelikli simülasyon.",
+                f5Title: "Kalıcı Kredi Haznesi", f5Body: "Süresi dolmayan 10, 25, 60 ve 150 ek simülasyon kredisi paketleri.",
+                f6Title: "Gizlilik & Tek Tıkla Silme", f6Body: "Tek tıkla hesabınızı ve tüm simülasyon verilerinizi anında kalıcı olarak silme hakkı.",
+                faqHeading: "SIKÇA SORULAN SORULAR", faqSub: "Parallis VIP üyeliği, krediler ve kuantum gerçeklik özellikleri hakkında merak edilen her şey.",
+                q1: "Parallis Nedir ve Paralel Hayat Simülasyonu Nasıl Çalışır?", a1: "Parallis, hayal ettiğiniz alternatif paralel hayatı yapay zeka ile canlandıran yeni nesil bir vizyon ve tezahür simülatörüdür. Karakterinizi seçer; kariyer, lüks yaşam tarzı ve şehrinizi belirlersiniz. fal.ai (Nano Banana 2 Lite) görsel motorumuz bu hayatı size özel 8K sinematik fotoğraf serileri ve ilham verici hikayelerle gerçeğe dönüştürür.",
+                q2: "Parallis VIP Üyeliği Nedir ve Neler Sunar?", a2: "Sınırsız sayıda paralel hayat profili oluşturma, tamamen reklamsız kullanım, en yüksek öncelikli fal.ai (Nano Banana 2 Lite) görsel üretimi ve özel lüks hikaye paketleri sunar. Haftalık veya yıllık abonelik seçenekleriyle sunulur ve Apple ID ayarlarınızdan dilediğiniz an tek tıkla iptal edilebilir.",
+                q3: "Simülasyon Kredi Paketleri Nasıl Çalışır, Süresi Biter mi?", a3: "Kredi paketleri (10, 25, 60 veya 150 kredi) tek seferlik satın alımlardır ve asla kullanım süresi dolmaz (non-expiring). VIP üyeliğiniz olsun ya da olmasın, dilediğiniz zaman ekstra 8K simülasyon sahneleri üretmek için süresiz olarak kullanabilirsiniz.",
+                q4: "Ücret Ödemeden Ücretsiz Simülasyon Kredisi Kazanabilir miyim?", a4: "Evet! Parallis içerisinde kısa ödüllü reklamları izleyerek tamamen ücretsiz simülasyon kredisi kazanabilir ve hayalinizdeki sahneleri sıfır maliyetle görselleştirmeye devam edebilirsiniz.",
+                q5: "528Hz Solfeggio Frekansı Nedir ve Nasıl Kullanılır?", a5: "528Hz, ses terapisi ve nörobilimde 'Dönüşüm ve Mucize Tonu' olarak bilinen saf bir frekanstır. Parallis'in Portal sekmesinde yerleşik 528Hz harmonik oynatıcıyı açarak vizyonlarınızı hayal ederken zihninizi sakinleştirebilir, odaklanabilir ve derin alfa meditasyon durumuna geçebilirsiniz.",
+                q6: "Gelecekten Gelen Benlik Mektupları (Future Self Telegrams) Nedir?", a6: "2030 yılındaki hedeflerine ulaşmış, başarı ve refah içindeki paralel kimliğinizin bakış açısından her gün size özel olarak yazılan ilham verici mektuplardır. Günlük motivasyonunuzu yüksek tutmak ve hedeflerinize odaklanmanızı sağlamak için tasarlanmıştır.",
+                q7: "Parallis Hangi Dilleri Destekliyor?", a7: "Parallis; Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça olmak üzere 8 dili tam olarak destekler. Tüm simülasyon hikayeleri, mektuplar, arayüz ve istemler seçtiğiniz dile göre yerel olarak üretilir.",
+                q8: "Gizliliğim Nasıl Korunuyor ve Hesabımı Nasıl Silebilirim?", a8: "Gizliliğinize en üst düzeyde saygı duyuyoruz ve kişisel verilerinizi asla paylaşmıyoruz. Tüm verileriniz üzerinde tam kontrole sahipsiniz; uygulama içerisinden Profil -> Hesabı Sil seçeneğine basarak tüm profillerinizi ve simülasyonlarınızı tek tıkla anında ve kalıcı olarak silebilirsiniz.",
+                qrHeading: "iPhone ile Tara", qrSub: "Anında App Store İndir"
+            },
+            fr: {
+                navShowcase: "Galerie 8K", navFeatures: "Fonctionnalités", navExperience: "Expérience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
+                btnDownload: "Télécharger", heroBadge: "Simulateur de Vie et Rêves IA Nouvelle Génération",
+                heroTitlePrefix: "MANIFESTEZ VOTRE", heroTitleHighlight: "VIE DE LUXE PARALLÈLE", heroTitleSuffix: "EN 8 LANGUES",
+                heroBody: "Entrez dans votre réalité la plus élevée. Générez des chroniques photo 8K ultra-réalistes avec le moteur fal.ai 8K Neural Vision, recevez des télégrammes de votre futur moi et calibrez votre fréquence à 528Hz.",
+                ctaDownload: "Sur l'App Store", ctaExplore: "Explorer la Galerie 8K",
+                specFrequency: "Calibration 528Hz", specLanguages: "8 Langues Natives", specLive: "Intelligence Urbaine Tavily",
+                showcaseHeading: "GALERIE DE SIMULATION INTERACTIVE 8K", showcaseSub: "Basculez entre les archétypes et observez le moteur fal.ai 8K matérialiser vos visions de luxe.",
+                tabMonaco: "Superyacht Monaco", tabParis: "Penthouse Paris", tabSwiss: "Chalet Alpes Suisses", tabTokyo: "Domaine Cyber Tokyo", tabDubai: "Villa Céleste Dubaï",
+                promptLabel: "Plan compilé fal.ai 8K Neural Vision", btnSimulateThis: "Simuler cette réalité",
+                expHeading: "L'EXPÉRIENCE QUANTIQUE", expSub: "Conçu avec les neurosciences, les harmoniques 528Hz et l'IA générative en temps réel.",
+                exp1Title: "Portail Solfeggio 528Hz", exp1Body: "Ajustez votre esprit sur la fréquence de transformation et d'alignement quantique.",
+                exp2Title: "Lettres Quantiques du Futur", exp2Body: "Recevez chaque jour des messages inspirants écrits par votre futur moi accompli en 2030.",
+                exp3Title: "Coffre-fort d'Actifs & Patrimoine", exp3Body: "Suivez votre patrimoine simulé, vos supercars sur mesure et vos jets privés.",
+                featuresHeading: "MOTEUR DE SIMULATION PUISSANT", featuresSub: "Une expérience IA personnalisée conçue pour vos aspirations les plus élevées.",
+                f1Title: "Moteur fal.ai 8K Neural Vision", f1Body: "Rendu cinématographique instantané en 8K pour penthouses et yachts d'exception.",
+                f2Title: "Architecture IA en 8 Langues", f2Body: "Support natif pour le français, l'anglais, le turc, l'allemand, l'italien, l'espagnol, le russe et l'arabe.",
+                f3Title: "Intelligence Urbaine Tavily", f3Body: "Ancrage web en direct pour les meilleures tables et événements VIP dans votre ville choisie.",
+                f4Title: "Abonnements & Pass VIP", f4Body: "Accès VIP sans publicité via RevenueCat avec profils illimités et rendu prioritaire.",
+                f5Title: "Réserve de Crédits", f5Body: "Recharges permanentes de 10, 25, 60 ou 150 crédits de simulation.",
+                f6Title: "Confidentialité & Effacement 1-Clic", f6Body: "Contrôle absolu avec suppression définitive de votre compte et de vos données en 1 clic.",
+                faqHeading: "FOIRE AUX QUESTIONS", faqSub: "Tout sur les abonnements VIP, les crédits et les fonctionnalités quantiques de Parallis.",
+                q1: "Qu'est-ce que Parallis et comment fonctionne la simulation de vie parallèle?", a1: "Parallis est un simulateur de manifestation et de réalité IA nouvelle génération. Vous définissez votre personnage idéal, votre carrière et votre destination de rêve. Notre moteur visuel fal.ai (Nano Banana 2 Lite) matérialise cette réalité avec des chroniques photo 8K et des récits personnalisés.",
+                q2: "Qu'est-ce que l'Abonnement Parallis VIP et quels sont ses avantages?", a2: "Parallis VIP débloque des profils illimités, une expérience 100% sans publicité, un rendu prioritaire avec fal.ai (Nano Banana 2 Lite) et des packs d'histoires de luxe exclusifs. Abonnements hebdomadaires ou annuels résiliables à tout moment via vos Réglages Apple ID.",
+                q3: "Comment fonctionnent les packs de crédits et expirent-ils?", a3: "Les packs de crédits (10, 25, 60 ou 150 crédits) sont des recharges définitives qui n'expirent jamais. Utilisez-les à votre rythme pour générer des scènes 8K supplémentaires, avec ou sans abonnement VIP.",
+                q4: "Puis-je gagner des crédits de simulation gratuits sans payer?", a4: "Oui! Parallis intègre une option de publicités avec récompense vous permettant de visionner de courts clips de sponsors pour obtenir des crédits gratuits et continuer à créer sans frais.",
+                q5: "Qu'est-ce que la fréquence Solfeggio 528Hz et comment l'utiliser?", a5: "Le 528Hz est reconnu en acoustique comme la 'Fréquence Miracle et de Transformation'. Dans l'onglet Portail, activez le lecteur 528Hz pour apaiser vos ondes cérébrales et aligner votre état d'esprit lors de vos visualisations.",
+                q6: "Que sont les Lettres Quantiques du Futur?", a6: "Ce sont des messages quotidiens personnalisés rédigés du point de vue de votre moi accompli et prospère en 2030, conçus pour stimuler votre état d'esprit et votre motivation quotidienne.",
+                q7: "Quelles langues sont prises en charge par Parallis?", a7: "Parallis prend en charge nativement 8 langues: français, anglais, turc, allemand, italien, espagnol, russe et arabe. Récits, lettres et interface s'adaptent parfaitement.",
+                q8: "Comment mes données sont-elles protégées et comment supprimer mon compte?", a8: "Nous respectons rigoureusement votre vie privée. Vous pouvez supprimer définitivement votre compte, vos profils et toutes vos simulations en un clic depuis l'application via Profil -> Supprimer le compte.",
+                qrHeading: "Scanner avec iPhone", qrSub: "Téléchargement App Store"
+            },
+            de: {
+                navShowcase: "8K Galerie", navFeatures: "Funktionen", navExperience: "Erlebnis", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto löschen",
+                btnDownload: "App holen", heroBadge: "Next-Gen KI-Traum- und Lebenssimulator",
+                heroTitlePrefix: "MANIFESTIEREN SIE IHR", heroTitleHighlight: "PARALLELES LUXUSLEBEN", heroTitleSuffix: "IN 8 SPRACHEN",
+                heroBody: "Treten Sie in Ihre höchste Realität ein. Erstellen Sie ultrarealistische 8K-Fotochroniken mit fal.ai 8K Neural Vision Engine, erhalten Sie Kuantum-Briefe von Ihrem zukünftigen Ich und kalibrieren Sie 528Hz.",
+                ctaDownload: "Im App Store laden", ctaExplore: "8K Galerie erkunden",
+                specFrequency: "528Hz Frequenz-Kalibrierung", specLanguages: "8 Muttersprachen", specLive: "Live Tavily City Intelligence",
+                showcaseHeading: "INTERAKTIVE 8K SIMULATIONSGALERIE", showcaseSub: "Wechseln Sie zwischen Archetypen und erleben Sie, wie fal.ai 8K Neural Vision Engine Ihre Träume materialisiert.",
+                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Schweizer Alpen Chalet", tabTokyo: "Tokio Cyber Anwesen", tabDubai: "Dubai Sky Villa",
+                promptLabel: "fal.ai 8K Neural Prompt-Architektur", btnSimulateThis: "Diese Realität simulieren",
+                expHeading: "DAS QUANTEN-MANIFESTATIONS-ERLEBNIS", expSub: "Entwickelt mit Neurowissenschaften, 528Hz Frequenzen und generativer Echtzeit-KI.",
+                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Stimmen Sie Ihren Geist auf die Frequenz der Transformation und Realitätsausrichtung ein.",
+                exp2Title: "Quantenbriefe aus der Zukunft", exp2Body: "Erhalten Sie tägliche Botschaften, geschrieben aus der Sicht Ihres erfolgreichen Ichs im Jahr 2030.",
+                exp3Title: "Vermögens- und Asset-Tresor", exp3Body: "Verfolgen Sie Ihre simulierten Luxusimmobilien, Supersportwagen und Privatjets.",
+                featuresHeading: "LEISTUNGSSTARKE SIMULATIONS-ENGINE", featuresSub: "Maßgeschneidertes KI-Erlebnis für Ihre höchsten Lebensziele.",
+                f1Title: "fal.ai 8K Neural Vision Engine Engine", f1Body: "Sofortiges 8K-Rendering für Penthäuser und Yachten in atemberaubendem Fotorealismus.",
+                f2Title: "8-Sprachen KI-Architektur", f2Body: "Native Lokalisierung für Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
+                f3Title: "Live Tavily City Intelligence", f3Body: "Echtzeit-Web-Recherche für Spitzenrestaurants und VIP-Events in Ihrer gewählten Stadt.",
+                f4Title: "VIP-Abonnements & Pässe", f4Body: "Wöchentlicher und jährlicher VIP-Zugang über RevenueCat ohne Werbung mit Prioritäts-Rendering.",
+                f5Title: "Simulationsguthaben-Tresor", f5Body: "Dauerhafte Guthabenpakete mit 10, 25, 60 oder 150 Credits.",
+                f6Title: "Datenschutz & 1-Klick-Löschung", f6Body: "Volle Kontrolle mit sofortiger 1-Klick-Kontolöschung jederzeit in der App.",
+                faqHeading: "HÄUFIG GESTELLTE FRAGEN", faqSub: "Alles über Parallis VIP-Abonnements, Credits und Quanten-Features.",
+                q1: "Was ist Parallis und wie funktioniert die parallele Lebenssimulation?", a1: "Parallis ist ein KI-Manifestations- und Realitätssimulator der nächsten Generation. Sie definieren Ihre Traum-Persona, Karriere und Reiseziele. Die fal.ai (Nano Banana 2 Lite) Engine erweckt diese Realität mit maßgeschneiderten 8K-Fotostrecken und persönlichen Geschichten zum Leben.",
+                q2: "Was beinhaltet das Parallis VIP-Abonnement?", a2: "Parallis VIP schaltet unbegrenzte Profile, absolute Werbefreiheit, priorisiertes Rendering mit fal.ai (Nano Banana 2 Lite) und exklusive Luxus-Geschichten frei. Jederzeit flexibel über Ihre Apple-ID-Einstellungen kündbar.",
+                q3: "Wie funktionieren Simulations-Guthabenpakete und verfallen sie?", a3: "Credit-Pakete (10, 25, 60 oder 150 Credits) sind einmalige Aufladungen, die niemals verfallen. Sie können sie jederzeit für zusätzliche 8K-Szenen nutzen, unabhängig von einem VIP-Abonnement.",
+                q4: "Kann ich kostenlose Simulations-Credits verdienen?", a4: "Ja! Durch das Ansehen kurzer, freiwilliger Belohnungswerbung können Sie kostenlose Credits erhalten und Ihre Traumwelten vollkommen gratis generieren.",
+                q5: "Was ist die 528Hz-Solfeggio-Frequenz und wie wird sie genutzt?", a5: "528Hz gilt in der Akustik als 'Wunder- und Transformationsfrequenz'. Aktivieren Sie im Portal-Tab den harmonischen 528Hz-Player, um Ihren Geist zu beruhigen und Ihre Konzentration auf Ihre Lebensziele auszurichten.",
+                q6: "Was sind Quantenbriefe aus der Zukunft?", a6: "Täglich inspirierende Botschaften, verfasst aus der Ich-Perspektive Ihres erfolgreichen, wohlhabenden Ichs im Jahr 2030, um Ihre tägliche Motivation zu stärken.",
+                q7: "Welche Sprachen unterstützt Parallis?", a7: "Parallis unterstützt nativ 8 Sprachen: Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
+                q8: "Wie wird meine Privatsphäre geschützt und wie lösche ich mein Konto?", a8: "Volle Kontrolle über Ihre Daten: Sie können Ihr Konto und alle Simulationen jederzeit mit einem Klick in der App unter Profil -> Konto löschen vollständig entfernen.",
+                qrHeading: "Mit iPhone scannen", qrSub: "Direkt im App Store laden"
+            },
+            it: {
+                navShowcase: "Vetrina 8K", navFeatures: "Caratteristiche", navExperience: "Esperienza", navFaq: "FAQ", navSupport: "Supporto", navPrivacy: "Privacy", navTerms: "Termini", navDelete: "Elimina Account",
+                btnDownload: "Scarica App", heroBadge: "Simulatore di Vita e Sogni AI di Nuova Generazione",
+                heroTitlePrefix: "MANIFESTA LA TUA", heroTitleHighlight: "VITA DI LUSSO PARALLELA", heroTitleSuffix: "IN 8 LINGUE",
+                heroBody: "Entra nella tua realtà più elevata. Genera cronache fotografiche 8K con fal.ai 8K Neural Vision Engine, ricevi lettere quantistiche dal tuo futuro e calibra a 528Hz.",
+                ctaDownload: "Scarica su App Store", ctaExplore: "Esplora Vetrina 8K",
+                specFrequency: "Calibrazione 528Hz", specLanguages: "8 Lingue Native", specLive: "Tavily City Intelligence",
+                showcaseHeading: "GALLERIA DI SIMULAZIONE INTERATTIVA 8K", showcaseSub: "Scegli tra gli archetipi e osserva come fal.ai 8K Neural Vision Engine materializza i tuoi sogni.",
+                tabMonaco: "Superyacht Monaco", tabParis: "Attico a Parigi", tabSwiss: "Chalet Alpi Svizzere", tabTokyo: "Tenuta Cyber Tokyo", tabDubai: "Sky Villa Dubai",
+                promptLabel: "Blueprint fal.ai 8K Neural Vision", btnSimulateThis: "Simula Questa Realtà",
+                expHeading: "L'ESPERIENZA QUANTISTICA", expSub: "Progettato con neuroscienze, frequenze a 528Hz e intelligenza artificiale generativa in tempo reale.",
+                exp1Title: "Portale Solfeggio 528Hz", exp1Body: "Sintonizza la tua mente sulla frequenza della trasformazione e dell'allineamento quantistico.",
+                exp2Title: "Lettere Quantistiche dal Futuro", exp2Body: "Ricevi ogni giorno messaggi ispiratori scritti dalla prospettiva del tuo io realizzato nel 2030.",
+                exp3Title: "Vault Patrimoniale & Asset", exp3Body: "Monitora i tuoi immobili di lusso, le supercar esclusive e la tua flotta di jet privati.",
+                featuresHeading: "POTENTE MOTORE DI SIMULAZIONE", featuresSub: "Esperienza AI su misura per i tuoi desideri più elevati.",
+                f1Title: "Motore Neurale fal.ai 8K", f1Body: "Rendering cinematografico 8K istantaneo per attici, yacht e lifestyle d'élite.",
+                f2Title: "Architettura AI in 8 Lingue", f2Body: "Localizzazione nativa per italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
+                f3Title: "Tavily City Intelligence", f3Body: "Informazioni in tempo reale su ristoranti stellati ed eventi VIP nella città selezionata.",
+                f4Title: "Abbonamenti & Pass VIP", f4Body: "Accesso VIP settimanale e annuale tramite RevenueCat senza pubblicità e con rendering prioritario.",
+                f5Title: "Vault dei Crediti", f5Body: "Ricariche permanenti di 10, 25, 60 o 150 crediti di simulazione.",
+                f6Title: "Privacy & Cancellazione in 1 Clic", f6Body: "Controllo assoluto con cancellazione immediata di account e dati in qualsiasi momento.",
+                faqHeading: "DOMANDE FREQUENTI", faqSub: "Tutto su abbonamenti VIP, pacchetti crediti e funzionalità quantistiche di Parallis.",
+                q1: "Cos'è Parallis e come funziona la simulazione di vita parallela?", a1: "Parallis è un simulatore di manifestazione e realtà AI di nuova generazione. Definisci il tuo profilo ideale, la tua carriera e le tue destinazioni di lusso. Il nostro motore fal.ai (Nano Banana 2 Lite) trasforma questi sogni in cronache fotografiche 8K iperrealistiche.",
+                q2: "Cos'è l'Abbonamento Parallis VIP e quali vantaggi offre?", a2: "Parallis VIP sblocca profili illimitati, esperienza priva di pubblicità, rendering ad altissima priorità con fal.ai (Nano Banana 2 Lite) e pacchetti narrativi esclusivi. Gestibile e annullabile in qualsiasi momento nelle impostazioni ID Apple.",
+                q3: "Come funzionano i pacchetti di crediti e hanno una scadenza?", a3: "I pacchetti crediti (10, 25, 60 o 150 crediti) non scadono mai. Puoi conservarli e utilizzarli quando desideri per creare scene 8K aggiuntive.",
+                q4: "Posso guadagnare crediti di simulazione gratuiti senza pagare?", a4: "Sì! Parallis include annunci video con ricompensa che consentono di ottenere crediti gratuiti per generare simulazioni senza alcun costo.",
+                q5: "Cos'è la frequenza Solfeggio 528Hz e come si usa?", a5: "Il tono 528Hz è noto come la 'Frequenza della Trasformazione e dei Miracoli'. Nella scheda Portale, attiva il lettore a 528Hz per rilassare la mente ed entrare in profonda sintonia con i tuoi obiettivi.",
+                q6: "Cosa sono le Lettere Quantistiche dal Futuro?", a6: "Messaggi quotidiani personalizzati scritti dalla prospettiva della tua identità realizzata e agiata nel 2030, ideati per alimentare la tua motivazione.",
+                q7: "Quali lingue supporta Parallis?", a7: "Parallis supporta nativamente 8 lingue: italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
+                q8: "Come vengono protetti i miei dati e come posso eliminare l'account?", a8: "Garantiamo la massima privacy. Puoi eliminare definitivamente account, profili e simulazioni con un clic nell'app tramite Profilo -> Elimina Account.",
+                qrHeading: "Scansiona con iPhone", qrSub: "Download su App Store"
+            },
+            es: {
+                navShowcase: "Galería 8K", navFeatures: "Características", navExperience: "Experiencia", navFaq: "FAQ", navSupport: "Soporte", navPrivacy: "Privacidad", navTerms: "Términos", navDelete: "Eliminar Cuenta",
+                btnDownload: "Obtener App", heroBadge: "Simulador de Sueños y Vida con IA de Última Generación",
+                heroTitlePrefix: "MANIFIESTA TU", heroTitleHighlight: "VIDA DE LUJO PARALELA", heroTitleSuffix: "EN 8 IDIOMAS",
+                heroBody: "Entra en tu realidad superior. Genera crónicas fotográficas en 8K con fal.ai 8K Neural Vision Engine, recibe cartas de tu yo del futuro y calibra tu frecuencia en 528Hz.",
+                ctaDownload: "Descargar en App Store", ctaExplore: "Explorar Galería 8K",
+                specFrequency: "Calibración 528Hz", specLanguages: "8 Idiomas Nativos", specLive: "Inteligencia Urbana Tavily",
+                showcaseHeading: "GALERÍA DE SIMULACIÓN INTERACTIVA 8K", showcaseSub: "Alterna entre arquetipos y contempla cómo fal.ai 8K Neural Vision Engine materializa tus mayores anhelos.",
+                tabMonaco: "Superyate en Mónaco", tabParis: "Ático en París", tabSwiss: "Chalet Alpes Suizos", tabTokyo: "Finca Cíber Tokio", tabDubai: "Sky Villa Dubái",
+                promptLabel: "Estructura compilada fal.ai 8K Neural Vision", btnSimulateThis: "Simular Esta Realidad",
+                expHeading: "LA EXPERIENCIA CUÁNTICA", expSub: "Diseñado con neurociencia, frecuencias de 528Hz e IA generativa en tiempo real.",
+                exp1Title: "Portal Solfeggio 528Hz", exp1Body: "Alinea tu mente con la frecuencia exacta de transformación y sincronización cuántica.",
+                exp2Title: "Cartas Cuánticas del Futuro", exp2Body: "Recibe mensajes inspiradores escritos desde la perspectiva de tu yo realizado en 2030.",
+                exp3Title: "Bóveda de Patrimonio y Activos", exp3Body: "Supervisa tus propiedades exclusivas, superdeportivos y flota de jets privados.",
+                featuresHeading: "POTENTE MOTOR DE SIMULACIÓN", featuresSub: "Experiencia de IA adaptada a tus aspiraciones de vida más altas.",
+                f1Title: "Motor Neuronal fal.ai 8K", f1Body: "Renderizado cinematográfico en 8K para áticos, yates y estilos de vida de lujo.",
+                f2Title: "Arquitectura IA en 8 Idiomas", f2Body: "Soporte nativo para español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
+                f3Title: "Inteligencia Urbana Tavily", f3Body: "Conexión web en vivo para conocer los restaurantes y eventos VIP de tu ciudad elegida.",
+                f4Title: "Suscripciones y Pases VIP", f4Body: "Acceso VIP semanal y anual vía RevenueCat sin anuncios y con renderizado prioritario.",
+                f5Title: "Bóveda de Créditos", f5Body: "Paquetes permanentes de 10, 25, 60 o 150 créditos sin caducidad.",
+                f6Title: "Privacidad y Borrado en 1 Clic", f6Body: "Control total con eliminación instantánea de tu cuenta y datos en cualquier momento.",
+                faqHeading: "PREGUNTAS FRECUENTES", faqSub: "Todo lo que necesitas saber sobre suscripciones VIP, créditos y funciones cuánticas de Parallis.",
+                q1: "¿Qué es Parallis y cómo funciona la simulación de vidas paralelas?", a1: "Parallis es un simulador de manifestación y realidad con IA de nueva generación. Defines tu persona ideal, carrera y destinos de lujo. El motor fal.ai (Nano Banana 2 Lite) hace realidad esta vida alternativa con crónicas fotográficas en 8K ultra-realistas.",
+                q2: "¿Qué es la Suscripción Parallis VIP y qué ventajas ofrece?", a2: "Parallis VIP desbloquea perfiles ilimitados, experiencia totalmente libre de anuncios, renderizado de máxima prioridad con fal.ai (Nano Banana 2 Lite) y relatos de lujo exclusivos. Cancelable en cualquier momento desde los Ajustes de Apple ID.",
+                q3: "¿Cómo funcionan los paquetes de créditos y tienen fecha de caducidad?", a3: "Los paquetes de créditos (10, 25, 60 o 150 créditos) nunca caducan. Puedes usarlos cuando lo desees para generar imágenes 8K adicionales.",
+                q4: "¿Puedo obtener créditos de simulación gratuitos sin pagar?", a4: "¡Sí! Parallis ofrece anuncios recompensados que te permiten ver clips breves de patrocinadores para ganar créditos gratuitos de forma continua.",
+                q5: "¿Qué es la frecuencia Solfeggio de 528Hz y cómo se utiliza?", a5: "El tono 528Hz es conocido en acústica como la 'Frecuencia de la Transformación y los Milagros'. En la pestaña Portal, activa el reproductor de 528Hz para calmar la mente y alinear tu enfoque durante la visualización.",
+                q6: "¿Qué son las Cartas Cuánticas del Futuro?", a6: "Mensajes diarios personalizados redactados desde la perspectiva de tu yo realizado y próspero en el año 2030, diseñados para mantener tu enfoque en el éxito.",
+                q7: "¿Qué idiomas admite Parallis?", a7: "Parallis admite de forma nativa 8 idiomas: español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
+                q8: "¿Cómo se protege mi privacidad y cómo puedo borrar mis datos?", a8: "Tu privacidad es primordial. Puedes eliminar de forma inmediata y permanente tu cuenta y todas las simulaciones en la app desde Perfil -> Eliminar Cuenta.",
+                qrHeading: "Escanear con iPhone", qrSub: "Descarga en App Store"
+            },
+            ru: {
+                navShowcase: "8K Галерея", navFeatures: "Функции", navExperience: "Опыт", navFaq: "FAQ", navSupport: "Поддержка", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить аккаунт",
+                btnDownload: "Скачать App", heroBadge: "AI-симулятор мечты и параллельной жизни нового поколения",
+                heroTitlePrefix: "ВОПЛОТИТЕ СВОЮ", heroTitleHighlight: "ПАРАЛЛЕЛЬНУЮ РОСКОШНУЮ ЖИЗНЬ", heroTitleSuffix: "НА 8 ЯЗЫКАХ",
+                heroBody: "Шагните в свою высшую реальность. Создавайте ультрареалистичные 8K-фотохроники с нейросетью fal.ai 8K Neural Vision, получайте квантовые письма от себя из будущего и настраивайтесь на 528 Гц.",
+                ctaDownload: "Скачать в App Store", ctaExplore: "Смотреть 8K галерею",
+                specFrequency: "Калибровка 528 Гц", specLanguages: "8 Языков", specLive: "Данные городов Tavily",
+                showcaseHeading: "ИНТЕРАКТИВНАЯ 8K ГАЛЕРЕЯ СИМУЛЯЦИЙ", showcaseSub: "Переключайтесь между архетипами и смотрите, как fal.ai 8K Neural Vision Engine материализует ваши мечты.",
+                tabMonaco: "Суперъяхта в Монако", tabParis: "Пентхаус в Париже", tabSwiss: "Шале в Альпах", tabTokyo: "Кибер-поместье в Токио", tabDubai: "Скай-вилла в Дубае",
+                promptLabel: "Промпт fal.ai 8K Neural Vision", btnSimulateThis: "Симулировать эту жизнь",
+                expHeading: "КВАНТОВЫЙ ОПЫТ МАНИФЕСТАЦИИ", expSub: "Создан на стыке нейробиологии, частот 528 Гц и генеративного искусственного интеллекта.",
+                exp1Title: "Портал 528 Гц", exp1Body: "Настройте сознание на частоту трансформации и квантового выравнивания реальности.",
+                exp2Title: "Квантовые письма из будущего", exp2Body: "Получайте вдохновляющие послания, написанные от лица вашего успешного «я» из 2030 года.",
+                exp3Title: "Хранилище активов и капитала", exp3Body: "Отслеживайте элитную недвижимость, коллекционные суперкары и частные джеты.",
+                featuresHeading: "МОЩНЫЙ ДВИЖОК СИМУЛЯЦИИ", featuresSub: "Персонализированный AI-опыт для ваших самых грандиозных жизненных целей.",
+                f1Title: "Нейронный движок fal.ai 8K", f1Body: "Мгновенный 8K-рендеринг пентхаусов, суперъяхт и эксклюзивного образа жизни.",
+                f2Title: "8-язычная AI-архитектура", f2Body: "Нативная поддержка русского, английского, турецкого, французского, немецкого, итальянского, испанского и арабского.",
+                f3Title: "Городской интеллект Tavily", f3Body: "Свежие данные о лучших ресторанах Michelin и VIP-событиях в выбранном городе.",
+                f4Title: "VIP-подписка и пассы", f4Body: "Еженедельный и годовой VIP-доступ через RevenueCat без рекламы с приоритетным рендерингом.",
+                f5Title: "Хранилище кредитов", f5Body: "Бессрочные пакеты на 10, 25, 60 или 150 кредитов для дополнительных генераций.",
+                f6Title: "Приватность и удаление в 1 клик", f6Body: "Полный контроль с мгновенным удалением аккаунта и данных прямо в приложении.",
+                faqHeading: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ", faqSub: "Всё о VIP-подписке, пакетах кредитов и квантовых функциях Parallis.",
+                q1: "Что такое Parallis и как работает симуляция параллельной жизни?", a1: "Parallis — это передовой AI-симулятор визуализации и параллельной реальности. Вы выбираете свою идеальную персону, карьеру и локации. Нейронный движок fal.ai (Nano Banana 2 Lite) материализует эту жизнь в кинематографических 8K-фотохрониках и персональных историях.",
+                q2: "Что включает в себя подписка Parallis VIP?", a2: "Parallis VIP открывает неограниченное число профилей, полное отсутствие рекламы, наивысший приоритет рендеринга с fal.ai (Nano Banana 2 Lite) и эксклюзивные сюжетные пакеты. Отмена доступна в любой момент в настройках Apple ID.",
+                q3: "Как работают кредиты симуляций и сгорают ли они?", a3: "Пакеты кредитов (10, 25, 60 или 150 кредитов) бессрочны и никогда не сгорают. Вы можете использовать их в любой момент для создания дополнительных 8K-кадров.",
+                q4: "Можно ли получать кредиты бесплатно без оплаты?", a4: "Да! В Parallis доступен просмотр коротких спонсорских видеороликов, за которые начисляются бесплатные кредиты для создания новых симуляций.",
+                q5: "Что такое частота 528 Гц и как её применять?", a5: "528 Гц — это научно признанная частота трансформации и гармонизации. Во вкладке Портал включите встроенный генератор 528 Гц для глубокой альфа-медитации и настройки сознания на образ желаемой жизни.",
+                q6: "Что представляют собой Квантовые письма из будущего?", a6: "Ежедневные мотивирующие послания, написанные от лица вашего успешного и состоятельного «я» из 2030 года, вдохновляющие вас на достижение целей.",
+                q7: "Какие языки поддерживает Parallis?", a7: "Parallis полноценно поддерживает 8 языков: русский, английский, турецкий, французский, немецкий, итальянский, испанский и арабский.",
+                q8: "Как защищены мои данные и как удалить аккаунт?", a8: "Мы соблюдаем строжайшие стандарты приватности. Вы можете удалить свой аккаунт и все связанные симуляции в один клик прямо в приложении: Профиль -> Удалить аккаунт.",
+                qrHeading: "Сканировать iPhone", qrSub: "Скачать в App Store"
+            },
+            ar: {
+                navShowcase: "معرض 8K", navFeatures: "المميزات", navExperience: "التجربة", navFaq: "الأسئلة الشائعة", navSupport: "الدعم", navPrivacy: "الخصوصية", navTerms: "الشروط", navDelete: "حذف الحساب",
+                btnDownload: "تحميل التطبيق", heroBadge: "الجيل الجديد من محاكي الأحلام والحياة بالذكاء الاصطناعي",
+                heroTitlePrefix: "حقق واقعك في", heroTitleHighlight: "حياة الرفاهية الموازية", heroTitleSuffix: "بـ 8 لغات",
+                heroBody: "ادخل إلى أسمى واقع لك. أنشئ صوراً وسيناريوهات فائقة الدقة بدقة 8K باستخدام محرك fal.ai 8K العصبي، وتلقَّ رسائل كمومية من ذاتك المستقبلية، واضبط ترددك على 528 هرتز.",
+                ctaDownload: "تحميل من App Store", ctaExplore: "استكشف معرض 8K",
+                specFrequency: "معايرة تردد 528 هرتز", specLanguages: "8 لغات أصلية", specLive: "ذكاء المدن المباشر Tavily",
+                showcaseHeading: "معرض المحاكاة التفاعلي بدقة 8K", showcaseSub: "تنقل بين الأنماط وشاهد كيف يجسد محرك fal.ai 8K العصبي الفائق رؤى حياتك الفاخرة.",
+                tabMonaco: "يخت موناكو الفاخر", tabParis: "بنتهاوس باريس", tabSwiss: "شاليه جبال الألب السويسرية", tabTokyo: "قصر طوكيو السيبراني", tabDubai: "فيلا دبي السماوية",
+                promptLabel: "مخطط أوامر fal.ai 8K العصبي", btnSimulateThis: "محاكاة هذا الواقع",
+                expHeading: "تجربة التجلي الكمومي", expSub: "مصممة بعلوم الأعصاب وترددات 528 هرتز والذكاء الاصطناعي التوليدي الفوري.",
+                exp1Title: "بوابة تردد 528 هرتز", exp1Body: "اضبط ذهنك على التردد الدقيق المرتبط بالتحول وإعادة المحاذاة الكمومية للواقع.",
+                exp2Title: "رسائل كمومية من المستقبل", exp2Body: "احصل يومياً على رسائل ملهمة مكتوبة من منظور ذاتك المحققة لأهدافها في عام 2030.",
+                exp3Title: "خزينة الأصول وصافي الثروة", exp3Body: "تتبع عقاراتك الفارهة، وسياراتك الخارقة، وأسطول طائراتك الخاصة.",
+                featuresHeading: "محرك محاكاة فائق القوة", featuresSub: "تجربة ذكاء اصطناعي مصممة خصيصاً لأرقى تطلعاتك في الحياة.",
+                f1Title: "محرك fal.ai 8K العصبي الفائق", f1Body: "توليد سينمائي فوري بدقة 8K لليخوت والبنتهاوس الفاخر بأعلى معايير الواقعية.",
+                f2Title: "بنية ذكاء اصطناعي بـ 8 لغات", f2Body: "دعم أصلي للعربية، والإنجليزية، والتركية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والروسية.",
+                f3Title: "ذكاء المدن المباشر Tavily", f3Body: "استكشاف مباشر لأرقى المطاعم والفعاليات الحصرية في مدينتك المختارة يومياً.",
+                f4Title: "اشتراكات وباقات VIP", f4Body: "وصول VIP أسبوعي وسنوي عبر RevenueCat بدون إعلانات مع أولوية المعالجة.",
+                f5Title: "خزينة أرصدة المحاكاة", f5Body: "باقات رصيد دائمة (10، 25، 60، أو 150) لا تنتهي صلاحيتها أبداً.",
+                f6Title: "الخصوصية والحذف بنقرة واحدة", f6Body: "تحكم كامل مع إمكانية حذف حسابك وبياناتك فورياً في أي وقت داخل التطبيق.",
+                faqHeading: "الأسئلة الشائعة", faqSub: "كل ما تحتاج معرفته عن باقات Parallis VIP وأرصدة المحاكاة والترددات الكمومية.",
+                q1: "ما هو تطبيق Parallis وكيف تعمل محاكاة الحياة الموازية؟", a1: "Parallis هو محاكي واقع وتجلٍ بالذكاء الاصطناعي من الجيل الجديد. تحدد شخصيتك المثالية، مهنتك، ووجهتك الفاخرة. ويقوم محرك fal.ai (Nano Banana 2 Lite) بتحويل هذا الواقع الموازي إلى سجلات فوتوغرافية سينمائية بدقة 8K مع قصص ملهمة مخصصة.",
+                q2: "ما هو اشتراك Parallis VIP وما هي مميزاته؟", a2: "يمنحك اشتراك Parallis VIP إمكانية إنشاء ملفات موازية غير محدودة، تجربة خالية تماماً من الإعلانات، أولوية معالجة قصوى مع محرك fal.ai (Nano Banana 2 Lite)، وحزم قصص فاخرة حصرية. يمكنك الإلغاء في أي وقت عبر إعدادات Apple ID.",
+                q3: "كيف تعمل باقات أرصدة المحاكاة وهل تنتهي صلاحيتها؟", a3: "باقات الأرصدة (10، 25، 60 أو 150 رصيداً) هي باقات دائمة لا تنتهي صلاحيتها أبداً، وتتيح لك إنشاء مشاهد 8K إضافية متى شئت مع أو بدون اشتراك VIP.",
+                q4: "هل يمكنني كسب أرصدة محاكاة مجاناً دون دفع؟", a4: "نعم! يوفر التطبيق ميزة مشاهدة إعلانات المكافآت القصيرة لكسب أرصدة محاكاة مجانية والاستمرار في توليد صور أحلامك بدون أي تكلفة.",
+                q5: "ما هو تردد 528 هرتز الصوتي وكيف يُستخدم؟", a5: "تردد 528 هرتز معروف في علم الصوتيات باسم 'تردد التحول والمعجزات'. في علامة تبويب البوابة بالتطبيق، يمكنك تفعيل نغمة 528 هرتز لتهدئة الدماغ والتركيز ومحاذاة التردد الذهني مع أهدافك.",
+                q6: "ما هي رسائل الذات المستقبلية الكمومية؟", a6: "هي رسائل يومية ملهمة ومخصصة تصلك في إشعاراتك، كُتبت من منظور ذاتك المحققة للثراء والنجاح في عام 2030 لتعزيز حافزك وتوجيهك نحو القمة.",
+                q7: "ما هي اللغات التي يدعمها تطبيق Parallis؟", a7: "يدعم Parallis بشكل أصلي 8 لغات: العربية، الإنجليزية، التركية، الفرنسية، الألمانية، الإيطالية، الإسبانية، والروسية عبر كافة النصوص والواجهات.",
+                q8: "كيف تتم حماية خصوصيتي وكيف يمكنني حذف حسابي؟", a8: "نولي خصوصيتك أقصى درجات الاحترام ولا نبيع بياناتك مطلقاً. يمكنك حذف حسابك وكافة ملفاتك وصورك فورياً بنقرة واحدة داخل التطبيق عبر الملف الشخصي -> حذف الحساب.",
+                qrHeading: "امسح باستخدام iPhone", qrSub: "تحميل فوري من App Store"
+            }
+        };
+
         // Localized 8K Showcase Data across 8 Languages
         const localizedShowcase = {
             "en": [
@@ -756,337 +1016,14 @@
                 const descEl = document.getElementById('showcase-desc');
                 const promptEl = document.getElementById('showcase-prompt');
                 if (tagEl) tagEl.innerHTML = `<i class="fa-solid fa-location-dot"></i> <span>${data.tag}</span>`;
-                if (titleEl) titleEl.innerText = data.title;
-                if (descEl) descEl.innerText = data.desc;
-                if (promptEl) promptEl.innerText = data.prompt;
+                if (titleEl) titleEl.textContent = data.title;
+                if (descEl) descEl.textContent = data.desc;
+                if (promptEl) promptEl.textContent = data.prompt;
             }
         }
-
-        // Quantum Canvas Animation
-        const canvas = document.getElementById('quantum-canvas');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let width = canvas.width = window.innerWidth;
-            let height = canvas.height = window.innerHeight;
-            window.addEventListener('resize', () => {
-                if (!canvas) return;
-                width = canvas.width = window.innerWidth;
-                height = canvas.height = window.innerHeight;
-            });
-            const particles = [];
-            class QuantumParticle {
-                constructor() {
-                    this.reset();
-                }
-                reset() {
-                    this.x = Math.random() * width;
-                    this.y = Math.random() * height;
-                    this.vx = (Math.random() - 0.5) * 0.35;
-                    this.vy = (Math.random() - 0.5) * 0.35;
-                    this.radius = Math.random() * 1.5 + 0.5;
-                }
-                update() {
-                    this.x += this.vx;
-                    this.y += this.vy;
-                    if (this.x < 0 || this.x > width) this.vx *= -1;
-                    if (this.y < 0 || this.y > height) this.vy *= -1;
-                }
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(212, 175, 55, 0.35)';
-                    ctx.fill();
-                }
-            }
-            for (let i = 0; i < 40; i++) {
-                particles.push(new QuantumParticle());
-            }
-            function animateCanvas() {
-                ctx.clearRect(0, 0, width, height);
-                for (let i = 0; i < particles.length; i++) {
-                    particles[i].update();
-                    particles[i].draw();
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const dx = particles[i].x - particles[j].x;
-                        const dy = particles[i].y - particles[j].y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 125) {
-                            ctx.beginPath();
-                            ctx.moveTo(particles[i].x, particles[i].y);
-                            ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.strokeStyle = `rgba(212, 175, 55, ${0.12 * (1 - dist / 125)})`;
-                            ctx.lineWidth = 0.65;
-                            ctx.stroke();
-                        }
-                    }
-                }
-                requestAnimationFrame(animateCanvas);
-            }
-            animateCanvas();
-        }
-
-        // 8 Languages Dictionary
-        const translations = {
-            en: {
-                navShowcase: "8K Showcase", navFeatures: "Features", navExperience: "Experience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Privacy Policy", navTerms: "Terms of Use", navDelete: "Delete Account",
-                btnDownload: "Get App", heroBadge: "Next-Gen AI Dream & Life Simulator",
-                heroTitlePrefix: "MANIFEST YOUR", heroTitleHighlight: "PARALLEL LUXURY LIFE", heroTitleSuffix: "IN 8 LANGUAGES",
-                heroBody: "Step into your highest reality. Generate hyper-realistic 8K photo chronicles with fal.ai 8K Neural Vision Engine, receive daily telegrams from your future self, and calibrate your frequency at 528Hz.",
-                ctaDownload: "Download on App Store", ctaExplore: "Explore 8K Showcase",
-                specFrequency: "528Hz Quantum Calibration", specLanguages: "8 Native Languages", specLive: "Live Tavily City Intelligence",
-                showcaseHeading: "INTERACTIVE 8K SIMULATION GALLERY", showcaseSub: "Switch between parallel archetypes and witness how fal.ai 8K Neural Vision Engine materializes your ultimate life visions.",
-                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Swiss Alps Chalet", tabTokyo: "Tokyo Cyber Estate", tabDubai: "Dubai Sky Villa",
-                promptLabel: "fal.ai 8K Neural Vision Engine Compiled Blueprint", btnSimulateThis: "Simulate This Reality",
-                expHeading: "THE QUANTUM MANIFESTATION EXPERIENCE", expSub: "Engineered with neuroscience, 528Hz solfeggio harmonics, and real-time generative AI intelligence.",
-                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Calibrate your mindset on the exact frequency associated with transformation, DNA repair, and quantum reality alignment.",
-                exp2Title: "Future Self Quantum Letters", exp2Body: "Receive inspiring, personalized telegrams written from the perspective of your accomplished parallel identity living in 2030.",
-                exp3Title: "Net Worth & Asset Portfolio", exp3Body: "Track your simulated high-net-worth real estate, bespoke hypercars, private aviation fleets, and luxury horology collection.",
-                featuresHeading: "POWERFUL SIMULATION ENGINE", featuresSub: "Experience state-of-the-art vision building tailored to your ultimate desires.",
-                f1Title: "fal.ai 8K Neural Vision Engine Engine", f1Body: "Instant 8K cinematic rendering for custom penthouses, superyachts, and luxury lifestyles with zero compromise on realism.",
-                f2Title: "8-Language AI Architecture", f2Body: "Native localization for Turkish, English, French, German, Italian, Spanish, Russian, and Arabic with smart prompt synthesis.",
-                f3Title: "Live Tavily City Intelligence", f3Body: "Real-time web grounding for chosen destinations. Experience live Michelin dining, galas, and hotspots synthesized daily.",
-                f4Title: "VIP Subscriptions & Passes", f4Body: "Weekly and Yearly VIP access via RevenueCat with unlimited simulation profiles and ad-free priority rendering.",
-                f5Title: "Simulation Credit Vault", f5Body: "Flexibility to top up 10, 25, 60, or 150 permanent simulation credits whenever you want extra visual generations.",
-                f6Title: "Privacy First & 1-Click Erasure", f6Body: "Full control over your profiles and data with instant 1-click in-app account deletion anytime.",
-                faqHeading: "FREQUENTLY ASKED QUESTIONS", faqSub: "Everything you need to know about Parallis VIP Subscriptions, credits, and quantum reality features.",
-                q1: "What is Parallis and how does parallel life simulation work?", a1: "Parallis is a next-generation AI manifestation and reality simulator. You define your dream persona, career, luxury destination, and lifestyle. Our fal.ai (Nano Banana 2 Lite) visual engine brings this parallel reality to life with bespoke 8K cinematic chronicles, grounded physics, and deeply personalized narratives.",
-                q2: "What is Parallis VIP Subscription and what benefits does it include?", a2: "Parallis VIP unlocks unlimited parallel simulation profiles, a completely ad-free experience, highest-highest-priority rendering with fal.ai (Nano Banana 2 Lite), and exclusive luxury lifestyle story packs. Subscriptions are available weekly or yearly and can be easily managed or cancelled anytime in your Apple ID Settings.",
-                q3: "How do Simulation Credit Packs work and do they expire?", a3: "Credit packs (10, 25, 60, or 150 credits) are one-time consumable top-ups that never expire. You can keep and use them whenever you wish to produce extra high-resolution 8K vision scenes, whether you have an active VIP subscription or not.",
-                q4: "Can I earn free simulation credits without making a purchase?", a4: "Yes! Parallis features a built-in Rewarded Ads option that allows you to watch short, non-intrusive sponsor clips to earn free simulation credits. You can continuously produce new dreams and visuals 100% free.",
-                q5: "What is the 528Hz Solfeggio frequency and how is it used?", a5: "528Hz is scientifically recognized in sound acoustics and meditation as the 'Transformation & Miracle Tone'. In Parallis's Portal tab, activate the built-in 528Hz harmonic player to calm brainwaves, deepen alpha-frequency focus, and mentally align with your highest goals while visualizing your parallel life.",
-                q6: "What are Future Self Quantum Letters?", a6: "They are personalized, deeply inspiring telegrams delivered daily to your notification feed, written from the first-person perspective of your accomplished, wealthy parallel identity living in 2030. They provide high-level mindset guidance and keep your daily momentum focused on success.",
-                q7: "Which languages does Parallis support?", a7: "Parallis natively supports 8 languages: English, Turkish, French, German, Italian, Spanish, Russian, and Arabic. All character prompts, generated story chronicles, future self telegrams, and user interface elements adapt seamlessly to your chosen language.",
-                q8: "How is my privacy protected and how can I delete my account or data?", a8: "We uphold strict privacy standards and never sell your personal data. You have full sovereignty over your information and can permanently delete your account, created profiles, and generated simulations with a single click in the app under Profile -> Delete Account, or via our web portal.",
-                qrHeading: "Scan with iPhone", qrSub: "Instant App Store Download"
-            },
-            tr: {
-                navShowcase: "8K Vitrin", navFeatures: "Özellikler", navExperience: "Deneyim", navFaq: "SSS", navSupport: "Destek", navPrivacy: "Gizlilik Politikası", navTerms: "Kullanım Şartları", navDelete: "Hesabı Sil",
-                btnDownload: "Uygulamayı İndir", heroBadge: "Yeni Nesil AI Vizyon & Hayat Simülatörü",
-                heroTitlePrefix: "HAYALİNİZDEKİ", heroTitleHighlight: "PARALEL LÜKS HAYATI", heroTitleSuffix: "8 DİLDE SİMÜLE EDİN",
-                heroBody: "En yüksek potansiyelinizin gerçekliğine adım atın. fal.ai 8K Sinematik Nöral Motoru ile ultra-gerçekçi fotoğraf serileri üretin, gelecekteki benliğinizden günlük kuantum mektuplar alın ve zihninizi 528Hz frekansına kilitleyin.",
-                ctaDownload: "App Store'dan İndirin", ctaExplore: "8K Vitrini Keşfet",
-                specFrequency: "528Hz Kuantum Frekansı", specLanguages: "8 Anadil Desteği", specLive: "Canlı Tavily Şehir İstihbaratı",
-                showcaseHeading: "İNTERAKTİF 8K SİMÜLASYON GALERİSİ", showcaseSub: "Paralel arketipler arasında geçiş yapın ve fal.ai 8K Sinematik Motorunun hayallerinizi nasıl 8K sinematik görselleştirdiğini canlı görün.",
-                tabMonaco: "Monako Süperyatı", tabParis: "Paris Penthouse", tabSwiss: "İsviçre Alpleri Şatosu", tabTokyo: "Tokyo Siber Rezidans", tabDubai: "Dubai Sky Villa",
-                promptLabel: "fal.ai 8K Derlenmiş İstem Mimarisi", btnSimulateThis: "Bu Hayatı Simüle Et",
-                expHeading: "KUANTUM TEZAHÜR DENEYİMİ", expSub: "Nörobilim, 528Hz solfeggio frekansları ve gerçek zamanlı üretken yapay zeka ile tasarlandı.",
-                exp1Title: "528Hz Kuantum Portalı", exp1Body: "Zihninizi dönüşüm, DNA onarımı ve kuantum paralel evren hizalanması frekansı olan 528Hz'e kilitleyin.",
-                exp2Title: "Gelecekten Kuantum Mektuplar", exp2Body: "2030'da zirveye ulaşmış paralel benliğinizin kaleminden her gün size özel yazılmış ilham verici mektuplar alın.",
-                exp3Title: "Lüks Varlık Kasası", exp3Body: "Simüle edilmiş lüks gayrimenkullerinizi, kişiye özel süper arabalarınızı ve özel jet filonuzu takip edin.",
-                featuresHeading: "GÜÇLÜ SİMÜLASYON MOTORU", featuresSub: "Arzuladığınız lüks yaşam standartlarına göre tasarlanmış yapay zeka deneyimi.",
-                f1Title: "fal.ai 8K Sinematik Görsel Motoru", f1Body: "Monako süperyatları ve lüks penthouse sahneleri için sıfır kayıpla anında 8K sinematik görsel üretimi.",
-                f2Title: "8 Dilli AI Mimarisi", f2Body: "Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça akıllı istem sentezi.",
-                f3Title: "Canlı Tavily Şehir Zekası", f3Body: "Seçtiğiniz şehirler için gerçek zamanlı canlı web istihbaratı. Güncel Michelin restoranları ve VIP etkinlikler her gün hazır.",
-                f4Title: "VIP Üyelik & Paketler", f4Body: "Haftalık ve Yıllık VIP erişim ile sınırsız profil üretimi ve reklamsız yüksek öncelikli simülasyon.",
-                f5Title: "Kalıcı Kredi Haznesi", f5Body: "Süresi dolmayan 10, 25, 60 ve 150 ek simülasyon kredisi paketleri.",
-                f6Title: "Gizlilik & Tek Tıkla Silme", f6Body: "Tek tıkla hesabınızı ve tüm simülasyon verilerinizi anında kalıcı olarak silme hakkı.",
-                faqHeading: "SIKÇA SORULAN SORULAR", faqSub: "Parallis VIP üyeliği, krediler ve kuantum gerçeklik özellikleri hakkında merak edilen her şey.",
-                q1: "Parallis Nedir ve Paralel Hayat Simülasyonu Nasıl Çalışır?", a1: "Parallis, hayal ettiğiniz alternatif paralel hayatı yapay zeka ile canlandıran yeni nesil bir vizyon ve tezahür simülatörüdür. Karakterinizi seçer; kariyer, lüks yaşam tarzı ve şehrinizi belirlersiniz. fal.ai (Nano Banana 2 Lite) görsel motorumuz bu hayatı size özel 8K sinematik fotoğraf serileri ve ilham verici hikayelerle gerçeğe dönüştürür.",
-                q2: "Parallis VIP Üyeliği Nedir ve Neler Sunar?", a2: "Sınırsız sayıda paralel hayat profili oluşturma, tamamen reklamsız kullanım, en yüksek öncelikli fal.ai (Nano Banana 2 Lite) görsel üretimi ve özel lüks hikaye paketleri sunar. Haftalık veya yıllık abonelik seçenekleriyle sunulur ve Apple ID ayarlarınızdan dilediğiniz an tek tıkla iptal edilebilir.",
-                q3: "Simülasyon Kredi Paketleri Nasıl Çalışır, Süresi Biter mi?", a3: "Kredi paketleri (10, 25, 60 veya 150 kredi) tek seferlik satın alımlardır ve asla kullanım süresi dolmaz (non-expiring). VIP üyeliğiniz olsun ya da olmasın, dilediğiniz zaman ekstra 8K simülasyon sahneleri üretmek için süresiz olarak kullanabilirsiniz.",
-                q4: "Ücret Ödemeden Ücretsiz Simülasyon Kredisi Kazanabilir miyim?", a4: "Evet! Parallis içerisinde kısa ödüllü reklamları izleyerek tamamen ücretsiz simülasyon kredisi kazanabilir ve hayalinizdeki sahneleri sıfır maliyetle görselleştirmeye devam edebilirsiniz.",
-                q5: "528Hz Solfeggio Frekansı Nedir ve Nasıl Kullanılır?", a5: "528Hz, ses terapisi ve nörobilimde 'Dönüşüm ve Mucize Tonu' olarak bilinen saf bir frekanstır. Parallis'in Portal sekmesinde yerleşik 528Hz harmonik oynatıcıyı açarak vizyonlarınızı hayal ederken zihninizi sakinleştirebilir, odaklanabilir ve derin alfa meditasyon durumuna geçebilirsiniz.",
-                q6: "Gelecekten Gelen Benlik Mektupları (Future Self Telegrams) Nedir?", a6: "2030 yılındaki hedeflerine ulaşmış, başarı ve refah içindeki paralel kimliğinizin bakış açısından her gün size özel olarak yazılan ilham verici mektuplardır. Günlük motivasyonunuzu yüksek tutmak ve hedeflerinize odaklanmanızı sağlamak için tasarlanmıştır.",
-                q7: "Parallis Hangi Dilleri Destekliyor?", a7: "Parallis; Türkçe, İngilizce, Fransızca, Almanca, İtalyanca, İspanyolca, Rusça ve Arapça olmak üzere 8 dili tam olarak destekler. Tüm simülasyon hikayeleri, mektuplar, arayüz ve istemler seçtiğiniz dile göre yerel olarak üretilir.",
-                q8: "Gizliliğim Nasıl Korunuyor ve Hesabımı Nasıl Silebilirim?", a8: "Gizliliğinize en üst düzeyde saygı duyuyoruz ve kişisel verilerinizi asla paylaşmıyoruz. Tüm verileriniz üzerinde tam kontrole sahipsiniz; uygulama içerisinden Profil -> Hesabı Sil seçeneğine basarak tüm profillerinizi ve simülasyonlarınızı tek tıkla anında ve kalıcı olarak silebilirsiniz.",
-                qrHeading: "iPhone ile Tara", qrSub: "Anında App Store İndir"
-            },
-            fr: {
-                navShowcase: "Galerie 8K", navFeatures: "Fonctionnalités", navExperience: "Expérience", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Confidentialité", navTerms: "Conditions", navDelete: "Supprimer Compte",
-                btnDownload: "Télécharger", heroBadge: "Simulateur de Vie et Rêves IA Nouvelle Génération",
-                heroTitlePrefix: "MANIFESTEZ VOTRE", heroTitleHighlight: "VIE DE LUXE PARALLÈLE", heroTitleSuffix: "EN 8 LANGUES",
-                heroBody: "Entrez dans votre réalité la plus élevée. Générez des chroniques photo 8K ultra-réalistes avec le moteur fal.ai 8K Neural Vision, recevez des télégrammes de votre futur moi et calibrez votre fréquence à 528Hz.",
-                ctaDownload: "Sur l'App Store", ctaExplore: "Explorer la Galerie 8K",
-                specFrequency: "Calibration 528Hz", specLanguages: "8 Langues Natives", specLive: "Intelligence Urbaine Tavily",
-                showcaseHeading: "GALERIE DE SIMULATION INTERACTIVE 8K", showcaseSub: "Basculez entre les archétypes et observez le moteur fal.ai 8K matérialiser vos visions de luxe.",
-                tabMonaco: "Superyacht Monaco", tabParis: "Penthouse Paris", tabSwiss: "Chalet Alpes Suisses", tabTokyo: "Domaine Cyber Tokyo", tabDubai: "Villa Céleste Dubaï",
-                promptLabel: "Plan compilé fal.ai 8K Neural Vision", btnSimulateThis: "Simuler cette réalité",
-                expHeading: "L'EXPÉRIENCE QUANTIQUE", expSub: "Conçu avec les neurosciences, les harmoniques 528Hz et l'IA générative en temps réel.",
-                exp1Title: "Portail Solfeggio 528Hz", exp1Body: "Ajustez votre esprit sur la fréquence de transformation et d'alignement quantique.",
-                exp2Title: "Lettres Quantiques du Futur", exp2Body: "Recevez chaque jour des messages inspirants écrits par votre futur moi accompli en 2030.",
-                exp3Title: "Coffre-fort d'Actifs & Patrimoine", exp3Body: "Suivez votre patrimoine simulé, vos supercars sur mesure et vos jets privés.",
-                featuresHeading: "MOTEUR DE SIMULATION PUISSANT", featuresSub: "Une expérience IA personnalisée conçue pour vos aspirations les plus élevées.",
-                f1Title: "Moteur fal.ai 8K Neural Vision", f1Body: "Rendu cinématographique instantané en 8K pour penthouses et yachts d'exception.",
-                f2Title: "Architecture IA en 8 Langues", f2Body: "Support natif pour le français, l'anglais, le turc, l'allemand, l'italien, l'espagnol, le russe et l'arabe.",
-                f3Title: "Intelligence Urbaine Tavily", f3Body: "Ancrage web en direct pour les meilleures tables et événements VIP dans votre ville choisie.",
-                f4Title: "Abonnements & Pass VIP", f4Body: "Accès VIP sans publicité via RevenueCat avec profils illimités et rendu prioritaire.",
-                f5Title: "Réserve de Crédits", f5Body: "Recharges permanentes de 10, 25, 60 ou 150 crédits de simulation.",
-                f6Title: "Confidentialité & Effacement 1-Clic", f6Body: "Contrôle absolu avec suppression définitive de votre compte et de vos données en 1 clic.",
-                faqHeading: "FOIRE AUX QUESTIONS", faqSub: "Tout sur les abonnements VIP, les crédits et les fonctionnalités quantiques de Parallis.",
-                q1: "Qu'est-ce que Parallis et comment fonctionne la simulation de vie parallèle?", a1: "Parallis est un simulateur de manifestation et de réalité IA nouvelle génération. Vous définissez votre personnage idéal, votre carrière et votre destination de rêve. Notre moteur visuel fal.ai (Nano Banana 2 Lite) matérialise cette réalité avec des chroniques photo 8K et des récits personnalisés.",
-                q2: "Qu'est-ce que l'Abonnement Parallis VIP et quels sont ses avantages?", a2: "Parallis VIP débloque des profils illimités, une expérience 100% sans publicité, un rendu prioritaire avec fal.ai (Nano Banana 2 Lite) et des packs d'histoires de luxe exclusifs. Abonnements hebdomadaires ou annuels résiliables à tout moment via vos Réglages Apple ID.",
-                q3: "Comment fonctionnent les packs de crédits et expirent-ils?", a3: "Les packs de crédits (10, 25, 60 ou 150 crédits) sont des recharges définitives qui n'expirent jamais. Utilisez-les à votre rythme pour générer des scènes 8K supplémentaires, avec ou sans abonnement VIP.",
-                q4: "Puis-je gagner des crédits de simulation gratuits sans payer?", a4: "Oui! Parallis intègre une option de publicités avec récompense vous permettant de visionner de courts clips de sponsors pour obtenir des crédits gratuits et continuer à créer sans frais.",
-                q5: "Qu'est-ce que la fréquence Solfeggio 528Hz et comment l'utiliser?", a5: "Le 528Hz est reconnu en acoustique comme la 'Fréquence Miracle et de Transformation'. Dans l'onglet Portail, activez le lecteur 528Hz pour apaiser vos ondes cérébrales et aligner votre état d'esprit lors de vos visualisations.",
-                q6: "Que sont les Lettres Quantiques du Futur?", a6: "Ce sont des messages quotidiens personnalisés rédigés du point de vue de votre moi accompli et prospère en 2030, conçus pour stimuler votre état d'esprit et votre motivation quotidienne.",
-                q7: "Quelles langues sont prises en charge par Parallis?", a7: "Parallis prend en charge nativement 8 langues: français, anglais, turc, allemand, italien, espagnol, russe et arabe. Récits, lettres et interface s'adaptent parfaitement.",
-                q8: "Comment mes données sont-elles protégées et comment supprimer mon compte?", a8: "Nous respectons rigoureusement votre vie privée. Vous pouvez supprimer définitivement votre compte, vos profils et toutes vos simulations en un clic depuis l'application via Profil -> Supprimer le compte.",
-                qrHeading: "Scanner avec iPhone", qrSub: "Téléchargement App Store"
-            },
-            de: {
-                navShowcase: "8K Galerie", navFeatures: "Funktionen", navExperience: "Erlebnis", navFaq: "FAQ", navSupport: "Support", navPrivacy: "Datenschutz", navTerms: "AGB", navDelete: "Konto löschen",
-                btnDownload: "App holen", heroBadge: "Next-Gen KI-Traum- und Lebenssimulator",
-                heroTitlePrefix: "MANIFESTIEREN SIE IHR", heroTitleHighlight: "PARALLELES LUXUSLEBEN", heroTitleSuffix: "IN 8 SPRACHEN",
-                heroBody: "Treten Sie in Ihre höchste Realität ein. Erstellen Sie ultrarealistische 8K-Fotochroniken mit fal.ai 8K Neural Vision Engine, erhalten Sie Kuantum-Briefe von Ihrem zukünftigen Ich und kalibrieren Sie 528Hz.",
-                ctaDownload: "Im App Store laden", ctaExplore: "8K Galerie erkunden",
-                specFrequency: "528Hz Frequenz-Kalibrierung", specLanguages: "8 Muttersprachen", specLive: "Live Tavily City Intelligence",
-                showcaseHeading: "INTERAKTIVE 8K SIMULATIONSGALERIE", showcaseSub: "Wechseln Sie zwischen Archetypen und erleben Sie, wie fal.ai 8K Neural Vision Engine Ihre Träume materialisiert.",
-                tabMonaco: "Monaco Superyacht", tabParis: "Paris Penthouse", tabSwiss: "Schweizer Alpen Chalet", tabTokyo: "Tokio Cyber Anwesen", tabDubai: "Dubai Sky Villa",
-                promptLabel: "fal.ai 8K Neural Prompt-Architektur", btnSimulateThis: "Diese Realität simulieren",
-                expHeading: "DAS QUANTEN-MANIFESTATIONS-ERLEBNIS", expSub: "Entwickelt mit Neurowissenschaften, 528Hz Frequenzen und generativer Echtzeit-KI.",
-                exp1Title: "528Hz Solfeggio Portal", exp1Body: "Stimmen Sie Ihren Geist auf die Frequenz der Transformation und Realitätsausrichtung ein.",
-                exp2Title: "Quantenbriefe aus der Zukunft", exp2Body: "Erhalten Sie tägliche Botschaften, geschrieben aus der Sicht Ihres erfolgreichen Ichs im Jahr 2030.",
-                exp3Title: "Vermögens- und Asset-Tresor", exp3Body: "Verfolgen Sie Ihre simulierten Luxusimmobilien, Supersportwagen und Privatjets.",
-                featuresHeading: "LEISTUNGSSTARKE SIMULATIONS-ENGINE", featuresSub: "Maßgeschneidertes KI-Erlebnis für Ihre höchsten Lebensziele.",
-                f1Title: "fal.ai 8K Neural Vision Engine Engine", f1Body: "Sofortiges 8K-Rendering für Penthäuser und Yachten in atemberaubendem Fotorealismus.",
-                f2Title: "8-Sprachen KI-Architektur", f2Body: "Native Lokalisierung für Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
-                f3Title: "Live Tavily City Intelligence", f3Body: "Echtzeit-Web-Recherche für Spitzenrestaurants und VIP-Events in Ihrer gewählten Stadt.",
-                f4Title: "VIP-Abonnements & Pässe", f4Body: "Wöchentlicher und jährlicher VIP-Zugang über RevenueCat ohne Werbung mit Prioritäts-Rendering.",
-                f5Title: "Simulationsguthaben-Tresor", f5Body: "Dauerhafte Guthabenpakete mit 10, 25, 60 oder 150 Credits.",
-                f6Title: "Datenschutz & 1-Klick-Löschung", f6Body: "Volle Kontrolle mit sofortiger 1-Klick-Kontolöschung jederzeit in der App.",
-                faqHeading: "HÄUFIG GESTELLTE FRAGEN", faqSub: "Alles über Parallis VIP-Abonnements, Credits und Quanten-Features.",
-                q1: "Was ist Parallis und wie funktioniert die parallele Lebenssimulation?", a1: "Parallis ist ein KI-Manifestations- und Realitätssimulator der nächsten Generation. Sie definieren Ihre Traum-Persona, Karriere und Reiseziele. Die fal.ai (Nano Banana 2 Lite) Engine erweckt diese Realität mit maßgeschneiderten 8K-Fotostrecken und persönlichen Geschichten zum Leben.",
-                q2: "Was beinhaltet das Parallis VIP-Abonnement?", a2: "Parallis VIP schaltet unbegrenzte Profile, absolute Werbefreiheit, priorisiertes Rendering mit fal.ai (Nano Banana 2 Lite) und exklusive Luxus-Geschichten frei. Jederzeit flexibel über Ihre Apple-ID-Einstellungen kündbar.",
-                q3: "Wie funktionieren Simulations-Guthabenpakete und verfallen sie?", a3: "Credit-Pakete (10, 25, 60 oder 150 Credits) sind einmalige Aufladungen, die niemals verfallen. Sie können sie jederzeit für zusätzliche 8K-Szenen nutzen, unabhängig von einem VIP-Abonnement.",
-                q4: "Kann ich kostenlose Simulations-Credits verdienen?", a4: "Ja! Durch das Ansehen kurzer, freiwilliger Belohnungswerbung können Sie kostenlose Credits erhalten und Ihre Traumwelten vollkommen gratis generieren.",
-                q5: "Was ist die 528Hz-Solfeggio-Frequenz und wie wird sie genutzt?", a5: "528Hz gilt in der Akustik als 'Wunder- und Transformationsfrequenz'. Aktivieren Sie im Portal-Tab den harmonischen 528Hz-Player, um Ihren Geist zu beruhigen und Ihre Konzentration auf Ihre Lebensziele auszurichten.",
-                q6: "Was sind Quantenbriefe aus der Zukunft?", a6: "Täglich inspirierende Botschaften, verfasst aus der Ich-Perspektive Ihres erfolgreichen, wohlhabenden Ichs im Jahr 2030, um Ihre tägliche Motivation zu stärken.",
-                q7: "Welche Sprachen unterstützt Parallis?", a7: "Parallis unterstützt nativ 8 Sprachen: Deutsch, Englisch, Türkisch, Französisch, Italienisch, Spanisch, Russisch und Arabisch.",
-                q8: "Wie wird meine Privatsphäre geschützt und wie lösche ich mein Konto?", a8: "Volle Kontrolle über Ihre Daten: Sie können Ihr Konto und alle Simulationen jederzeit mit einem Klick in der App unter Profil -> Konto löschen vollständig entfernen.",
-                qrHeading: "Mit iPhone scannen", qrSub: "Direkt im App Store laden"
-            },
-            it: {
-                navShowcase: "Vetrina 8K", navFeatures: "Caratteristiche", navExperience: "Esperienza", navFaq: "FAQ", navSupport: "Supporto", navPrivacy: "Privacy", navTerms: "Termini", navDelete: "Elimina Account",
-                btnDownload: "Scarica App", heroBadge: "Simulatore di Vita e Sogni AI di Nuova Generazione",
-                heroTitlePrefix: "MANIFESTA LA TUA", heroTitleHighlight: "VITA DI LUSSO PARALLELA", heroTitleSuffix: "IN 8 LINGUE",
-                heroBody: "Entra nella tua realtà più elevata. Genera cronache fotografiche 8K con fal.ai 8K Neural Vision Engine, ricevi lettere quantistiche dal tuo futuro e calibra a 528Hz.",
-                ctaDownload: "Scarica su App Store", ctaExplore: "Esplora Vetrina 8K",
-                specFrequency: "Calibrazione 528Hz", specLanguages: "8 Lingue Native", specLive: "Tavily City Intelligence",
-                showcaseHeading: "GALLERIA DI SIMULAZIONE INTERATTIVA 8K", showcaseSub: "Scegli tra gli archetipi e osserva come fal.ai 8K Neural Vision Engine materializza i tuoi sogni.",
-                tabMonaco: "Superyacht Monaco", tabParis: "Attico a Parigi", tabSwiss: "Chalet Alpi Svizzere", tabTokyo: "Tenuta Cyber Tokyo", tabDubai: "Sky Villa Dubai",
-                promptLabel: "Blueprint fal.ai 8K Neural Vision", btnSimulateThis: "Simula Questa Realtà",
-                expHeading: "L'ESPERIENZA QUANTISTICA", expSub: "Progettato con neuroscienze, frequenze a 528Hz e intelligenza artificiale generativa in tempo reale.",
-                exp1Title: "Portale Solfeggio 528Hz", exp1Body: "Sintonizza la tua mente sulla frequenza della trasformazione e dell'allineamento quantistico.",
-                exp2Title: "Lettere Quantistiche dal Futuro", exp2Body: "Ricevi ogni giorno messaggi ispiratori scritti dalla prospettiva del tuo io realizzato nel 2030.",
-                exp3Title: "Vault Patrimoniale & Asset", exp3Body: "Monitora i tuoi immobili di lusso, le supercar esclusive e la tua flotta di jet privati.",
-                featuresHeading: "POTENTE MOTORE DI SIMULAZIONE", featuresSub: "Esperienza AI su misura per i tuoi desideri più elevati.",
-                f1Title: "Motore Neurale fal.ai 8K", f1Body: "Rendering cinematografico 8K istantaneo per attici, yacht e lifestyle d'élite.",
-                f2Title: "Architettura AI in 8 Lingue", f2Body: "Localizzazione nativa per italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
-                f3Title: "Tavily City Intelligence", f3Body: "Informazioni in tempo reale su ristoranti stellati ed eventi VIP nella città selezionata.",
-                f4Title: "Abbonamenti & Pass VIP", f4Body: "Accesso VIP settimanale e annuale tramite RevenueCat senza pubblicità e con rendering prioritario.",
-                f5Title: "Vault dei Crediti", f5Body: "Ricariche permanenti di 10, 25, 60 o 150 crediti di simulazione.",
-                f6Title: "Privacy & Cancellazione in 1 Clic", f6Body: "Controllo assoluto con cancellazione immediata di account e dati in qualsiasi momento.",
-                faqHeading: "DOMANDE FREQUENTI", faqSub: "Tutto su abbonamenti VIP, pacchetti crediti e funzionalità quantistiche di Parallis.",
-                q1: "Cos'è Parallis e come funziona la simulazione di vita parallela?", a1: "Parallis è un simulatore di manifestazione e realtà AI di nuova generazione. Definisci il tuo profilo ideale, la tua carriera e le tue destinazioni di lusso. Il nostro motore fal.ai (Nano Banana 2 Lite) trasforma questi sogni in cronache fotografiche 8K iperrealistiche.",
-                q2: "Cos'è l'Abbonamento Parallis VIP e quali vantaggi offre?", a2: "Parallis VIP sblocca profili illimitati, esperienza priva di pubblicità, rendering ad altissima priorità con fal.ai (Nano Banana 2 Lite) e pacchetti narrativi esclusivi. Gestibile e annullabile in qualsiasi momento nelle impostazioni ID Apple.",
-                q3: "Come funzionano i pacchetti di crediti e hanno una scadenza?", a3: "I pacchetti crediti (10, 25, 60 o 150 crediti) non scadono mai. Puoi conservarli e utilizzarli quando desideri per creare scene 8K aggiuntive.",
-                q4: "Posso guadagnare crediti di simulazione gratuiti senza pagare?", a4: "Sì! Parallis include annunci video con ricompensa che consentono di ottenere crediti gratuiti per generare simulazioni senza alcun costo.",
-                q5: "Cos'è la frequenza Solfeggio 528Hz e come si usa?", a5: "Il tono 528Hz è noto come la 'Frequenza della Trasformazione e dei Miracoli'. Nella scheda Portale, attiva il lettore a 528Hz per rilassare la mente ed entrare in profonda sintonia con i tuoi obiettivi.",
-                q6: "Cosa sono le Lettere Quantistiche dal Futuro?", a6: "Messaggi quotidiani personalizzati scritti dalla prospettiva della tua identità realizzata e agiata nel 2030, ideati per alimentare la tua motivazione.",
-                q7: "Quali lingue supporta Parallis?", a7: "Parallis supporta nativamente 8 lingue: italiano, inglese, turco, francese, tedesco, spagnolo, russo e arabo.",
-                q8: "Come vengono protetti i miei dati e come posso eliminare l'account?", a8: "Garantiamo la massima privacy. Puoi eliminare definitivamente account, profili e simulazioni con un clic nell'app tramite Profilo -> Elimina Account.",
-                qrHeading: "Scansiona con iPhone", qrSub: "Download su App Store"
-            },
-            es: {
-                navShowcase: "Galería 8K", navFeatures: "Características", navExperience: "Experiencia", navFaq: "FAQ", navSupport: "Soporte", navPrivacy: "Privacidad", navTerms: "Términos", navDelete: "Eliminar Cuenta",
-                btnDownload: "Obtener App", heroBadge: "Simulador de Sueños y Vida con IA de Última Generación",
-                heroTitlePrefix: "MANIFIESTA TU", heroTitleHighlight: "VIDA DE LUJO PARALELA", heroTitleSuffix: "EN 8 IDIOMAS",
-                heroBody: "Entra en tu realidad superior. Genera crónicas fotográficas en 8K con fal.ai 8K Neural Vision Engine, recibe cartas de tu yo del futuro y calibra tu frecuencia en 528Hz.",
-                ctaDownload: "Descargar en App Store", ctaExplore: "Explorar Galería 8K",
-                specFrequency: "Calibración 528Hz", specLanguages: "8 Idiomas Nativos", specLive: "Inteligencia Urbana Tavily",
-                showcaseHeading: "GALERÍA DE SIMULACIÓN INTERACTIVA 8K", showcaseSub: "Alterna entre arquetipos y contempla cómo fal.ai 8K Neural Vision Engine materializa tus mayores anhelos.",
-                tabMonaco: "Superyate en Mónaco", tabParis: "Ático en París", tabSwiss: "Chalet Alpes Suizos", tabTokyo: "Finca Cíber Tokio", tabDubai: "Sky Villa Dubái",
-                promptLabel: "Estructura compilada fal.ai 8K Neural Vision", btnSimulateThis: "Simular Esta Realidad",
-                expHeading: "LA EXPERIENCIA CUÁNTICA", expSub: "Diseñado con neurociencia, frecuencias de 528Hz e IA generativa en tiempo real.",
-                exp1Title: "Portal Solfeggio 528Hz", exp1Body: "Alinea tu mente con la frecuencia exacta de transformación y sincronización cuántica.",
-                exp2Title: "Cartas Cuánticas del Futuro", exp2Body: "Recibe mensajes inspiradores escritos desde la perspectiva de tu yo realizado en 2030.",
-                exp3Title: "Bóveda de Patrimonio y Activos", exp3Body: "Supervisa tus propiedades exclusivas, superdeportivos y flota de jets privados.",
-                featuresHeading: "POTENTE MOTOR DE SIMULACIÓN", featuresSub: "Experiencia de IA adaptada a tus aspiraciones de vida más altas.",
-                f1Title: "Motor Neuronal fal.ai 8K", f1Body: "Renderizado cinematográfico en 8K para áticos, yates y estilos de vida de lujo.",
-                f2Title: "Arquitectura IA en 8 Idiomas", f2Body: "Soporte nativo para español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
-                f3Title: "Inteligencia Urbana Tavily", f3Body: "Conexión web en vivo para conocer los restaurantes y eventos VIP de tu ciudad elegida.",
-                f4Title: "Suscripciones y Pases VIP", f4Body: "Acceso VIP semanal y anual vía RevenueCat sin anuncios y con renderizado prioritario.",
-                f5Title: "Bóveda de Créditos", f5Body: "Paquetes permanentes de 10, 25, 60 o 150 créditos sin caducidad.",
-                f6Title: "Privacidad y Borrado en 1 Clic", f6Body: "Control total con eliminación instantánea de tu cuenta y datos en cualquier momento.",
-                faqHeading: "PREGUNTAS FRECUENTES", faqSub: "Todo lo que necesitas saber sobre suscripciones VIP, créditos y funciones cuánticas de Parallis.",
-                q1: "¿Qué es Parallis y cómo funciona la simulación de vidas paralelas?", a1: "Parallis es un simulador de manifestación y realidad con IA de nueva generación. Defines tu persona ideal, carrera y destinos de lujo. El motor fal.ai (Nano Banana 2 Lite) hace realidad esta vida alternativa con crónicas fotográficas en 8K ultra-realistas.",
-                q2: "¿Qué es la Suscripción Parallis VIP y qué ventajas ofrece?", a2: "Parallis VIP desbloquea perfiles ilimitados, experiencia totalmente libre de anuncios, renderizado de máxima prioridad con fal.ai (Nano Banana 2 Lite) y relatos de lujo exclusivos. Cancelable en cualquier momento desde los Ajustes de Apple ID.",
-                q3: "¿Cómo funcionan los paquetes de créditos y tienen fecha de caducidad?", a3: "Los paquetes de créditos (10, 25, 60 o 150 créditos) nunca caducan. Puedes usarlos cuando lo desees para generar imágenes 8K adicionales.",
-                q4: "¿Puedo obtener créditos de simulación gratuitos sin pagar?", a4: "¡Sí! Parallis ofrece anuncios recompensados que te permiten ver clips breves de patrocinadores para ganar créditos gratuitos de forma continua.",
-                q5: "¿Qué es la frecuencia Solfeggio de 528Hz y cómo se utiliza?", a5: "El tono 528Hz es conocido en acústica como la 'Frecuencia de la Transformación y los Milagros'. En la pestaña Portal, activa el reproductor de 528Hz para calmar la mente y alinear tu enfoque durante la visualización.",
-                q6: "¿Qué son las Cartas Cuánticas del Futuro?", a6: "Mensajes diarios personalizados redactados desde la perspectiva de tu yo realizado y próspero en el año 2030, diseñados para mantener tu enfoque en el éxito.",
-                q7: "¿Qué idiomas admite Parallis?", a7: "Parallis admite de forma nativa 8 idiomas: español, inglés, turco, francés, alemán, italiano, ruso y árabe.",
-                q8: "¿Cómo se protege mi privacidad y cómo puedo borrar mis datos?", a8: "Tu privacidad es primordial. Puedes eliminar de forma inmediata y permanente tu cuenta y todas las simulaciones en la app desde Perfil -> Eliminar Cuenta.",
-                qrHeading: "Escanear con iPhone", qrSub: "Descarga en App Store"
-            },
-            ru: {
-                navShowcase: "8K Галерея", navFeatures: "Функции", navExperience: "Опыт", navFaq: "FAQ", navSupport: "Поддержка", navPrivacy: "Конфиденциальность", navTerms: "Условия", navDelete: "Удалить аккаунт",
-                btnDownload: "Скачать App", heroBadge: "AI-симулятор мечты и параллельной жизни нового поколения",
-                heroTitlePrefix: "ВОПЛОТИТЕ СВОЮ", heroTitleHighlight: "ПАРАЛЛЕЛЬНУЮ РОСКОШНУЮ ЖИЗНЬ", heroTitleSuffix: "НА 8 ЯЗЫКАХ",
-                heroBody: "Шагните в свою высшую реальность. Создавайте ультрареалистичные 8K-фотохроники с нейросетью fal.ai 8K Neural Vision, получайте квантовые письма от себя из будущего и настраивайтесь на 528 Гц.",
-                ctaDownload: "Скачать в App Store", ctaExplore: "Смотреть 8K галерею",
-                specFrequency: "Калибровка 528 Гц", specLanguages: "8 Языков", specLive: "Данные городов Tavily",
-                showcaseHeading: "ИНТЕРАКТИВНАЯ 8K ГАЛЕРЕЯ СИМУЛЯЦИЙ", showcaseSub: "Переключайтесь между архетипами и смотрите, как fal.ai 8K Neural Vision Engine материализует ваши мечты.",
-                tabMonaco: "Суперъяхта в Монако", tabParis: "Пентхаус в Париже", tabSwiss: "Шале в Альпах", tabTokyo: "Кибер-поместье в Токио", tabDubai: "Скай-вилла в Дубае",
-                promptLabel: "Промпт fal.ai 8K Neural Vision", btnSimulateThis: "Симулировать эту жизнь",
-                expHeading: "КВАНТОВЫЙ ОПЫТ МАНИФЕСТАЦИИ", expSub: "Создан на стыке нейробиологии, частот 528 Гц и генеративного искусственного интеллекта.",
-                exp1Title: "Портал 528 Гц", exp1Body: "Настройте сознание на частоту трансформации и квантового выравнивания реальности.",
-                exp2Title: "Квантовые письма из будущего", exp2Body: "Получайте вдохновляющие послания, написанные от лица вашего успешного «я» из 2030 года.",
-                exp3Title: "Хранилище активов и капитала", exp3Body: "Отслеживайте элитную недвижимость, коллекционные суперкары и частные джеты.",
-                featuresHeading: "МОЩНЫЙ ДВИЖОК СИМУЛЯЦИИ", featuresSub: "Персонализированный AI-опыт для ваших самых грандиозных жизненных целей.",
-                f1Title: "Нейронный движок fal.ai 8K", f1Body: "Мгновенный 8K-рендеринг пентхаусов, суперъяхт и эксклюзивного образа жизни.",
-                f2Title: "8-язычная AI-архитектура", f2Body: "Нативная поддержка русского, английского, турецкого, французского, немецкого, итальянского, испанского и арабского.",
-                f3Title: "Городской интеллект Tavily", f3Body: "Свежие данные о лучших ресторанах Michelin и VIP-событиях в выбранном городе.",
-                f4Title: "VIP-подписка и пассы", f4Body: "Еженедельный и годовой VIP-доступ через RevenueCat без рекламы с приоритетным рендерингом.",
-                f5Title: "Хранилище кредитов", f5Body: "Бессрочные пакеты на 10, 25, 60 или 150 кредитов для дополнительных генераций.",
-                f6Title: "Приватность и удаление в 1 клик", f6Body: "Полный контроль с мгновенным удалением аккаунта и данных прямо в приложении.",
-                faqHeading: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ", faqSub: "Всё о VIP-подписке, пакетах кредитов и квантовых функциях Parallis.",
-                q1: "Что такое Parallis и как работает симуляция параллельной жизни?", a1: "Parallis — это передовой AI-симулятор визуализации и параллельной реальности. Вы выбираете свою идеальную персону, карьеру и локации. Нейронный движок fal.ai (Nano Banana 2 Lite) материализует эту жизнь в кинематографических 8K-фотохрониках и персональных историях.",
-                q2: "Что включает в себя подписка Parallis VIP?", a2: "Parallis VIP открывает неограниченное число профилей, полное отсутствие рекламы, наивысший приоритет рендеринга с fal.ai (Nano Banana 2 Lite) и эксклюзивные сюжетные пакеты. Отмена доступна в любой момент в настройках Apple ID.",
-                q3: "Как работают кредиты симуляций и сгорают ли они?", a3: "Пакеты кредитов (10, 25, 60 или 150 кредитов) бессрочны и никогда не сгорают. Вы можете использовать их в любой момент для создания дополнительных 8K-кадров.",
-                q4: "Можно ли получать кредиты бесплатно без оплаты?", a4: "Да! В Parallis доступен просмотр коротких спонсорских видеороликов, за которые начисляются бесплатные кредиты для создания новых симуляций.",
-                q5: "Что такое частота 528 Гц и как её применять?", a5: "528 Гц — это научно признанная частота трансформации и гармонизации. Во вкладке Портал включите встроенный генератор 528 Гц для глубокой альфа-медитации и настройки сознания на образ желаемой жизни.",
-                q6: "Что представляют собой Квантовые письма из будущего?", a6: "Ежедневные мотивирующие послания, написанные от лица вашего успешного и состоятельного «я» из 2030 года, вдохновляющие вас на достижение целей.",
-                q7: "Какие языки поддерживает Parallis?", a7: "Parallis полноценно поддерживает 8 языков: русский, английский, турецкий, французский, немецкий, итальянский, испанский и арабский.",
-                q8: "Как защищены мои данные и как удалить аккаунт?", a8: "Мы соблюдаем строжайшие стандарты приватности. Вы можете удалить свой аккаунт и все связанные симуляции в один клик прямо в приложении: Профиль -> Удалить аккаунт.",
-                qrHeading: "Сканировать iPhone", qrSub: "Скачать в App Store"
-            },
-            ar: {
-                navShowcase: "معرض 8K", navFeatures: "المميزات", navExperience: "التجربة", navFaq: "الأسئلة الشائعة", navSupport: "الدعم", navPrivacy: "الخصوصية", navTerms: "الشروط", navDelete: "حذف الحساب",
-                btnDownload: "تحميل التطبيق", heroBadge: "الجيل الجديد من محاكي الأحلام والحياة بالذكاء الاصطناعي",
-                heroTitlePrefix: "حقق واقعك في", heroTitleHighlight: "حياة الرفاهية الموازية", heroTitleSuffix: "بـ 8 لغات",
-                heroBody: "ادخل إلى أسمى واقع لك. أنشئ صوراً وسيناريوهات فائقة الدقة بدقة 8K باستخدام محرك fal.ai 8K العصبي، وتلقَّ رسائل كمومية من ذاتك المستقبلية، واضبط ترددك على 528 هرتز.",
-                ctaDownload: "تحميل من App Store", ctaExplore: "استكشف معرض 8K",
-                specFrequency: "معايرة تردد 528 هرتز", specLanguages: "8 لغات أصلية", specLive: "ذكاء المدن المباشر Tavily",
-                showcaseHeading: "معرض المحاكاة التفاعلي بدقة 8K", showcaseSub: "تنقل بين الأنماط وشاهد كيف يجسد محرك fal.ai 8K العصبي الفائق رؤى حياتك الفاخرة.",
-                tabMonaco: "يخت موناكو الفاخر", tabParis: "بنتهاوس باريس", tabSwiss: "شاليه جبال الألب السويسرية", tabTokyo: "قصر طوكيو السيبراني", tabDubai: "فيلا دبي السماوية",
-                promptLabel: "مخطط أوامر fal.ai 8K العصبي", btnSimulateThis: "محاكاة هذا الواقع",
-                expHeading: "تجربة التجلي الكمومي", expSub: "مصممة بعلوم الأعصاب وترددات 528 هرتز والذكاء الاصطناعي التوليدي الفوري.",
-                exp1Title: "بوابة تردد 528 هرتز", exp1Body: "اضبط ذهنك على التردد الدقيق المرتبط بالتحول وإعادة المحاذاة الكمومية للواقع.",
-                exp2Title: "رسائل كمومية من المستقبل", exp2Body: "احصل يومياً على رسائل ملهمة مكتوبة من منظور ذاتك المحققة لأهدافها في عام 2030.",
-                exp3Title: "خزينة الأصول وصافي الثروة", exp3Body: "تتبع عقاراتك الفارهة، وسياراتك الخارقة، وأسطول طائراتك الخاصة.",
-                featuresHeading: "محرك محاكاة فائق القوة", featuresSub: "تجربة ذكاء اصطناعي مصممة خصيصاً لأرقى تطلعاتك في الحياة.",
-                f1Title: "محرك fal.ai 8K العصبي الفائق", f1Body: "توليد سينمائي فوري بدقة 8K لليخوت والبنتهاوس الفاخر بأعلى معايير الواقعية.",
-                f2Title: "بنية ذكاء اصطناعي بـ 8 لغات", f2Body: "دعم أصلي للعربية، والإنجليزية، والتركية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والروسية.",
-                f3Title: "ذكاء المدن المباشر Tavily", f3Body: "استكشاف مباشر لأرقى المطاعم والفعاليات الحصرية في مدينتك المختارة يومياً.",
-                f4Title: "اشتراكات وباقات VIP", f4Body: "وصول VIP أسبوعي وسنوي عبر RevenueCat بدون إعلانات مع أولوية المعالجة.",
-                f5Title: "خزينة أرصدة المحاكاة", f5Body: "باقات رصيد دائمة (10، 25، 60، أو 150) لا تنتهي صلاحيتها أبداً.",
-                f6Title: "الخصوصية والحذف بنقرة واحدة", f6Body: "تحكم كامل مع إمكانية حذف حسابك وبياناتك فورياً في أي وقت داخل التطبيق.",
-                faqHeading: "الأسئلة الشائعة", faqSub: "كل ما تحتاج معرفته عن باقات Parallis VIP وأرصدة المحاكاة والترددات الكمومية.",
-                q1: "ما هو تطبيق Parallis وكيف تعمل محاكاة الحياة الموازية؟", a1: "Parallis هو محاكي واقع وتجلٍ بالذكاء الاصطناعي من الجيل الجديد. تحدد شخصيتك المثالية، مهنتك، ووجهتك الفاخرة. ويقوم محرك fal.ai (Nano Banana 2 Lite) بتحويل هذا الواقع الموازي إلى سجلات فوتوغرافية سينمائية بدقة 8K مع قصص ملهمة مخصصة.",
-                q2: "ما هو اشتراك Parallis VIP وما هي مميزاته؟", a2: "يمنحك اشتراك Parallis VIP إمكانية إنشاء ملفات موازية غير محدودة، تجربة خالية تماماً من الإعلانات، أولوية معالجة قصوى مع محرك fal.ai (Nano Banana 2 Lite)، وحزم قصص فاخرة حصرية. يمكنك الإلغاء في أي وقت عبر إعدادات Apple ID.",
-                q3: "كيف تعمل باقات أرصدة المحاكاة وهل تنتهي صلاحيتها؟", a3: "باقات الأرصدة (10، 25، 60 أو 150 رصيداً) هي باقات دائمة لا تنتهي صلاحيتها أبداً، وتتيح لك إنشاء مشاهد 8K إضافية متى شئت مع أو بدون اشتراك VIP.",
-                q4: "هل يمكنني كسب أرصدة محاكاة مجاناً دون دفع؟", a4: "نعم! يوفر التطبيق ميزة مشاهدة إعلانات المكافآت القصيرة لكسب أرصدة محاكاة مجانية والاستمرار في توليد صور أحلامك بدون أي تكلفة.",
-                q5: "ما هو تردد 528 هرتز الصوتي وكيف يُستخدم؟", a5: "تردد 528 هرتز معروف في علم الصوتيات باسم 'تردد التحول والمعجزات'. في علامة تبويب البوابة بالتطبيق، يمكنك تفعيل نغمة 528 هرتز لتهدئة الدماغ والتركيز ومحاذاة التردد الذهني مع أهدافك.",
-                q6: "ما هي رسائل الذات المستقبلية الكمومية؟", a6: "هي رسائل يومية ملهمة ومخصصة تصلك في إشعاراتك، كُتبت من منظور ذاتك المحققة للثراء والنجاح في عام 2030 لتعزيز حافزك وتوجيهك نحو القمة.",
-                q7: "ما هي اللغات التي يدعمها تطبيق Parallis؟", a7: "يدعم Parallis بشكل أصلي 8 لغات: العربية، الإنجليزية، التركية، الفرنسية، الألمانية، الإيطالية، الإسبانية، والروسية عبر كافة النصوص والواجهات.",
-                q8: "كيف تتم حماية خصوصيتي وكيف يمكنني حذف حسابي؟", a8: "نولي خصوصيتك أقصى درجات الاحترام ولا نبيع بياناتك مطلقاً. يمكنك حذف حسابك وكافة ملفاتك وصورك فورياً بنقرة واحدة داخل التطبيق عبر الملف الشخصي -> حذف الحساب.",
-                qrHeading: "امسح باستخدام iPhone", qrSub: "تحميل فوري من App Store"
-            }
-        };
-
         function setLanguage(lang) {
             const htmlRoot = document.getElementById('html-root');
+            if (!htmlRoot) return;
             htmlRoot.setAttribute('lang', lang);
             
             if (lang === 'ar') {
@@ -1095,34 +1032,48 @@
                 htmlRoot.removeAttribute('dir');
             }
 
-            document.getElementById('current-lang-code').innerText = lang.toUpperCase();
+            const codeEl = document.getElementById('current-lang-code');
+            if (codeEl) codeEl.textContent = lang.toUpperCase();
 
             const dict = translations[lang] || translations['en'];
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (dict[key]) {
-                    el.innerText = dict[key];
+                if (dict && dict[key] !== undefined) {
+                    el.textContent = dict[key];
                 }
             });
 
-                        // Refresh active showcase tab with new language strings
-            if (typeof switchShowcase === 'function') {
-                switchShowcase(currentShowcaseIndex);
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (dict && dict[key] !== undefined) {
+                    el.setAttribute('placeholder', dict[key]);
+                }
+            });
+
+            // Refresh active showcase tab with new language strings
+            try {
+                if (typeof switchShowcase === 'function') {
+                    switchShowcase(currentShowcaseIndex);
+                }
+            } catch (err) {
+                console.warn('Showcase sync error:', err);
             }
 
             // Persist language choice
-            localStorage.setItem('parallis_lang', lang);
+            try {
+                localStorage.setItem('parallis_lang', lang);
+            } catch (e) {}
             closeLangMenu();
         }
 
         function toggleLangMenu() {
             const menu = document.getElementById('lang-menu');
-            menu.classList.toggle('show');
+            if (menu) menu.classList.toggle('show');
         }
 
         function closeLangMenu() {
             const menu = document.getElementById('lang-menu');
-            menu.classList.remove('show');
+            if (menu) menu.classList.remove('show');
         }
 
         window.addEventListener('click', (e) => {
@@ -1132,17 +1083,100 @@
         });
 
         function toggleFaq(item) {
-            item.classList.toggle('active');
+            if (item) item.classList.toggle('active');
         }
 
-        // Initialize language from URL query or localStorage
-        window.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('parallis_lang') || navigator.language.slice(0,2) || 'en';
-            const initialLang = queryLang || (translations[savedLang] ? savedLang : 'en');
-            setLanguage(initialLang);
-        });
+        // Quantum Canvas Animation (Safely isolated)
+        function initQuantumCanvas() {
+            try {
+                const canvas = document.getElementById('quantum-canvas');
+                if (!canvas) return;
+                const ctx = canvas.getContext ? canvas.getContext('2d') : null;
+                if (!ctx) return;
+                let width = canvas.width = window.innerWidth;
+                let height = canvas.height = window.innerHeight;
+                window.addEventListener('resize', () => {
+                    if (!canvas) return;
+                    width = canvas.width = window.innerWidth;
+                    height = canvas.height = window.innerHeight;
+                });
+                const particles = [];
+                class QuantumParticle {
+                    constructor() {
+                        this.reset();
+                    }
+                    reset() {
+                        this.x = Math.random() * width;
+                        this.y = Math.random() * height;
+                        this.vx = (Math.random() - 0.5) * 0.35;
+                        this.vy = (Math.random() - 0.5) * 0.35;
+                        this.radius = Math.random() * 1.5 + 0.5;
+                    }
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        if (this.x < 0 || this.x > width) this.vx *= -1;
+                        if (this.y < 0 || this.y > height) this.vy *= -1;
+                    }
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(212, 175, 55, 0.35)';
+                        ctx.fill();
+                    }
+                }
+                for (let i = 0; i < 45; i++) {
+                    particles.push(new QuantumParticle());
+                }
+                function animateCanvas() {
+                    ctx.clearRect(0, 0, width, height);
+                    for (let i = 0; i < particles.length; i++) {
+                        particles[i].update();
+                        particles[i].draw();
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < 130) {
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.strokeStyle = "rgba(212, 175, 55, " + (0.15 * (1 - dist / 130)) + ")";
+                                ctx.lineWidth = 0.75;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    requestAnimationFrame(animateCanvas);
+                }
+                animateCanvas();
+            } catch (err) {
+                console.warn("Canvas animation unavailable:", err);
+            }
+        }
+
+        // Initialize Quantum Canvas & Language
+        initQuantumCanvas();
+
+        function initParallisLanguage() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const queryLang = urlParams.get('lang');
+                const savedLang = localStorage.getItem('parallis_lang') || (navigator.language ? navigator.language.slice(0, 2).toLowerCase() : 'en');
+                const initialLang = queryLang || (translations[savedLang] ? savedLang : 'en');
+                setLanguage(initialLang);
+            } catch (err) {
+                console.error("Language initialization failed:", err);
+                setLanguage('en');
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            window.addEventListener('DOMContentLoaded', initParallisLanguage);
+        } else {
+            initParallisLanguage();
+        }
+    
     </script>
 </body>
 </html>
